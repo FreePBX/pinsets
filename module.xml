@@ -8,6 +8,6 @@
 		<pinsets>PIN Sets</pinsets>
 	</menuitems>
 	<info>http://freepbx.org/wiki/pinsets</info>
-	<location>release/pinsets-1.0.1.tgz</location>
-	<md5sum>57bc196a3c3c4b5636917173c36b8a9d</md5sum>
+	<location>release/pinsets-1.0.tgz</location>
+	<md5sum>243e95cd66235d97161d546ff4e076b6</md5sum>
 </module>
