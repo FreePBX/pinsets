@@ -1,0 +1,13 @@
+<module>
+	<rawname>pinsets</rawname>
+	<name>PIN Sets</name>
+	<version>1.0</version>
+	<type>setup</type>
+	<category>Module</category>
+	<menuitems>
+		<pinsets>PIN Sets</pinsets>
+	</menuitems>
+	<info>http://freepbx.org/wiki/pinsets</info>
+	<location>release/pinsets-1.0.1.tgz</location>
+	<md5sum>57bc196a3c3c4b5636917173c36b8a9d</md5sum>
+</module>
