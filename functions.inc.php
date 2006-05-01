@@ -192,8 +192,12 @@ function pinsets_hook_core($viewing_itemid, $target_menuid) {
 						<select name="pinsets">
 							<option value=></option>
 			';
-			foreach($pinsets as $item) {
-				$hookhtml .= "<option value={$item['pinsets_id']} ".(strpos($item['used_by'], "routing_{$viewing_itemid}") !== false ? 'selected' : '').">{$item['description']}</option>";
+			
+			if (is_array($pinsets))
+			{
+				foreach($pinsets as $item) {
+					$hookhtml .= "<option value={$item['pinsets_id']} ".(strpos($item['used_by'], "routing_{$viewing_itemid}") !== false ? 'selected' : '').">{$item['description']}</option>";
+				}
 			}
 			$hookhtml .= '
 						</select>
