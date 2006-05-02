@@ -7,10 +7,15 @@ class pinsets_conf {
 	// return an array of filenames to write
 	// files named like pinset_N
 	function get_filename() {
-		foreach (array_keys($this->_pinsets) as $pinset) {
-			$files[] = 'pinset_'.$pinset;
+		$files = array;
+		if (isset($this->_pinsets) && is_array($this->_pinsets)) {
+			foreach (array_keys($this->_pinsets) as $pinset) {
+				$files[] = 'pinset_'.$pinset;
+			}
+			return $files;
+		} else {
+			return null;
 		}
-		return $files;
 	}
 	
 	function addPinsets($setid, $pins) {
@@ -18,7 +23,7 @@ class pinsets_conf {
 	}
 	
 	// return the output that goes in each of the files
-	function generateConf($file) {
+	function generateConf() {
 		$setid = ltrim($file,'pinset_');
 		$output = $this->_pinsets[$setid];
 		return $output;
