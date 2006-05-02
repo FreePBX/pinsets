@@ -7,7 +7,7 @@ class pinsets_conf {
 	// return an array of filenames to write
 	// files named like pinset_N
 	function get_filename() {
-		$files = array;
+		$files = array();
 		if (isset($this->_pinsets) && is_array($this->_pinsets)) {
 			foreach (array_keys($this->_pinsets) as $pinset) {
 				$files[] = 'pinset_'.$pinset;
