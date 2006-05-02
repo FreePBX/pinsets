@@ -23,7 +23,7 @@ class pinsets_conf {
 	}
 	
 	// return the output that goes in each of the files
-	function generateConf() {
+	function generateConf($file) {
 		$setid = ltrim($file,'pinset_');
 		$output = $this->_pinsets[$setid];
 		return $output;
