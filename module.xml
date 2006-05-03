@@ -8,6 +8,6 @@
 		<pinsets>PIN Sets</pinsets>
 	</menuitems>
 	<info>http://aussievoip.com.au/wiki/freePBX-PinSets</info>
-	<location>release/pinsets-1.0.2.tgz</location>
-	<md5sum>a57c070b6eb98f5b3bba8fa1b6d120d9</md5sum>
+	<location>release/pinsets-1.0.3.tgz</location>
+	<md5sum>7ec86c84236668460879231c311e2485</md5sum>
 </module>
