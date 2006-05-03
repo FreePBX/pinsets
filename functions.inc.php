@@ -14,7 +14,8 @@ class pinsets_conf {
 			}
 			return $files;
 		} else {
-			return null;
+			// jusr return an empty array
+			return array();
 		}
 	}
 	
