@@ -233,33 +233,35 @@ function pinsets_hookProcess_core($viewing_itemid, $request) {
 		$pinsets = pinsets_list();
 		
 		// loop through all the pinsets
-		foreach($pinsets as $pinset) {
-			
-			// get the used_by field
-			if(empty($pinset['used_by'])) {
-				$usedby = "";
-			} else {
-				$usedby = $pinset['used_by'];
+		if(is_array($pinsets)){
+			foreach($pinsets as $pinset) {
+				
+				// get the used_by field
+				if(empty($pinset['used_by'])) {
+					$usedby = "";
+				} else {
+					$usedby = $pinset['used_by'];
+				}
+				
+				// remove the target if it's already in this row's used_by field
+				$usedby = str_replace("{$request['display']}_{$viewing_itemid}","",$usedby);
+				
+				// create an array from usedby
+				$arrUsedby = explode(',',$usedby);
+				
+				// add <targetmodule>_<viewing_itemid> to the array
+				if(!empty($request['pinsets']) && ($request['pinsets'] == $pinset['pinsets_id']))
+					$arrUsedby[] = "{$request['display']}_{$viewing_itemid}";
+				
+				// remove any duplicates
+				$arrUsedby = array_values(array_unique($arrUsedby));
+				
+				// create a new string
+				$strUsedby = implode($arrUsedby,',');
+				
+				// store the used_by column in the DB
+				sql("UPDATE pinsets SET used_by = \"{$strUsedby}\" WHERE pinsets_id = \"{$pinset['pinsets_id']}\"");
 			}
-			
-			// remove the target if it's already in this row's used_by field
-			$usedby = str_replace("{$request['display']}_{$viewing_itemid}","",$usedby);
-			
-			// create an array from usedby
-			$arrUsedby = explode(',',$usedby);
-			
-			// add <targetmodule>_<viewing_itemid> to the array
-			if(!empty($request['pinsets']) && ($request['pinsets'] == $pinset['pinsets_id']))
-				$arrUsedby[] = "{$request['display']}_{$viewing_itemid}";
-			
-			// remove any duplicates
-			$arrUsedby = array_values(array_unique($arrUsedby));
-			
-			// create a new string
-			$strUsedby = implode($arrUsedby,',');
-			
-			// store the used_by column in the DB
-			sql("UPDATE pinsets SET used_by = \"{$strUsedby}\" WHERE pinsets_id = \"{$pinset['pinsets_id']}\"");
 		}
 	}
 }
