@@ -1,7 +1,7 @@
 <module>
 	<rawname>pinsets</rawname>
 	<name>PIN Sets</name>
-	<version>1.0.3</version>
+	<version>1.0.4</version>
 	<type>setup</type>
 	<category>Module</category>
 	<menuitems>
