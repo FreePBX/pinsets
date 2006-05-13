@@ -1,0 +1,1 @@
+CREATE TABLE IF NOT EXISTS pinsets ( pinsets_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY , passwords LONGTEXT, description VARCHAR( 50 ) , addtocdr TINYINT( 1 ) , deptname VARCHAR( 50 ) , used_by VARCHAR( 255 ));
