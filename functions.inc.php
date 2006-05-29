@@ -129,6 +129,13 @@ function pinsets_get($id){
 }
 
 function pinsets_del($id){
+	global $asterisk_conf;
+	
+	$filename = $asterisk_conf['astetcdir'].'/pinset_'.$id;
+	if (file_exists($filename)) {
+		unlink($filename);
+	}
+
 	$results = sql("DELETE FROM pinsets WHERE pinsets_id = '$id'","query");
 }
 
