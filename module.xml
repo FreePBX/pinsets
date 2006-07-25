@@ -1,13 +1,13 @@
 <module>
 	<rawname>pinsets</rawname>
 	<name>PIN Sets</name>
-	<version>1.0.6</version>
+	<version>1.0.7</version>
 	<type>setup</type>
 	<category>Module</category>
 	<menuitems>
 		<pinsets>PIN Sets</pinsets>
 	</menuitems>
 	<info>http://aussievoip.com.au/wiki/freePBX-PinSets</info>
-	<location>release/pinsets-1.0.6.tgz</location>
-	<md5sum>e9c8465cba01c5ac7af90c105edcd041</md5sum>
+	<location>release/pinsets-1.0.7.tgz</location>
+	<md5sum>17780a1ab808378361807e5166e0273d</md5sum>
 </module>
