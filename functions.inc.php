@@ -88,8 +88,9 @@ function pinsets_hookGet_config($engine) {
 								// we need to manipulate each route/extension
 								foreach($routes as $rt) {
 									//strip the pipe out as that's what we use for the dialplan extension
-									$extension = '_'.str_replace('|','',$rt);
-									// add dialplan
+									$extension = str_replace('|','',$rt);
+									// If there are any wildcards in there, add a _ to the start
+									if (preg_match("/\.|z|x|\[|\]/i", $extension)) { $extension = "_".$extension; }
 									$ext->splice($context, $extension, 0, new ext_macro('pinsets', $thisitem['pinsets_id'].'|'.$thisitem['addtocdr']));
 								}						
 								
