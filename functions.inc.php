@@ -236,7 +236,7 @@ function pinsets_hookProcess_core($viewing_itemid, $request) {
 	// Any module that is hooked by pinsets when submitted will result in all the "used_by" fields being re-written
 	
 	// if routing was using post for the form (incl delete), i wouldn't need all these conditions
-	if(isset($request['Submit']) || (isset($request['action']) && $request['action'] == "delroute" || $request['action'] == "prioritizeroute")) {
+	if(isset($request['Submit']) || (isset($request['action']) && ($request['action'] == "delroute" || $request['action'] == "prioritizeroute"))) {
 		// get all pinsets defined
 		$pinsets = pinsets_list();
 		
