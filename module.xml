@@ -1,14 +1,17 @@
 <module>
 	<rawname>pinsets</rawname>
 	<name>PIN Sets</name>
-	<version>1.0.10</version>
+	<version>1.0.11</version>
 	<type>setup</type>
 	<category>Internal Options &amp; Configuration</category>
 	<description>Allow creation of lists of PINs (numbers for passwords) that can be used by other modules (eg, trunks).</description>
+	<changelog>
+		*1.0.11* Stop potential error where a random pinset is appearing when creating a new trunk
+	</changelog>
 	<menuitems>
 		<pinsets>PIN Sets</pinsets>
 	</menuitems>
 	<info>http://aussievoip.com.au/wiki/freePBX-PinSets</info>
-	<location>release/2.2/pinsets-1.0.10.tgz</location>
-	<md5sum>7a2d1183a05ff6f7f44fbb68bbbdecca</md5sum>
+	<location>release/2.2/pinsets-1.0.11.tgz</location>
+	<md5sum>d24565fa6ac542515c599305c58ea4ef</md5sum>
 </module>
