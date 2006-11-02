@@ -266,6 +266,9 @@ function pinsets_hookProcess_core($viewing_itemid, $request) {
 				
 				// create a new string
 				$strUsedby = implode($arrUsedby,',');
+
+				// Insure there's no leading or trailing commas
+				$strUsedby = trim ($strUsedby, ',');
 				
 				// store the used_by column in the DB
 				sql("UPDATE pinsets SET used_by = \"{$strUsedby}\" WHERE pinsets_id = \"{$pinset['pinsets_id']}\"");
