@@ -24,12 +24,12 @@ if(isset($_POST['action'])) {
 		case "add":
 			pinsets_add($_POST);
 			needreload();
-			redirect_standard('itemid');
+			redirect_standard();
 		break;
 		case "delete":
 			pinsets_del($itemid);
 			needreload();
-			redirect_standard('itemid');
+			redirect_standard();
 		break;
 		case "edit":
 			pinsets_edit($itemid,$_POST);
