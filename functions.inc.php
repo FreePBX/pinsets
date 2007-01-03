@@ -192,6 +192,93 @@ function pinsets_chk($post){
 	return true;
 }
 
+//removes a pinset from a route and shifts priority for all outbound routing pinsets
+function pinsets_adjustroute($route,$action,$routepinset='',$direction='',$newname='') {
+    $priority = (int)substr($route,0,3);
+    //create a selection of available pinsets
+    $pinsets = pinsets_list();
+	// loop through all the pinsets
+	if(is_array($pinsets)){
+		foreach($pinsets as $pinset) {
+				
+			// get the used_by field
+			if(empty($pinset['used_by'])) {
+				$usedby = "";
+			} else {
+				$usedby = $pinset['used_by'];
+			}
+					
+			// remove the target if it's already in this row's used_by field
+			//$usedby = str_replace("routing_{$route}","",$usedby);
+					
+			// create an array from usedby
+			$arrUsedby = explode(',',$usedby);
+			
+			for($i=0;$i<count($arrUsedby);$i++) {
+				if (substr($arrUsedby[$i],0,8)=='routing_') {
+                    switch($action){
+                        case 'delroute':
+                    		if ($arrUsedby[$i] == "routing_{$route}") {
+								unset($arrUsedby[$i]);
+		              		}
+                    		$usedbypriority = (int)substr($arrUsedby[$i],8,3);
+							$usedbyroute = substr($arrUsedby[$i],12);
+                    		if ($usedbypriority > $priority) {
+		                        $newpriority = str_pad($usedbypriority - 1, 3, "0", STR_PAD_LEFT);
+                        		$arrUsedby[$i] = 'routing_'.$newpriority.'-'.$usedbyroute;
+							}
+						break;
+                        case 'prioritizeroute';
+                        	$addpriority = ($direction=='up')?-1:1;
+                    		$usedbypriority = (int)substr($arrUsedby[$i],8,3);
+							$usedbyroute = substr($arrUsedby[$i],12);
+                    		if ($priority + $addpriority == $usedbypriority) {
+		                        $newpriority = str_pad($priority, 3, "0", STR_PAD_LEFT);
+                        		$arrUsedby[$i] = 'routing_'.$newpriority.'-'.$usedbyroute;
+							}
+                		    if ($arrUsedby[$i] == "routing_{$route}") {
+		                        $newpriority = str_pad($priority + $addpriority, 3, "0", STR_PAD_LEFT);
+                        		$arrUsedby[$i] = 'routing_'.$newpriority.'-'.$usedbyroute;
+		              		}
+
+						break;
+                        case 'renameroute';
+                    		if ($arrUsedby[$i] == "routing_{$route}") {
+		                        $newpriority = str_pad($priority, 3, "0", STR_PAD_LEFT);
+                        		$arrUsedby[$i] = 'routing_'.$newpriority.'-'.$newname;
+		              		}
+						break;
+                        case 'editroute';
+                        	$usedbyroute = (int)substr($arrUsedby[$i],12);
+                    		if ($arrUsedby[$i] == "routing_{$route}") {
+								unset($arrUsedby[$i]);
+							}
+                        break;
+					}
+				}
+			}	
+            
+			// save the route in the selected pin
+			if ($routepinset == $pinset['pinsets_id'] && $action == 'editroute') {
+				$arrUsedby[] = 'routing_'.$route;
+			}
+
+			// remove any duplicates
+			$arrUsedby = array_values(array_unique($arrUsedby));
+				
+			// create a new string
+			$strUsedby = implode($arrUsedby,',');
+	
+			// Insure there's no leading or trailing commas
+			$strUsedby = trim ($strUsedby, ',');
+
+					
+			// store the used_by column in the DB
+			sql("UPDATE pinsets SET used_by = \"{$strUsedby}\" WHERE pinsets_id = \"{$pinset['pinsets_id']}\"");
+		}
+	}
+}
+
 // provide hook for routing
 function pinsets_hook_core($viewing_itemid, $target_menuid) {
 	switch ($target_menuid) {
@@ -206,11 +293,16 @@ function pinsets_hook_core($viewing_itemid, $target_menuid) {
 						<select name="pinsets">
 							<option value=></option>
 			';
-			
+
 			if (is_array($pinsets))
 			{
 				foreach($pinsets as $item) {
-					$hookhtml .= "<option value={$item['pinsets_id']} ".(strpos($item['used_by'], "routing_{$viewing_itemid}") !== false ? 'selected' : '').">{$item['description']}</option>";
+					if (isset($viewing_itemid) && $viewing_itemid <> '' && strpos($item['used_by'], "routing_{$viewing_itemid}") !== false) {
+						$selected = 'selected';
+					} else {
+						$selected = '';
+					}
+					$hookhtml .= "<option value={$item['pinsets_id']} ".$selected.">{$item['description']}</option>";
 				}
 			}
 			$hookhtml .= '
@@ -234,47 +326,29 @@ function pinsets_hookProcess_core($viewing_itemid, $request) {
 	
 	// this is really a crappy way to store things.  
 	// Any module that is hooked by pinsets when submitted will result in all the "used_by" fields being re-written
-	
-	// if routing was using post for the form (incl delete), i wouldn't need all these conditions
-	if(isset($request['Submit']) || (isset($request['action']) && ($request['action'] == "delroute" || $request['action'] == "prioritizeroute"))) {
-		// get all pinsets defined
-		$pinsets = pinsets_list();
-		
-		// loop through all the pinsets
-		if(is_array($pinsets)){
-			foreach($pinsets as $pinset) {
-				
-				// get the used_by field
-				if(empty($pinset['used_by'])) {
-					$usedby = "";
-				} else {
-					$usedby = $pinset['used_by'];
-				}
-				
-				// remove the target if it's already in this row's used_by field
-				$usedby = str_replace("{$request['display']}_{$viewing_itemid}","",$usedby);
-				
-				// create an array from usedby
-				$arrUsedby = explode(',',$usedby);
-				
-				// add <targetmodule>_<viewing_itemid> to the array
-				if(!empty($request['pinsets']) && ($request['pinsets'] == $pinset['pinsets_id']))
-					$arrUsedby[] = "{$request['display']}_{$viewing_itemid}";
-				
-				// remove any duplicates
-				$arrUsedby = array_values(array_unique($arrUsedby));
-				
-				// create a new string
-				$strUsedby = implode($arrUsedby,',');
+	switch ($request['display']) {
+        case 'routing':
+		// if routing was using post for the form (incl delete), i wouldn't need all these conditions
+		//		if(isset($request['Submit']) || (isset($request['action']) && ($request['action'] == "delroute" || $request['action'] == "prioritizeroute" || $request['action'] == "renameroute"))) {        
 
-				// Insure there's no leading or trailing commas
-				$strUsedby = trim ($strUsedby, ',');
-				
-				// store the used_by column in the DB
-				sql("UPDATE pinsets SET used_by = \"{$strUsedby}\" WHERE pinsets_id = \"{$pinset['pinsets_id']}\"");
+			$action = (isset($request['action']))?$request['action']:null;
+			$route = $viewing_itemid;
+			if (isset($request['reporoutekey']) && $action == 'prioritizeroute') {
+                $outbound_routes = core_routing_getroutenames();
+				$route = $outbound_routes[(int)$request['reporoutekey']][0];
+            }
+			if (isset($request['Submit']) ) {
+				$action = (isset($action))?$action:'editroute';
+        	}
+			if (isset($action)) {            
+            	$direction = (isset($request['reporoutedirection']))?$request['reporoutedirection']:null;
+                $newname = (isset($request['newroutename']))?$request['newroutename']:null;
+				pinsets_adjustroute($route,$action,$request['pinsets'],$direction,$newname);
 			}
-		}
+
+        break;
 	}
 }
+
 
 ?>
