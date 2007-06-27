@@ -1,5 +1,5 @@
 <?php
 
-sql('DROP TABLE pinsets');
+sql('DROP TABLE IF EXISTS `pinsets`');
 
 ?>
