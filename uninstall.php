@@ -1,5 +1,18 @@
 <?php
 
+global $db;
+global $amp_conf;
+
+$pinsets = pinsets_list();
+foreach ($pinsets as $item) {
+	echo "removing ".$item['description']."..";
+	pinsets_del($item['pinsets_id']);
+	echo "done<br>\n";
+}
+
+echo "dropping table pinsets..";
 sql('DROP TABLE IF EXISTS `pinsets`');
+echo "done<br>\n";
+
 
 ?>

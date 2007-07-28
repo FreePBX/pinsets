@@ -1,11 +1,12 @@
 <module>
 	<rawname>pinsets</rawname>
 	<name>PIN Sets</name>
-	<version>1.2</version>
+	<version>1.2.1</version>
 	<type>setup</type>
 	<category>Internal Options &amp; Configuration</category>
 	<description>Allow creation of lists of PINs (numbers for passwords) that can be used by other modules (eg, trunks).</description>
 	<changelog>
+		*1.2.1* #1770 added proper uninstall
 		*1.2* Add SQLite3 support, fixes http://freepbx.org/trac/ticket/1778
 		*1.1* Add he_IL translation, add naftali5's fixes where pinsets were being lost when moved around.
 		*1.0.11* Stop potential error where a random pinset is appearing when creating a new trunk
