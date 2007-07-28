@@ -15,6 +15,6 @@
 		<pinsets>PIN Sets</pinsets>
 	</menuitems>
 	<info>http://aussievoip.com.au/wiki/freePBX-PinSets</info>
-	<location>release/2.3/pinsets-1.2.tgz</location>
-	<md5sum>fe6839d46966cb1f2d3c2be4d610d695</md5sum>
+	<location>release/2.3/pinsets-1.2.1.tgz</location>
+	<md5sum>a3df9c37e3cc1ae41b5748cda82f2ef8</md5sum>
 </module>
