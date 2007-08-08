@@ -16,7 +16,7 @@ $sql = "CREATE TABLE IF NOT EXISTS pinsets (
 
 $check = $db->query($sql);
 if(DB::IsError($check)) {
-        die("Can not create `pinsets` table\n");
+        die_freepbx("Can not create `pinsets` table\n");
 }
 
 ?>
