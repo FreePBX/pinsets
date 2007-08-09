@@ -16,6 +16,6 @@
 	<menuitems>
 		<pinsets>PIN Sets</pinsets>
 	</menuitems>
-	<location>release/2.3/pinsets-1.2.2.tgz</location>
-	<md5sum>5a5ad9ed898bec8d323ea3546e21454d</md5sum>
+	<location>release/2.3/pinsets-1.2.2.1.tgz</location>
+	<md5sum>895f85d305d2084c244fa92ee76ee42d</md5sum>
 </module>
