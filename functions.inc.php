@@ -91,7 +91,7 @@ function pinsets_hookGet_config($engine) {
 									$extension = str_replace('|','',$rt);
 									// If there are any wildcards in there, add a _ to the start
 									if (preg_match("/\.|z|x|\[|\]/i", $extension)) { $extension = "_".$extension; }
-									$ext->splice($context, $extension, 0, new ext_macro('pinsets', $thisitem['pinsets_id'].'|'.$thisitem['addtocdr']));
+									$ext->splice($context, $extension, 0, new ext_macro('pinsets', $thisitem['pinsets_id'].','.$thisitem['addtocdr']));
 								}						
 								
 							}
