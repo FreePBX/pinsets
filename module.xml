@@ -1,11 +1,12 @@
 <module>
 	<rawname>pinsets</rawname>
 	<name>PIN Sets</name>
-	<version>1.2.2.1</version>
+	<version>1.2.2.2</version>
 	<type>setup</type>
 	<category>Internal Options &amp; Configuration</category>
 	<description>Allow creation of lists of PINs (numbers for passwords) that can be used by other modules (eg, trunks).</description>
 	<changelog>
+		*1.2.2.2* #2172 deprecated use of |
 		*1.2.2.1* bump for rc1
 		*1.2.2* Put None label in menu hook
 		*1.2.1* #1770 added proper uninstall
@@ -16,6 +17,6 @@
 	<menuitems>
 		<pinsets>PIN Sets</pinsets>
 	</menuitems>
-	<location>release/2.3/pinsets-1.2.2.1.tgz</location>
-	<md5sum>895f85d305d2084c244fa92ee76ee42d</md5sum>
+	<location>release/2.3/pinsets-1.2.2.2.tgz</location>
+	<md5sum>7e8fcf9188369f80298a553190809690</md5sum>
 </module>
