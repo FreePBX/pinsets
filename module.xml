@@ -1,11 +1,12 @@
 <module>
 	<rawname>pinsets</rawname>
 	<name>PIN Sets</name>
-	<version>1.2.2.2</version>
+	<version>1.2.3</version>
 	<type>setup</type>
 	<category>Internal Options &amp; Configuration</category>
 	<description>Allow creation of lists of PINs (numbers for passwords) that can be used by other modules (eg, trunks).</description>
 	<changelog>
+		*1.2.3* #2393 add support for pinless dialing
 		*1.2.2.2* #2172 deprecated use of |
 		*1.2.2.1* bump for rc1
 		*1.2.2* Put None label in menu hook

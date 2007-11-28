@@ -49,9 +49,9 @@ function pinsets_get_config($engine) {
 				
 				// write out a macro that handles the authenticate
 				$ext->add('macro-pinsets', 's', '', new ext_gotoif('${ARG2} = 1','cdr,1'));
-				$ext->add('macro-pinsets', 's', '', new ext_authenticate($asterisk_conf['astetcdir'].'/pinset_${ARG1}'));
+				$ext->add('macro-pinsets', 's', '', new ext_execif('$["${DB(AMPUSER/${AMPUSER}/pinless)}" != "NOPASSWD"]', 'Authenticate',$asterisk_conf['astetcdir'].'/pinset_${ARG1}'));
 				// authenticate with the CDR option (a)
-				$ext->add('macro-pinsets', 'cdr', '', new ext_authenticate($asterisk_conf['astetcdir'].'/pinset_${ARG1}','a'));
+				$ext->add('macro-pinsets', 'cdr', '', new ext_execif('$["${DB(AMPUSER/${AMPUSER}/pinless)}" != "NOPASSWD"]', 'Authenticate',$asterisk_conf['astetcdir'].'/pinset_${ARG1},a'));
 			}
 		break;
 	}
@@ -91,7 +91,7 @@ function pinsets_hookGet_config($engine) {
 									$extension = str_replace('|','',$rt);
 									// If there are any wildcards in there, add a _ to the start
 									if (preg_match("/\.|z|x|\[|\]/i", $extension)) { $extension = "_".$extension; }
-									$ext->splice($context, $extension, 0, new ext_macro('pinsets', $thisitem['pinsets_id'].','.$thisitem['addtocdr']));
+									$ext->splice($context, $extension, 1, new ext_macro('pinsets', $thisitem['pinsets_id'].','.$thisitem['addtocdr']));
 								}						
 								
 							}
