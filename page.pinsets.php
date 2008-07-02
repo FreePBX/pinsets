@@ -122,15 +122,11 @@ var theForm = document.edit;
 theForm.description.focus();
 
 function edit_onsubmit() {
-	setDestinations(edit,1);
 	
 	defaultEmptyOK = false;
 	if (!isAlphanumeric(theForm.description.value))
-		return warnInvalid(theForm.description, "Please enter a valid Description");
+		return warnInvalid(theForm.description, "<?php _("Please enter a valid Description") ?>");
 		
-	if (!validateDestinations(edit,1,true))
-		return false;
-	
 	return true;
 }
 
