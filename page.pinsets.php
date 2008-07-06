@@ -98,21 +98,21 @@ if ($action == 'delete') {
 
 	<tr>
 		<td><?php echo _("PIN Set Description:")?></td>
-		<td><input type="text" size=23 name="description" value="<?php echo (isset($thisItem['description']) ? $thisItem['description'] : ''); ?>"></td>
+		<td><input type="text" size=23 name="description" value="<?php echo (isset($thisItem['description']) ? $thisItem['description'] : ''); ?>" tabindex="<?php echo ++$tabindex;?>"></td>
 	</tr>
 	<tr>
 		<td><a href="#" class="info"><?php echo _("Record In CDR?:")?><span><?php echo _("Select this box if you would like to record the PIN in the call detail records when used")?></span></a></td>
-		<td><input type="checkbox" name="addtocdr" value="1" <?php echo (isset($thisItem['addtocdr']) && $thisItem['addtocdr'] == '1' ? 'CHECKED' : ''); ?>></td>
+		<td><input type="checkbox" name="addtocdr" value="1" <?php echo (isset($thisItem['addtocdr']) && $thisItem['addtocdr'] == '1' ? 'CHECKED' : ''); ?> tabindex="<?php echo ++$tabindex;?>"></td>
 	</tr>
 	<tr>
 		<td><a href="#" class="info"><?php echo _("PIN List:")?><span><?php echo _("Enter a list of one or more PINs.  One PIN per line.")?></span></a></td>
 		<td>
-			<textarea rows=15 cols=20 name="passwords"><?php echo (isset($thisItem['passwords']) ? $thisItem['passwords'] : ''); ?></textarea>
+			<textarea rows=15 cols=20 name="passwords" tabindex="<?php echo ++$tabindex;?>"><?php echo (isset($thisItem['passwords']) ? $thisItem['passwords'] : ''); ?></textarea>
 		</td>
 	</tr>
 
 	<tr>
-		<td colspan="2"><br><h6><input name="submit" type="submit" value="<?php echo _("Submit Changes")?>"></h6></td>		
+		<td colspan="2"><br><h6><input name="submit" type="submit" value="<?php echo _("Submit Changes")?>" tabindex="<?php echo ++$tabindex;?>"></h6></td>		
 	</tr>
 	</table>
 <script language="javascript">
