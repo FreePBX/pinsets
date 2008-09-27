@@ -50,8 +50,10 @@ function pinsets_get_config($engine) {
 				// write out a macro that handles the authenticate
 				$ext->add('macro-pinsets', 's', '', new ext_gotoif('${ARG2} = 1','cdr,1'));
 				$ext->add('macro-pinsets', 's', '', new ext_execif('$["${DB(AMPUSER/${AMPUSER}/pinless)}" != "NOPASSWD"]', 'Authenticate',$asterisk_conf['astetcdir'].'/pinset_${ARG1}'));
+				$ext->add('macro-pinsets', 's', '', new ext_execif('$["${DB(AMPUSER/${AMPUSER}/pinless)}" != "NOPASSWD"]', 'ResetCDR'));
 				// authenticate with the CDR option (a)
 				$ext->add('macro-pinsets', 'cdr', '', new ext_execif('$["${DB(AMPUSER/${AMPUSER}/pinless)}" != "NOPASSWD"]', 'Authenticate',$asterisk_conf['astetcdir'].'/pinset_${ARG1},a'));
+				$ext->add('macro-pinsets', 'cdr', '', new ext_execif('$["${DB(AMPUSER/${AMPUSER}/pinless)}" != "NOPASSWD"]', 'ResetCDR'));
 			}
 		break;
 	}
