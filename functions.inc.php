@@ -6,17 +6,14 @@
 class pinsets_conf {
 	// return an array of filenames to write
 	// files named like pinset_N
+	var $_pinsets = array();
+	
 	function get_filename() {
 		$files = array();
-		if (isset($this->_pinsets) && is_array($this->_pinsets)) {
-			foreach (array_keys($this->_pinsets) as $pinset) {
-				$files[] = 'pinset_'.$pinset;
-			}
-			return $files;
-		} else {
-			// jusr return an empty array
-			return array();
+		foreach (array_keys($this->_pinsets) as $pinset) {
+			$files[] = 'pinset_'.$pinset;
 		}
+		return $files;
 	}
 	
 	function addPinsets($setid, $pins) {
@@ -40,7 +37,7 @@ function pinsets_get_config($engine) {
 	global $pinsets_conf; // our pinsets object (created in retrieve_conf)
 	switch($engine) {
 		case "asterisk":
-			$allpinsets = pinsets_list();
+			$allpinsets = pinsets_list(true);
 			if(is_array($allpinsets)) {
 				foreach($allpinsets as $item) {
 					// write our own pin list files
@@ -63,7 +60,7 @@ function pinsets_hookGet_config($engine) {
 	global $ext;
 	switch($engine) {
 		case "asterisk":
-			$hooklist = pinsets_list();
+			$hooklist = pinsets_list(true);
 			if(is_array($hooklist)) {
 				foreach($hooklist as $thisitem) {
 					
@@ -108,12 +105,12 @@ function pinsets_hookGet_config($engine) {
 
 
 //get the existing meetme extensions
-function pinsets_list() {
+function pinsets_list($getAll=false) {
 	$results = sql("SELECT * FROM pinsets","getAll",DB_FETCHMODE_ASSOC);
 	if(is_array($results)){
 		foreach($results as $result){
 			// check to see if we have a dept match for the current AMP User.
-			if (checkDept($result['deptname'])){
+			if ($getAll || checkDept($result['deptname'])){
 				// return this item's dialplan destination, and the description
 				$allowed[] = $result;
 			}
