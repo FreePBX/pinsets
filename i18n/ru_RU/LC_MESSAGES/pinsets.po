@@ -1,10 +1,7 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# Copyright (C) 2008 PostMet GmbH
 # This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <ceo@postmet.com>, 2008.
+# Alexander Kozyrev <ceo@postmet.com>, 2008.
 #
-#, fuzzy
-
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.4\n"
@@ -17,7 +14,7 @@ msgstr ""
 "Content-Type: text/plain; charset=ISO-8859-5\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: functions.php:291
+#: functions.inc.php:291
 msgid "PIN Set"
 msgstr "Лист PIN-кодов"
 
@@ -26,8 +23,8 @@ msgid ""
 "Optional: Select a PIN set to use. If using this option, leave the Route "
 "Password field blank."
 msgstr ""
-"Опционально: выбрать лист PIN-кодов. Если используется эта опция - необходимо "
-"оставлять поле Пароль на маршруте пустым." 
+"Опционально: выбрать лист PIN-кодов. Если "
+"используется эта опция - необходимо оставлять поле Пароль на маршруте пустым."
 
 #: functions.inc.php:294
 msgid "None"
@@ -63,9 +60,10 @@ msgid ""
 "restricted features such as Outbound Routes. The PIN can also be added to "
 "the CDR record's 'accountcode' field."
 msgstr ""
-"Модуль списков PIN-кодов используется для организации доступа к специальным "
-"исходящим маршрутам с ограниченными правами. Сам набираемый PIN-код можно добавлять "
-"также в отчёт о звонках в специальное поле 'accountcode'."  
+"Модуль списков PIN-кодов используется для "
+"организации доступа к специальным исходящим маршрутам с ограниченными правами. Сам "
+"набираемый PIN-код можно добавлять также в отчёт "
+"о звонках в специальное поле 'accountcode'."
 
 #: page.pinsets.php:93
 msgid "Edit PIN Set"
@@ -88,7 +86,8 @@ msgid ""
 "Select this box if you would like to record the PIN in the call detail "
 "records when used"
 msgstr ""
-"Выберите эту опцию, если нужно записывать PIN в журнал звонков для детализации."
+"Выберите эту опцию, если нужно записывать PIN в "
+"журнал звонков для детализации."
 
 #: page.pinsets.php:108
 msgid "PIN List:"
@@ -98,5 +97,14 @@ msgstr "Список PIN:"
 msgid "Enter a list of one or more PINs.  One PIN per line."
 msgstr "Введите PIN-коды в список, по одному в строке."
 
+#: page.pinsets.php:115
 msgid "Submit Changes"
 msgstr "Применить изменения"
+
+#: page.pinsets.php:128
+msgid "Please enter a valid Description"
+msgstr "Укажите разрешенное описание"
+
+#: module.xml
+msgid "PIN Sets"
+msgstr "Листы PIN-кодов"
