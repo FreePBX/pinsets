@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-02-27 13:45+0100\n"
+"POT-Creation-Date: 2010-02-27 17:34+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -28,101 +28,79 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: pinsets/functions.inc.php:290
 msgid "PIN Set"
 msgstr ""
 
-#: pinsets/functions.inc.php:290
 msgid ""
 "Optional: Select a PIN set to use. If using this option, leave the Route "
 "Password field blank."
 msgstr ""
 
-#: pinsets/functions.inc.php:293
 msgid "None"
 msgstr ""
 
-#: pinsets/page.pinsets.php:50
 msgid "Add Password Set"
 msgstr ""
 
-#: pinsets/page.pinsets.php:63
 msgid "PIN Set "
 msgstr ""
 
-#: pinsets/page.pinsets.php:63
 msgid "deleted"
 msgstr ""
 
-#: pinsets/page.pinsets.php:76
 msgid "Delete PIN Set"
 msgstr ""
 
-#: pinsets/page.pinsets.php:81
 msgid "PIN Set:"
 msgstr ""
 
-#: pinsets/page.pinsets.php:81
 msgid "Add PIN Set"
 msgstr ""
 
-#: pinsets/page.pinsets.php:83
 msgid ""
 "PIN Sets are used to manage lists of PINs that can be used to access "
 "restricted features such as Outbound Routes. The PIN can also be added to "
 "the CDR record's 'accountcode' field."
 msgstr ""
 
-#: pinsets/page.pinsets.php:93
 msgid "Edit PIN Set"
 msgstr ""
 
-#: pinsets/page.pinsets.php:93
 msgid "New PIN Set"
 msgstr ""
 
-#: pinsets/page.pinsets.php:100
 msgid "PIN Set Description:"
 msgstr ""
 
-#: pinsets/page.pinsets.php:104
 msgid "Record In CDR?:"
 msgstr ""
 
-#: pinsets/page.pinsets.php:104
 msgid ""
 "Select this box if you would like to record the PIN in the call detail "
 "records when used"
 msgstr ""
 
-#: pinsets/page.pinsets.php:108
 msgid "PIN List:"
 msgstr ""
 
-#: pinsets/page.pinsets.php:108
 msgid "Enter a list of one or more PINs.  One PIN per line."
 msgstr ""
 
-#: pinsets/page.pinsets.php:115
 msgid "Submit Changes"
 msgstr ""
 
-#: pinsets/page.pinsets.php:128
 msgid "Please enter a valid Description"
 msgstr ""
 
-#: pinsets/pinsets.i18n.php:5 pinsets/pinsets.i18n.php:13
 msgid "PIN Sets"
 msgstr ""
 
-#: pinsets/pinsets.i18n.php:7
 msgid ""
 "Internal Options \n"
 "&\n"
 " Configuration"
 msgstr ""
 
-#: pinsets/pinsets.i18n.php:11
 msgid ""
 "Allow creation of lists of PINs (numbers for passwords) that can be used by "
 "other modules (eg, trunks)."
