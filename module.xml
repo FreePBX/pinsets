@@ -1,13 +1,14 @@
 <module>
 	<rawname>pinsets</rawname>
 	<name>PIN Sets</name>
-	<version>2.6.0.0</version>
+	<version>2.7.0.0</version>
 	<publisher>FreePBX</publisher>
 	<license>GPLv2+</license>
 	<type>setup</type>
 	<category>Internal Options &amp; Configuration</category>
 	<description>Allow creation of lists of PINs (numbers for passwords) that can be used by other modules (eg, trunks).</description>
 	<changelog>
+		*2.7.0.0* localizations
 		*2.6.0.0* misc
 		*2.5.0.1* #3240, #3258
 		*2.5.0* #2845, #2764 tabindex
@@ -25,6 +26,6 @@
 	<menuitems>
 		<pinsets>PIN Sets</pinsets>
 	</menuitems>
-	<location>release/2.6/pinsets-2.6.0.0.tgz</location>
-	<md5sum>93ac8f034d5b79b3595aced9ee132583</md5sum>
+	<location>release/2.7/pinsets-2.7.0.0.tgz</location>
+	<md5sum>8b4f9bb6b5e90f743b224b4d2e67c7f9</md5sum>
 </module>
