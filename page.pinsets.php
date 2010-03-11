@@ -130,10 +130,8 @@ function edit_onsubmit() {
 	return true;
 }
 
-
 -->
 </script>
-
 
 	</form>
 <?php		

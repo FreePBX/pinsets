@@ -60,49 +60,34 @@ function pinsets_hookGet_config($engine) {
 	global $ext;
 	switch($engine) {
 		case "asterisk":
-			$hooklist = pinsets_list(true);
-			if(is_array($hooklist)) {
-				foreach($hooklist as $thisitem) {
-					
-					// get the used_by field
-					if(empty($thisitem['used_by'])) {
-						$usedby = "";
-					} else {
-						$usedby = $thisitem['used_by'];
-					}
-					
-					// create an array from usedby
-					$arrUsedby = explode(',',$usedby);
-					
-					if(is_array($arrUsedby)){
-						foreach($arrUsedby as $strUsedby){
-							// if it's an outbound route
-							if(strpos($strUsedby,'routing_') !== false) {
-								$route = substr($strUsedby,8);
-								$context = 'outrt-'.$route;
-								
-								// get all the routes that are in this context
-								$routes = core_routing_getroutepatterns($route);
-
-								// we need to manipulate each route/extension
-								foreach($routes as $rt) {
-									//strip the pipe out as that's what we use for the dialplan extension
-									$extension = str_replace('|','',$rt);
-									// If there are any wildcards in there, add a _ to the start
-									if (preg_match("/\.|z|x|\[|\]/i", $extension)) { $extension = "_".$extension; }
-									$ext->splice($context, $extension, 1, new ext_macro('pinsets', $thisitem['pinsets_id'].','.$thisitem['addtocdr']));
-								}						
-								
-							}
-						}
-					}
-					
-				}
-			}
+      $usage_list = pinsets_list_usage('routing');
+      if (is_array($usage_list) && count($usage_list)) {
+			  $pinsets = pinsets_list(true);
+        $addtocdr = array();
+        foreach ($pinsets as $pinset) {
+          $addtocdr[$pinset['pinsets_id']] = $pinset['addtocdr'];
+        }
+        foreach ($usage_list as $thisroute) {
+          $context = 'outrt-'.$thisroute['foreign_id'];
+          $patterns = core_routing_getroutepatternsbyid($thisroute['foreign_id']);
+          foreach ($patterns as $pattern) {
+            $fpattern = core_routing_formatpattern($pattern);
+            $exten = $fpattern['dial_pattern'];
+            $ext->splice($context, $exten, 1, new ext_macro('pinsets', $thisroute['pinsets_id'].','.$addtocdr[$thisroute['pinsets_id']]));
+          }
+        }
+      }
 		break;
 	}
 }
 
+function pinsets_list_usage($dispname=true) {
+  $sql = 'SELECT * FROM `pinset_usage`';
+  if ($dispname !== true) {
+    $sql .= " WHERE `dispname` = '$dispname'";
+  }
+  return sql($sql,'getAll',DB_FETCHMODE_ASSOC);
+}
 
 //get the existing meetme extensions
 function pinsets_list($getAll=false) {
@@ -129,14 +114,14 @@ function pinsets_get($id){
 }
 
 function pinsets_del($id){
-	global $asterisk_conf;
+	global $amp_conf;
 	
-	$filename = $asterisk_conf['astetcdir'].'/pinset_'.$id;
+	$filename = $amp_conf['ASTETCDIR'].'/pinset_'.$id;
 	if (file_exists($filename)) {
 		unlink($filename);
 	}
-
 	$results = sql("DELETE FROM pinsets WHERE pinsets_id = '$id'","query");
+	$results = sql("DELETE FROM pinset_usage WHERE pinsets_id = '$id'","query");
 }
 
 function pinsets_add($post){
@@ -144,7 +129,7 @@ function pinsets_add($post){
 		return false;
 	extract($post);
 	$passwords = pinsets_clean($passwords);
-	if(empty($description)) $description = 'Unnamed';
+	if(empty($description)) $description = _('Unnamed');
 	$results = sql("INSERT INTO pinsets (description,passwords,addtocdr,deptname) values (\"$description\",\"$passwords\",\"$addtocdr\",\"$deptname\")");
 }
 
@@ -153,7 +138,7 @@ function pinsets_edit($id,$post){
 		return false;
 	extract($post);
 	$passwords = pinsets_clean($passwords);
-	if(empty($description)) $description = 'Unnamed';
+	if(empty($description)) $description = _('Unnamed');
 	$results = sql("UPDATE pinsets SET description = \"$description\", passwords = \"$passwords\", addtocdr = \"$addtocdr\", deptname = \"$deptname\" WHERE pinsets_id = \"$id\"");
 }
 
@@ -192,129 +177,74 @@ function pinsets_chk($post){
 }
 
 //removes a pinset from a route and shifts priority for all outbound routing pinsets
-function pinsets_adjustroute($route,$action,$routepinset='',$direction='',$newname='') {
-    $priority = (int)substr($route,0,3);
-    //create a selection of available pinsets
-    $pinsets = pinsets_list();
-	// loop through all the pinsets
-	if(is_array($pinsets)){
-		foreach($pinsets as $pinset) {
-				
-			// get the used_by field
-			if(empty($pinset['used_by'])) {
-				$usedby = "";
-			} else {
-				$usedby = $pinset['used_by'];
-			}
-					
-			// remove the target if it's already in this row's used_by field
-			//$usedby = str_replace("routing_{$route}","",$usedby);
-					
-			// create an array from usedby
-			$arrUsedby = explode(',',$usedby);
-			
-			for($i=0;$i<count($arrUsedby);$i++) {
-				if (substr($arrUsedby[$i],0,8)=='routing_') {
-                    switch($action){
-                        case 'delroute':
-                    		if ($arrUsedby[$i] == "routing_{$route}") {
-								unset($arrUsedby[$i]);
-		              		}
-                    		$usedbypriority = (int)substr($arrUsedby[$i],8,3);
-							$usedbyroute = substr($arrUsedby[$i],12);
-                    		if ($usedbypriority > $priority) {
-		                        $newpriority = str_pad($usedbypriority - 1, 3, "0", STR_PAD_LEFT);
-                        		$arrUsedby[$i] = 'routing_'.$newpriority.'-'.$usedbyroute;
-							}
-						break;
-                        case 'prioritizeroute';
-                        	$addpriority = ($direction=='up')?-1:1;
-                    		$usedbypriority = (int)substr($arrUsedby[$i],8,3);
-							$usedbyroute = substr($arrUsedby[$i],12);
-                    		if ($priority + $addpriority == $usedbypriority) {
-		                        $newpriority = str_pad($priority, 3, "0", STR_PAD_LEFT);
-                        		$arrUsedby[$i] = 'routing_'.$newpriority.'-'.$usedbyroute;
-							}
-                		    if ($arrUsedby[$i] == "routing_{$route}") {
-		                        $newpriority = str_pad($priority + $addpriority, 3, "0", STR_PAD_LEFT);
-                        		$arrUsedby[$i] = 'routing_'.$newpriority.'-'.$usedbyroute;
-		              		}
+function pinsets_adjustroute($route_id,$action,$routepinset='') {
+  global $db;
+  $dispname = 'routing';
+  $route_id = $db->escapeSimple($route_id);
+  $routepinset = $db->escapeSimple($routepinset);
+  //TODO: debug test for add if blank route_id comes in
+  if ($route_id == '') die_freepbx("got blank route_id in pinsets, action: $action");
 
-						break;
-                        case 'renameroute';
-                    		if ($arrUsedby[$i] == "routing_{$route}") {
-		                        $newpriority = str_pad($priority, 3, "0", STR_PAD_LEFT);
-                        		$arrUsedby[$i] = 'routing_'.$newpriority.'-'.$newname;
-		              		}
-						break;
-                        case 'editroute';
-                        	$usedbyroute = (int)substr($arrUsedby[$i],12);
-                    		if ($arrUsedby[$i] == "routing_{$route}") {
-								unset($arrUsedby[$i]);
-							}
-                        break;
-					}
-				}
-			}	
-            
-			// save the route in the selected pin
-			if ($routepinset == $pinset['pinsets_id'] && $action == 'editroute') {
-				$arrUsedby[] = 'routing_'.$route;
-			}
-
-			// remove any duplicates
-			$arrUsedby = array_values(array_unique($arrUsedby));
-				
-			// create a new string
-			$strUsedby = implode($arrUsedby,',');
-	
-			// Insure there's no leading or trailing commas
-			$strUsedby = trim ($strUsedby, ',');
-
-					
-			// store the used_by column in the DB
-			sql("UPDATE pinsets SET used_by = \"{$strUsedby}\" WHERE pinsets_id = \"{$pinset['pinsets_id']}\"");
-		}
-	}
+  switch ($action) {
+  case 'delroute':
+    sql('DELETE FROM pinset_usage WHERE foreign_id ='.q($route_id)." AND dispname = '$dispname'");
+    break;
+  case 'addroute';
+    if ($routepinset != '') {
+      sql("INSERT INTO pinset_usage (pinsets_id, dispname, foreign_id) VALUES ($routepinset, '$dispname', '$route_id')");
+    }
+    break;
+  case 'editroute';
+    if ($routepinset != '') {
+      sql("REPLACE INTO pinset_usage (pinsets_id, dispname, foreign_id) VALUES ($routepinset, '$dispname', '$route_id')");
+    } else {
+      sql('DELETE FROM pinset_usage WHERE foreign_id ='.q($route_id)." AND dispname = '$dispname'");
+    }
+    break;
+  }
 }
 
 // provide hook for routing
 function pinsets_hook_core($viewing_itemid, $target_menuid) {
+  global $db;
+
 	switch ($target_menuid) {
-		// only provide display for outbound routing
 		case 'routing':
 			//create a selection of available pinsets
 			$pinsets = pinsets_list();
-			$hookhtml = '
-				<tr>
-					<td><a href="#" class="info">'._("PIN Set").'<span>'._('Optional: Select a PIN set to use. If using this option, leave the Route Password field blank.').'</span></a>:</td>
-					<td>
-						<select name="pinsets">
-							<option value=>'._('None').'</option>
-			';
+      if ($viewing_itemid == '') {
+        $selected_pinset = '';
+      } else {
+        $selected_pinset = $db->getOne("SELECT pinsets_id FROM pinset_usage WHERE dispname='routing' AND foreign_id='".$db->escapeSimple($viewing_itemid)."'");
+        if(DB::IsError($results)) {
+          die_freepbx($results->getMessage());
+        }
+      }
 
-			if (is_array($pinsets))
-			{
-				foreach($pinsets as $item) {
-					if (isset($viewing_itemid) && $viewing_itemid <> '' && strpos($item['used_by'], "routing_{$viewing_itemid}") !== false) {
-						$selected = 'selected';
-					} else {
-						$selected = '';
-					}
-					$hookhtml .= "<option value={$item['pinsets_id']} ".$selected.">{$item['description']}</option>";
-				}
-			}
-			$hookhtml .= '
+			$hookhtml = '
+        <tr>
+          <td><a href="#" class="info">'._("PIN Set").'<span>'._('Optional: Select a PIN set to use. If using this option, leave the Route Password field blank.').'</span></a>:</td>
+          <td>
+            <select name="pinsets">
+              <option value=>'._('None').'</option>
+      ';
+      if (is_array($pinsets)) {
+        foreach($pinsets as $item) {
+          $selected = $selected_pinset == $item['pinsets_id'] ? 'selected' : '';
+          $hookhtml .= "<option value={$item['pinsets_id']} ".$selected.">{$item['description']}</option>";
+        }
+      }
+      $hookhtml .= '
 						</select>
 					</td>
 				</tr>
 			';
-			return $hookhtml;
-		break;
-		default:
-				return false;
-		break;
-	}
+      return $hookhtml;
+    break;
+    default:
+      return false;
+    break;
+  }
 }
 
 function pinsets_hookProcess_core($viewing_itemid, $request) {
@@ -326,28 +256,19 @@ function pinsets_hookProcess_core($viewing_itemid, $request) {
 	// this is really a crappy way to store things.  
 	// Any module that is hooked by pinsets when submitted will result in all the "used_by" fields being re-written
 	switch ($request['display']) {
-        case 'routing':
-		// if routing was using post for the form (incl delete), i wouldn't need all these conditions
-		//		if(isset($request['Submit']) || (isset($request['action']) && ($request['action'] == "delroute" || $request['action'] == "prioritizeroute" || $request['action'] == "renameroute"))) {        
+  case 'routing':
+    // if routing was using post for the form (incl delete), i wouldn't need all these conditions
+    //		if(isset($request['Submit']) || (isset($request['action']) && ($request['action'] == "delroute" || $request['action'] == "prioritizeroute" || $request['action'] == "renameroute"))) {        
 
-			$action = (isset($request['action']))?$request['action']:null;
-			$route = $viewing_itemid;
-			if (isset($request['reporoutekey']) && $action == 'prioritizeroute') {
-                $outbound_routes = core_routing_getroutenames();
-				$route = $outbound_routes[(int)$request['reporoutekey']][0];
-            }
-			if (isset($request['Submit']) ) {
-				$action = (isset($action))?$action:'editroute';
-        	}
-			if (isset($action)) {            
-            	$direction = (isset($request['reporoutedirection']))?$request['reporoutedirection']:null;
-                $newname = (isset($request['newroutename']))?$request['newroutename']:null;
-				pinsets_adjustroute($route,$action,$request['pinsets'],$direction,$newname);
-			}
-
-        break;
+    $action = (isset($request['action']))?$request['action']:null;
+    $route_id = $viewing_itemid;
+    if (isset($request['Submit']) ) {
+      $action = (isset($action))?$action:'editroute';
+    }
+    if (isset($action)) {            
+      pinsets_adjustroute($route_id,$action,$request['pinsets']);
+    }
+    break;
 	}
 }
-
-
 ?>
