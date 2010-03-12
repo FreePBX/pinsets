@@ -29,6 +29,7 @@ $sql = "CREATE TABLE IF NOT EXISTS pinset_usage (
 	pinsets_id INTEGER NOT NULL,
 	dispname VARCHAR( 30 ),
 	foreign_id VARCHAR( 30 )
+  PRIMARY KEY (`dispname`, `foreign_id`)
 )";
 
 $check = $db->query($sql);
@@ -39,7 +40,7 @@ if(DB::IsError($check)) {
 outn(_("checking if migration required.."));
 $sql = "SELECT `used_by` FROM pinsets";
 $check = $db->getRow($sql, DB_FETCHMODE_ASSOC);
-if(DB::IsError($check)) {
+if(!DB::IsError($check)) {
 	outn(_("migrating.."));
   /* We need to now migrate from from the old format of dispname_id where the only supported dispname
      so far has been "routing" and the "id" used was the imperfect nnn-name. As it truns out, it was
@@ -77,6 +78,7 @@ if(DB::IsError($check)) {
           $foreign_id = $parts[1];
         }
         if ($foreign_id === false) {
+	        out();
           out(_("FAILED migrating route $lookup NOT FOUND"));
 	        outn(_("continuing.."));
         } else {
