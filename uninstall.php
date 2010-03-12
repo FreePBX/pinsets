@@ -14,5 +14,8 @@ echo "dropping table pinsets..";
 sql('DROP TABLE IF EXISTS `pinsets`');
 echo "done<br>\n";
 
+echo "dropping table pinset_usage..";
+sql('DROP TABLE IF EXISTS `pinset_usage`');
+echo "done<br>\n";
 
 ?>
