@@ -17,7 +17,7 @@ if (! function_exists("outn")) {
 
 $autoincrement = (($amp_conf["AMPDBENGINE"] == "sqlite") || ($amp_conf["AMPDBENGINE"] == "sqlite3")) ? "AUTOINCREMENT":"AUTO_INCREMENT";
 
-$sql = "CREATE TABLE IF NOT EXISTS pinsets ( 
+$sql[] = "CREATE TABLE IF NOT EXISTS pinsets ( 
 	pinsets_id INTEGER NOT NULL PRIMARY KEY $autoincrement, 
 	passwords LONGTEXT, 
 	description VARCHAR( 50 ) , 
@@ -25,18 +25,19 @@ $sql = "CREATE TABLE IF NOT EXISTS pinsets (
 	deptname VARCHAR( 50 )
 )";
 
-$sql = "CREATE TABLE IF NOT EXISTS pinset_usage ( 
+$sql[] = "CREATE TABLE IF NOT EXISTS pinset_usage ( 
 	pinsets_id INTEGER NOT NULL,
 	dispname VARCHAR( 30 ),
-	foreign_id VARCHAR( 30 )
+	foreign_id VARCHAR( 30 ),
   PRIMARY KEY (`dispname`, `foreign_id`)
 )";
 
-$check = $db->query($sql);
-if(DB::IsError($check)) {
-        die_freepbx("Can not create `pinsets` table\n");
+foreach($sql as $q){
+	$check = $db->query($q);
+	if(DB::IsError($check)) {
+	  die_freepbx("Can not create pinsets tables\n");
+	}
 }
-
 outn(_("checking if migration required.."));
 $sql = "SELECT `used_by` FROM pinsets";
 $check = $db->getRow($sql, DB_FETCHMODE_ASSOC);
