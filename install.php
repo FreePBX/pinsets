@@ -35,7 +35,7 @@ $sql[] = "CREATE TABLE IF NOT EXISTS pinset_usage (
 foreach($sql as $q){
 	$check = $db->query($q);
 	if(DB::IsError($check)) {
-	  die_freepbx("Can not create pinsets tables\n");
+    die_freepbx("Can not create pinset tables\n".$check->getDebugInfo());
 	}
 }
 outn(_("checking if migration required.."));
