@@ -223,8 +223,8 @@ function pinsets_hook_core($viewing_itemid, $target_menuid) {
           $selected_pinset = $_SESSION['pinsetsAddRoute'];
         } else {
           $selected_pinset = $db->getOne("SELECT pinsets_id FROM pinset_usage WHERE dispname='routing' AND foreign_id='".$db->escapeSimple($viewing_itemid)."'");
-          if(DB::IsError($results)) {
-            die_freepbx($results->getMessage());
+          if(DB::IsError($selected_pinset)) {
+            die_freepbx($selected_pinset->getMessage());
           }
         }
       }
