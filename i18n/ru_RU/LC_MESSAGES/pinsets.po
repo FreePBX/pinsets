@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-01-29 15:07+0100\n"
+"POT-Creation-Date: 2010-06-22 19:14+0200\n"
 "PO-Revision-Date: 2008-10-13 15:07+0100\n"
 "Last-Translator: Alexander Kozyrev\n"
 "Language-Team: Russian\n"
@@ -14,97 +14,120 @@ msgstr ""
 "Content-Type: text/plain; charset=ISO-8859-5\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: functions.inc.php:291
+msgid "Unnamed"
+msgstr ""
+
 msgid "PIN Set"
 msgstr "Лист PIN-кодов"
 
-#: functions.inc.php:291
 msgid ""
 "Optional: Select a PIN set to use. If using this option, leave the Route "
 "Password field blank."
 msgstr ""
-"Опционально: выбрать лист PIN-кодов. Если "
-"используется эта опция - необходимо оставлять поле Пароль на маршруте пустым."
+"Опционально: выбрать лист PIN-кодов. Если используется эта опция - "
+"необходимо оставлять поле Пароль на маршруте пустым."
 
-#: functions.inc.php:294
 msgid "None"
 msgstr "Нет"
 
-#: page.pinsets.php:50
+msgid "checking if migration required.."
+msgstr ""
+
+msgid "migrating.."
+msgstr ""
+
+msgid "unknown error fetching table data"
+msgstr ""
+
+msgid "migration aborted"
+msgstr ""
+
+msgid "continuing.."
+msgstr ""
+
+msgid "done"
+msgstr ""
+
+msgid "dropping used_by field.."
+msgstr ""
+
+msgid "no used_by field???"
+msgstr ""
+
+msgid "ok"
+msgstr ""
+
+msgid "already done"
+msgstr ""
+
 msgid "Add Password Set"
 msgstr "Добавить лист PIN-кодов"
 
-#: page.pinsets.php:63
 msgid "PIN Set "
 msgstr "Лист PIN-кодов"
 
-#: page.pinsets.php:63
 msgid "deleted"
 msgstr "удалено"
 
-#: page.pinsets.php:76
 msgid "Delete PIN Set"
 msgstr "Удалить лист PIN-кодов"
 
-#: page.pinsets.php:81
 msgid "PIN Set:"
 msgstr "Набор PIN:"
 
-#: page.pinsets.php:81
 msgid "Add PIN Set"
 msgstr "Добавить лист PIN-кодов"
 
-#: page.pinsets.php:83
 msgid ""
 "PIN Sets are used to manage lists of PINs that can be used to access "
 "restricted features such as Outbound Routes. The PIN can also be added to "
 "the CDR record's 'accountcode' field."
 msgstr ""
-"Модуль списков PIN-кодов используется для "
-"организации доступа к специальным исходящим маршрутам с ограниченными правами. Сам "
-"набираемый PIN-код можно добавлять также в отчёт "
-"о звонках в специальное поле 'accountcode'."
+"Модуль списков PIN-кодов используется для организации доступа к специальным "
+"исходящим маршрутам с ограниченными правами. Сам набираемый PIN-код можно "
+"добавлять также в отчёт о звонках в специальное поле 'accountcode'."
 
-#: page.pinsets.php:93
 msgid "Edit PIN Set"
 msgstr "Изменить лист PIN-кодов"
 
-#: page.pinsets.php:93
 msgid "New PIN Set"
 msgstr "Новый лист PIN-кодов"
 
-#: page.pinsets.php:100
 msgid "PIN Set Description:"
 msgstr "Описание:"
 
-#: page.pinsets.php:104
 msgid "Record In CDR?:"
 msgstr "Записывать в CDR?"
 
-#: page.pinsets.php:104
 msgid ""
 "Select this box if you would like to record the PIN in the call detail "
 "records when used"
 msgstr ""
-"Выберите эту опцию, если нужно записывать PIN в "
-"журнал звонков для детализации."
+"Выберите эту опцию, если нужно записывать PIN в журнал звонков для "
+"детализации."
 
-#: page.pinsets.php:108
 msgid "PIN List:"
 msgstr "Список PIN:"
 
-#: page.pinsets.php:108
 msgid "Enter a list of one or more PINs.  One PIN per line."
 msgstr "Введите PIN-коды в список, по одному в строке."
 
-#: page.pinsets.php:115
 msgid "Submit Changes"
 msgstr "Применить изменения"
 
-#: page.pinsets.php:128
 msgid "Please enter a valid Description"
 msgstr "Укажите разрешенное описание"
 
-#: module.xml
 msgid "PIN Sets"
 msgstr "Листы PIN-кодов"
+
+msgid ""
+"Internal Options \n"
+"&\n"
+" Configuration"
+msgstr ""
+
+msgid ""
+"Allow creation of lists of PINs (numbers for passwords) that can be used by "
+"other modules (eg, trunks)."
+msgstr ""
