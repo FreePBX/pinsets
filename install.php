@@ -39,7 +39,7 @@ foreach($sql as $q){
 	}
 }
 outn(_("checking if migration required.."));
-$sql = "SELECT `used_by` FROM pinsets";
+$sql = "SELECT `used_by` FROM pinsets WHERE used_by != ''";
 $check = $db->getRow($sql, DB_FETCHMODE_ASSOC);
 if(!DB::IsError($check)) {
 	outn(_("migrating.."));
