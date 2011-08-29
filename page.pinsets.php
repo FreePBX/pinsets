@@ -43,8 +43,6 @@ if(isset($_POST['action'])) {
 $pinsetss = pinsets_list();
 ?>
 
-</div> <!-- end content div so we can display rnav properly-->
-
 <!-- right side menu -->
 <div class="rnav"><ul>
     <li><a id="<?php echo ($itemid=='' ? 'current':'') ?>" href="config.php?display=<?php echo urlencode($dispnum)?>"><?php echo _("Add Password Set")?></a></li>
@@ -56,8 +54,6 @@ if (isset($pinsetss)) {
 }
 ?>
 </ul></div>
-
-<div class="content">
 <?php
 if ($action == 'delete') {
 	echo '<br><h3>'._("PIN Set ").' '.$itemid.' '._("deleted").'!</h3>';
