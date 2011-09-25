@@ -1,63 +1,79 @@
-# Hebrew version for PIN Sets FreePBX Module.
-# Copyright (C) 2006
-# This file is distributed under the same license as the PACKAGE package.
-# Shimi <shimi@shimi.net>, 2006.
+# This file is part of FreePBX.
 #
-#, fuzzy
+#    FreePBX is free software: you can redistribute it and/or modify
+#    it under the terms of the GNU General Public License as published by
+#    the Free Software Foundation, either version 2 of the License, or
+#    (at your option) any later version.
+#
+#    FreePBX is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    GNU General Public License for more details.
+#
+#    You should have received a copy of the GNU General Public License
+#    along with FreePBX.  If not, see <http://www.gnu.org/licenses/>.
+#
+# FreePBX language template for printextensions
+# Copyright (C) 2008, 2009, 2010, 2011 Bandwith.com
+# Hebrew version for PIN Sets FreePBX Module.
+# Copyright (C) 2011
+# This file is distributed under the same license as the PACKAGE package.
+# Isaac Gal <gal@allegronet.co.il>, 2011.
+
 msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX 2.2.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2010-06-22 19:14+0200\n"
 "PO-Revision-Date: 2006-10-17 17:30+0300\n"
-"Last-Translator: Shimi <shimi@shimi.net>\n"
+"Last-Translator: Isaac Gal <gal@allegronet.co.il>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
 msgid "Unnamed"
-msgstr ""
+msgstr "ללא שם"
 
 msgid "PIN Set"
-msgstr ""
+msgstr "סט סיסמאות"
 
 msgid ""
 "Optional: Select a PIN set to use. If using this option, leave the Route "
 "Password field blank."
-msgstr ""
+msgstr "אופציונאלי: בחר בסט הסיסמאות, כאשר משתמשים בתכונה זו, יש להשאיר את סיסמת הניתוב ריקה"
 
 msgid "None"
-msgstr ""
+msgstr "ללא"
 
 msgid "checking if migration required.."
-msgstr ""
+msgstr "בודק האם נדרשת מיגרציה"
 
 msgid "migrating.."
-msgstr ""
+msgstr "מבצע מיגרציה"
 
 msgid "unknown error fetching table data"
-msgstr ""
+msgstr "תקלה לא ידוע בקריאת בסיס הנתונים"
 
 msgid "migration aborted"
-msgstr ""
+msgstr "המיגרציה בוטלה"
 
 msgid "continuing.."
-msgstr ""
+msgstr "ממשיך..."
 
 msgid "done"
-msgstr ""
+msgstr "הסתיים"
 
 msgid "dropping used_by field.."
-msgstr ""
+msgstr "מוחק את ערכי"
 
 msgid "no used_by field???"
-msgstr ""
+msgstr "לא קיימים ערכים ב"
 
 msgid "ok"
-msgstr ""
+msgstr "טוב"
 
 msgid "already done"
-msgstr ""
+msgstr "כבר בוצע"
 
 msgid "Add Password Set"
 msgstr "הוסף סט סיסמאות"
@@ -69,13 +85,13 @@ msgid "deleted"
 msgstr "נמחק"
 
 msgid "Delete PIN Set"
-msgstr "מחק סט סיסמא"
+msgstr "מחק סט סיסמאות"
 
 msgid "PIN Set:"
-msgstr "סט סיסמא:"
+msgstr "סט סיסמאות:"
 
 msgid "Add PIN Set"
-msgstr "הוסף סט סיסמא"
+msgstr "הוסף סט סיסמאות"
 
 msgid ""
 "PIN Sets are used to manage lists of PINs that can be used to access "
@@ -111,21 +127,26 @@ msgid "Enter a list of one or more PINs.  One PIN per line."
 msgstr "הכנס רשימה של סיסמא אחת או יותר. סיסמא אחת בכל שורה."
 
 msgid "Submit Changes"
-msgstr ""
+msgstr "הפעל שינויים"
 
 msgid "Please enter a valid Description"
-msgstr ""
+msgstr "נא ציין תיאור"
 
 msgid "PIN Sets"
-msgstr ""
+msgstr "סט סיסמאות"
 
 msgid ""
 "Internal Options \n"
 "&\n"
 " Configuration"
 msgstr ""
+"תוכנה פנימית \n"
+"&\n"
+" קונפיגורציה"
 
 msgid ""
 "Allow creation of lists of PINs (numbers for passwords) that can be used by "
 "other modules (eg, trunks)."
-msgstr ""
+msgstr 
+"מאפשר יצירת סטים של סיסמאות שניתנים לשימוש"
+ "על ידי מודלים אחרים כגון (ניתוב שיחות יוצאות וכד)"
