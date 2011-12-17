@@ -1,4 +1,5 @@
 <?php /* $Id */
+if (!defined('FREEPBX_IS_AUTH')) { die('No direct script access allowed'); }
 
 // a class for generating passwdfile
 // retrieve_conf will create an object of and <modulename>_conf classes,
