@@ -275,8 +275,8 @@ function pinsets_hookProcess_core($viewing_itemid, $request) {
     // $action won't be set on the redirect but pinsetsAddRoute will be in the session
     //
     if (!$action && isset($_SESSION['pinsetsAddRoute']) && $_SESSION['pinsetsAddRoute'] != '') {
-      unset($_SESSION['pinsetsAddRoute']);
       pinsets_adjustroute($route_id,'delayed_insert_route',$_SESSION['pinsetsAddRoute']);
+      unset($_SESSION['pinsetsAddRoute']);
     } elseif ($action){
       pinsets_adjustroute($route_id,$action,$request['pinsets']);
     }
