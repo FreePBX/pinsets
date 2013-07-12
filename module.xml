@@ -19,9 +19,9 @@
 	<menuitems>
 		<pinsets>PIN Sets</pinsets>
 	</menuitems>
-	<location>release/2.11/pinsets-2.11.0.0.tgz</location>
+	<location>release/2.11/pinsets-2.11.0.1.tgz</location>
 	<methods>
 		<get_config pri="120">pinsets_get_config_hook_core</get_config>
 	</methods>
-	<md5sum>6b83c6f4633825995393facdb6f1ce54</md5sum>
+	<md5sum>7b1f3c1cd25ea74837a7a20034a2a416</md5sum>
 </module>
