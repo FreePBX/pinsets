@@ -196,7 +196,9 @@ function pinsets_adjustroute($route_id,$action,$routepinset='') {
     }
     break;
   case 'delayed_insert_route';
-    sql("INSERT INTO pinset_usage (pinsets_id, dispname, foreign_id) VALUES ($routepinset, '$dispname', '$route_id')");
+    if ($routepinset != '') {
+		sql("INSERT INTO pinset_usage (pinsets_id, dispname, foreign_id) VALUES ($routepinset, '$dispname', '$route_id')");
+    }
     break;
   case 'editroute';
     if ($routepinset != '') {
@@ -235,7 +237,7 @@ function pinsets_hook_core($viewing_itemid, $target_menuid) {
           <td><a href="#" class="info">'._("PIN Set").'<span>'._('Optional: Select a PIN set to use. If using this option, leave the Route Password field blank.').'</span></a>:</td>
           <td>
             <select name="pinsets">
-              <option value=>'._('None').'</option>
+              <option value="">'._('None').'</option>
       ';
       if (is_array($pinsets)) {
         foreach($pinsets as $item) {
