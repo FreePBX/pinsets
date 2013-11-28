@@ -18,4 +18,4 @@
 	</menuitems>
 	<location>release/2.10/pinsets-2.10.0.1.tgz</location>
 	<md5sum>575e139eb2669f486fd549402e61edb8</md5sum>
-</module>
+<supported><version>2.10</version></supported></module>
