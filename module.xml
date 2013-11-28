@@ -23,4 +23,4 @@
 		<get_config pri="120">pinsets_get_config_hook_core</get_config>
 	</methods>
 	<md5sum>6b83c6f4633825995393facdb6f1ce54</md5sum>
-</module>
+<supported><version>2.11</version></supported></module>
