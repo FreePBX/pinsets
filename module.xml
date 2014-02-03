@@ -1,13 +1,13 @@
 <module>
-	<rawname>pinsets</rawname>
-	<repo>standard</repo>
-	<name>PIN Sets</name>
-	<version>2.11.0.1</version>
-	<publisher>FreePBX</publisher>
-	<license>GPLv2+</license>
-	<category>Settings</category>
-	<description>Allow creation of lists of PINs (numbers for passwords) that can be used by other modules (eg, trunks).</description>
-	<changelog>
+  <rawname>pinsets</rawname>
+  <repo>standard</repo>
+  <name>PIN Sets</name>
+  <version>2.11.0.1</version>
+  <publisher>FreePBX</publisher>
+  <license>GPLv2+</license>
+  <category>Settings</category>
+  <description>Allow creation of lists of PINs (numbers for passwords) that can be used by other modules (eg, trunks).</description>
+  <changelog>
 		*2.11.0.1* #6653
 		*2.11.0.0* method priority for pinset pro
 		*2.10.0.2* #5597
@@ -16,12 +16,15 @@
 		*2.9.0.1* removed duplicate functions
 		*2.9.0.0* 2.9 Update
 	</changelog>
-	<menuitems>
-		<pinsets>PIN Sets</pinsets>
-	</menuitems>
-	<location>release/2.11/pinsets-2.11.0.1.tgz</location>
-	<methods>
-		<get_config pri="120">pinsets_get_config_hook_core</get_config>
-	</methods>
-	<md5sum>7b1f3c1cd25ea74837a7a20034a2a416</md5sum>
+  <menuitems>
+    <pinsets>PIN Sets</pinsets>
+  </menuitems>
+  <location>release/2.11/pinsets-2.11.0.1.tgz</location>
+  <methods>
+    <get_config pri="120">pinsets_get_config_hook_core</get_config>
+  </methods>
+  <md5sum>7b1f3c1cd25ea74837a7a20034a2a416</md5sum>
+  <supported>
+    <version>2.10</version>
+  </supported>
 </module>
