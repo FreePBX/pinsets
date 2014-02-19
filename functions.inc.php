@@ -1,6 +1,20 @@
 <?php /* $Id */
 if (!defined('FREEPBX_IS_AUTH')) { die('No direct script access allowed'); }
 
+// Copyright (c) 2004 Coalescent Systems Inc. (info@coalescentsystems.ca)
+// Copyright (c) 2014 Schmoozecom INC
+// Copyright (c) 2014 Rob Thomas <xrobau@gmail.com>
+//
+// This program is free software; you can redistribute it and/or
+// modify it under the terms of the GNU General Public License
+// as published by the Free Software Foundation; either version 3
+// of the License, or (at your option) any later version.
+//
+// This program is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU General Public License for more details.
+
 // a class for generating passwdfile
 class pinsets_conf {
 	// return an array of filenames to write
