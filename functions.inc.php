@@ -2,12 +2,20 @@
 if (!defined('FREEPBX_IS_AUTH')) { die('No direct script access allowed'); }
 
 // a class for generating passwdfile
-// retrieve_conf will create an object of and <modulename>_conf classes,
-// which can be used in <modulename>_get_conf below.
 class pinsets_conf {
 	// return an array of filenames to write
 	// files named like pinset_N
 	var $_pinsets = array();
+
+	private static $obj;
+
+	// FreePBX magic ::create() call
+	public static function create() {
+		if (!isset(self::$obj))
+			self::$obj = new pinsets_conf();
+
+		return self::$obj;
+	}
 	
 	function get_filename() {
 		$files = array();
@@ -35,7 +43,9 @@ class pinsets_conf {
 function pinsets_get_config($engine) {
 	global $ext;  // is this the best way to pass this?
 	global $asterisk_conf;
-	global $pinsets_conf; // our pinsets object (created in retrieve_conf)
+
+	$pinsets_conf = pinsets_conf::create();
+
 	switch($engine) {
 		case "asterisk":
 			$allpinsets = pinsets_list(true);
