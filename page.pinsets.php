@@ -124,6 +124,10 @@ theForm.description.focus();
 function edit_onsubmit() {
 	
 	defaultEmptyOK = false;
+	var sizeDisplayName = "<?php echo pinsets_get_field_size('description', 50); ?>";
+	if (!isCorrectLength(theForm.description.value, sizeDisplayName))
+                return warnInvalid(theForm.description, "<?php echo _('The PIN Set Description provided is too long.'); ?>")
+
 	if (!isAlphanumeric(theForm.description.value))
 		return warnInvalid(theForm.description, "<?php _("Please enter a valid Description") ?>");
 		
