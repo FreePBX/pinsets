@@ -1,20 +1,6 @@
 <?php /* $Id */
 if (!defined('FREEPBX_IS_AUTH')) { die('No direct script access allowed'); }
 
-// Copyright (c) 2004 Coalescent Systems Inc. (info@coalescentsystems.ca)
-// Copyright (c) 2014 Schmoozecom INC
-// Copyright (c) 2014 Rob Thomas <xrobau@gmail.com>
-//
-// This program is free software; you can redistribute it and/or
-// modify it under the terms of the GNU General Public License
-// as published by the Free Software Foundation; either version 3
-// of the License, or (at your option) any later version.
-//
-// This program is distributed in the hope that it will be useful,
-// but WITHOUT ANY WARRANTY; without even the implied warranty of
-// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-// GNU General Public License for more details.
-
 isset($_REQUEST['action'])?$action = $_REQUEST['action']:$action='';
 
 //the item we are currently displaying
@@ -62,7 +48,7 @@ if (isset($pinsetss)) {
 if ($action == 'delete') {
 	echo '<br><h3>'._("PIN Set ").' '.$itemid.' '._("deleted").'!</h3>';
 } else {
-	if ($itemid){ 
+	if ($itemid){
 		//get details for this time condition
 		$thisItem = pinsets_get($itemid);
 	}
@@ -75,11 +61,11 @@ if ($action == 'delete') {
 				<input type=\"hidden\" name=\"action\" value=\"delete\">
 				<input type=submit value=\""._("Delete PIN Set")."\">
 			</form>";
-	
+
 ?>
 
 	<h2><?php echo ($itemid ? _("PIN Set:")." ". $itemid : _("Add PIN Set")); ?></h2>
-	
+
 	<p><?php echo ($itemid ? '' : _("PIN Sets are used to manage lists of PINs that can be used to access restricted features such as Outbound Routes. The PIN can also be added to the CDR record's 'accountcode' field.")); ?></p>
 
 <?php		if ($itemid){  echo $delButton; 	} ?>
@@ -88,7 +74,7 @@ if ($action == 'delete') {
 	<input type="hidden" name="display" value="<?php echo $dispnum?>">
 	<input type="hidden" name="action" value="<?php echo ($itemid ? 'edit' : 'add') ?>">
 	<input type="hidden" name="deptname" value="<?php echo $_SESSION["AMP_user"]->_deptname ?>">
-	
+
 	<table>
 	<tr><td colspan="2"><h5><?php echo ($itemid ? _("Edit PIN Set") : _("New PIN Set")) ?><hr></h5></td></tr>
 
@@ -112,7 +98,7 @@ if ($action == 'delete') {
 	</tr>
 
 	<tr>
-		<td colspan="2"><br><h6><input name="submit" type="submit" value="<?php echo _("Submit Changes")?>" tabindex="<?php echo ++$tabindex;?>"></h6></td>		
+		<td colspan="2"><br><h6><input name="submit" type="submit" value="<?php echo _("Submit Changes")?>" tabindex="<?php echo ++$tabindex;?>"></h6></td>
 	</tr>
 	</table>
 <script language="javascript">
@@ -122,11 +108,18 @@ var theForm = document.edit;
 theForm.description.focus();
 
 function edit_onsubmit() {
-	
+
 	defaultEmptyOK = false;
+
+	<?php if (function_exists('module_get_field_size')) { ?>
+		var sizeDisplayName = "<?php echo module_get_field_size('pinsets', 'description', 50); ?>";
+		if (!isCorrectLength(theForm.description.value, sizeDisplayName))
+			return warnInvalid(theForm.description, "<?php echo _('The PIN Set Description provided is too long.'); ?>")
+	<?php } ?>
+	
 	if (!isAlphanumeric(theForm.description.value))
 		return warnInvalid(theForm.description, "<?php _("Please enter a valid Description") ?>");
-		
+
 	return true;
 }
 
@@ -134,6 +127,6 @@ function edit_onsubmit() {
 </script>
 
 	</form>
-<?php		
+<?php
 } //end if action == delete
 ?>
