@@ -53,9 +53,9 @@ if ($action == 'delete') {
 		$thisItem = pinsets_get($itemid);
 	}
 
-	$delURL = $_SERVER['PHP_SELF'].'?'.$_SERVER['QUERY_STRING'].'&action=delete';
+	$delURL = '?'.$_SERVER['QUERY_STRING'].'&action=delete';
 	$delButton = "
-			<form name=delete action=\"{$_SERVER['PHP_SELF']}\" method=POST>
+			<form name=delete action=\"\" method=POST>
 				<input type=\"hidden\" name=\"display\" value=\"{$dispnum}\">
 				<input type=\"hidden\" name=\"itemid\" value=\"{$itemid}\">
 				<input type=\"hidden\" name=\"action\" value=\"delete\">
@@ -70,7 +70,7 @@ if ($action == 'delete') {
 
 <?php		if ($itemid){  echo $delButton; 	} ?>
 
-<form autocomplete="off" name="edit" action="<?php $_SERVER['PHP_SELF'] ?>" method="post" onsubmit="return edit_onsubmit();">
+<form autocomplete="off" name="edit" action="" method="post" onsubmit="return edit_onsubmit();">
 	<input type="hidden" name="display" value="<?php echo $dispnum?>">
 	<input type="hidden" name="action" value="<?php echo ($itemid ? 'edit' : 'add') ?>">
 	<input type="hidden" name="deptname" value="<?php echo $_SESSION["AMP_user"]->_deptname ?>">
@@ -116,7 +116,7 @@ function edit_onsubmit() {
 		if (!isCorrectLength(theForm.description.value, sizeDisplayName))
 			return warnInvalid(theForm.description, "<?php echo _('The PIN Set Description provided is too long.'); ?>")
 	<?php } ?>
-	
+
 	if (!isAlphanumeric(theForm.description.value))
 		return warnInvalid(theForm.description, "<?php _("Please enter a valid Description") ?>");
 
