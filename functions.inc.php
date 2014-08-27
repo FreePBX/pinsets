@@ -45,56 +45,45 @@ class pinsets_conf {
 
 /* 	Generates passwd files for pinsets
 	We call this with retrieve_conf
-*/
+ */
 function pinsets_get_config($engine) {
 	global $ext;  // is this the best way to pass this?
 	global $asterisk_conf;
 
 	$pinsets_conf = pinsets_conf::create();
 
-	switch($engine) {
-		case "asterisk":
-			$allpinsets = pinsets_list(true);
-			if(is_array($allpinsets)) {
-				foreach($allpinsets as $item) {
-					// write our own pin list files
-					$pinsets_conf->addPinsets($item['pinsets_id'],$item['passwords']);
-				}
-				
-				// write out a macro that handles the authenticate
-				$ext->add('macro-pinsets', 's', '', new ext_gotoif('${ARG2} = 1','cdr,1'));
-				$ext->add('macro-pinsets', 's', '', new ext_execif('$["${DB(AMPUSER/${AMPUSER}/pinless)}" != "NOPASSWD"]', 'Authenticate',$asterisk_conf['astetcdir'].'/pinset_${ARG1}'));
-				$ext->add('macro-pinsets', 's', '', new ext_execif('$["${DB(AMPUSER/${AMPUSER}/pinless)}" != "NOPASSWD"]', 'ResetCDR'));
-				// authenticate with the CDR option (a)
-				$ext->add('macro-pinsets', 'cdr', '', new ext_execif('$["${DB(AMPUSER/${AMPUSER}/pinless)}" != "NOPASSWD"]', 'Authenticate',$asterisk_conf['astetcdir'].'/pinset_${ARG1},a'));
-				$ext->add('macro-pinsets', 'cdr', '', new ext_execif('$["${DB(AMPUSER/${AMPUSER}/pinless)}" != "NOPASSWD"]', 'ResetCDR'));
-			}
-		break;
-	}
-}
+	$allpinsets = pinsets_list(true);
+	if(is_array($allpinsets)) {
+		foreach($allpinsets as $item) {
+			// write our own pin list files
+			$pinsets_conf->addPinsets($item['pinsets_id'],$item['passwords']);
+		}
 
-function pinsets_hookGet_config($engine) {
-	global $ext;
-	switch($engine) {
-		case "asterisk":
-      $usage_list = pinsets_list_usage('routing');
-      if (is_array($usage_list) && count($usage_list)) {
-			  $pinsets = pinsets_list(true);
-        $addtocdr = array();
-        foreach ($pinsets as $pinset) {
-          $addtocdr[$pinset['pinsets_id']] = $pinset['addtocdr'];
-        }
-        foreach ($usage_list as $thisroute) {
-          $context = 'outrt-'.$thisroute['foreign_id'];
-          $patterns = core_routing_getroutepatternsbyid($thisroute['foreign_id']);
-          foreach ($patterns as $pattern) {
-            $fpattern = core_routing_formatpattern($pattern);
-            $exten = $fpattern['dial_pattern'];
-            $ext->splice($context, $exten, 1, new ext_macro('pinsets', $thisroute['pinsets_id'].','.$addtocdr[$thisroute['pinsets_id']]));
-          }
-        }
-      }
-		break;
+		// write out a macro that handles the authenticate
+		$ext->add('macro-pinsets', 's', '', new ext_gotoif('${ARG2} = 1','cdr,1'));
+		$ext->add('macro-pinsets', 's', '', new ext_execif('$["${DB(AMPUSER/${AMPUSER}/pinless)}" != "NOPASSWD"]', 'Authenticate',$asterisk_conf['astetcdir'].'/pinset_${ARG1}'));
+		$ext->add('macro-pinsets', 's', '', new ext_execif('$["${DB(AMPUSER/${AMPUSER}/pinless)}" != "NOPASSWD"]', 'ResetCDR'));
+		// authenticate with the CDR option (a)
+		$ext->add('macro-pinsets', 'cdr', '', new ext_execif('$["${DB(AMPUSER/${AMPUSER}/pinless)}" != "NOPASSWD"]', 'Authenticate',$asterisk_conf['astetcdir'].'/pinset_${ARG1},a'));
+		$ext->add('macro-pinsets', 'cdr', '', new ext_execif('$["${DB(AMPUSER/${AMPUSER}/pinless)}" != "NOPASSWD"]', 'ResetCDR'));
+	}
+
+	$usage_list = pinsets_list_usage('routing');
+	if (is_array($usage_list) && count($usage_list)) {
+		$pinsets = pinsets_list(true);
+		$addtocdr = array();
+		foreach ($pinsets as $pinset) {
+			$addtocdr[$pinset['pinsets_id']] = $pinset['addtocdr'];
+		}
+		foreach ($usage_list as $thisroute) {
+			$context = 'outrt-'.$thisroute['foreign_id'];
+			$patterns = core_routing_getroutepatternsbyid($thisroute['foreign_id']);
+			foreach ($patterns as $pattern) {
+				$fpattern = core_routing_formatpattern($pattern);
+				$exten = $fpattern['dial_pattern'];
+				$ext->splice($context, $exten, 1, new ext_macro('pinsets', $thisroute['pinsets_id'].','.$addtocdr[$thisroute['pinsets_id']]));
+			}
+		}
 	}
 }
 
