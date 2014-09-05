@@ -1,130 +1,137 @@
 # Copyright (C) 2008 PostMet GmbH
 # This file is distributed under the same license as the PACKAGE package.
-# Alexander Kozyrev <ceo@postmet.com>, 2008.
+# Alexander Kozyrev <ceo@postmet.com>, 2012.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-09-23 09:52+0000\n"
-"PO-Revision-Date: 2008-10-13 15:07+0100\n"
-"Last-Translator: Alexander Kozyrev\n"
-"Language-Team: Russian\n"
+"POT-Creation-Date: 2012-10-30 09:52+0000\n"
+"PO-Revision-Date: 2014-02-28 04:51+0200\n"
+"Last-Translator: Andrew <andrew.nagy@the159.com>\n"
+"Language-Team: Russian <http://example.com/projects/freepbx-211/pinsets/ru/>"
+"\n"
+"Language: ru_RU\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=ISO-8859-5\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<="
+"4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 1.9-dev\n"
 
 msgid "Unnamed"
-msgstr ""
+msgstr "–ë–µ–∑ –Ω–∞–∑–≤–∞–Ω–∏—è"
 
 msgid "PIN Set"
-msgstr "ªÿ·‚ PIN-⁄ﬁ‘ﬁ“"
+msgstr "–õ–∏—Å—Ç PIN-–∫–æ–¥–æ–≤"
 
 msgid ""
 "Optional: Select a PIN set to use. If using this option, leave the Route "
 "Password field blank."
 msgstr ""
-"æﬂÊÿﬁ›–€Ï›ﬁ: “Î—‡–‚Ï €ÿ·‚ PIN-⁄ﬁ‘ﬁ“. µ·€ÿ ÿ·ﬂﬁ€Ï◊„’‚·Ô Ì‚– ﬁﬂÊÿÔ - "
-"›’ﬁ—Âﬁ‘ÿ‹ﬁ ﬁ·‚–“€Ô‚Ï ﬂﬁ€’ ø–‡ﬁ€Ï ›– ‹–‡Ë‡„‚’ ﬂ„·‚Î‹."
+"–û–ø—Ü–∏–æ–Ω–∞–ª—å–Ω–æ: –≤—ã–±—Ä–∞—Ç—å –ª–∏—Å—Ç PIN-–∫–æ–¥–æ–≤. –ï—Å–ª–∏ –∏—Å–ø–æ–ª—å–∑—É–µ—Ç—Å—è —ç—Ç–∞ –æ–ø—Ü–∏—è - "
+"–Ω–µ–æ–±—Ö–æ–¥–∏–º–æ –æ—Å—Ç–∞–≤–ª—è—Ç—å –ø–æ–ª–µ –ü–∞—Ä–æ–ª—å –Ω–∞ –º–∞—Ä—à—Ä—É—Ç–µ –ø—É—Å—Ç—ã–º."
 
 msgid "None"
-msgstr "Ω’‚"
+msgstr "–ù–µ—Ç"
 
 msgid "checking if migration required.."
-msgstr ""
+msgstr "–ø—Ä–æ–≤–µ—Ä—è–µ—Ç—Å—è –Ω–µ–æ–±—Ö–æ–¥–∏–º–æ—Å—Ç—å –ø–µ—Ä–µ–Ω–æ—Å–∞ –¥–∞–Ω–Ω—ã—Ö.."
 
 msgid "migrating.."
-msgstr ""
+msgstr "–ø–µ—Ä–µ–Ω–æ—Å–∏–º.."
 
 msgid "unknown error fetching table data"
-msgstr ""
+msgstr "–ø—Ä–æ–∏–∑–æ—à–ª–∞ –Ω–µ–ø–æ–Ω—è—Ç–Ω–∞—è –æ—à–∏–±–∫–∞ –ø—Ä–∏ –ø–æ–ø—ã—Ç–∫–µ –∞–Ω–∞–ª–∏–∑–∞ –¥–∞–Ω–Ω—ã—Ö —Ç–∞–±–ª–∏—Ü—ã"
 
 msgid "migration aborted"
-msgstr ""
+msgstr "–ø–µ—Ä–µ–Ω–æ—Å –æ—Ç–º–µ–Ω—ë–Ω"
 
 msgid "continuing.."
-msgstr ""
+msgstr "–ø—Ä–æ–¥–æ–ª–∂–∞–µ–º.."
 
 msgid "done"
-msgstr ""
+msgstr "–≥–æ—Ç–æ–≤–æ"
 
 msgid "dropping used_by field.."
-msgstr ""
+msgstr "—Å–±—Ä–∞—Å—ã–≤–∞–µ–º –ø–æ–ª–µ used_by.."
 
 msgid "no used_by field???"
-msgstr ""
+msgstr "–æ—Ç—Å—É—Ç—Å—Ç–≤—É–µ—Ç –ø–æ–ª–µ used_by???"
 
 msgid "ok"
-msgstr ""
+msgstr "ok"
 
 msgid "already done"
-msgstr ""
+msgstr "—É–∂–µ —Å–¥–µ–ª–∞–Ω–æ"
 
 msgid "Add Password Set"
-msgstr "¥ﬁ—–“ÿ‚Ï €ÿ·‚ PIN-⁄ﬁ‘ﬁ“"
+msgstr "–î–æ–±–∞–≤–∏—Ç—å –ª–∏—Å—Ç PIN-–∫–æ–¥–æ–≤"
 
 msgid "PIN Set "
-msgstr "ªÿ·‚ PIN-⁄ﬁ‘ﬁ“"
+msgstr "–õ–∏—Å—Ç PIN-–∫–æ–¥–æ–≤"
 
 msgid "deleted"
-msgstr "„‘–€’›ﬁ"
+msgstr "—É–¥–∞–ª–µ–Ω–æ"
 
 msgid "Delete PIN Set"
-msgstr "√‘–€ÿ‚Ï €ÿ·‚ PIN-⁄ﬁ‘ﬁ“"
+msgstr "–£–¥–∞–ª–∏—Ç—å –ª–∏—Å—Ç PIN-–∫–æ–¥–æ–≤"
 
 msgid "PIN Set:"
-msgstr "Ω–—ﬁ‡ PIN:"
+msgstr "–ù–∞–±–æ—Ä PIN:"
 
 msgid "Add PIN Set"
-msgstr "¥ﬁ—–“ÿ‚Ï €ÿ·‚ PIN-⁄ﬁ‘ﬁ“"
+msgstr "–î–æ–±–∞–≤–∏—Ç—å –ª–∏—Å—Ç PIN-–∫–æ–¥–æ–≤"
 
 msgid ""
 "PIN Sets are used to manage lists of PINs that can be used to access "
 "restricted features such as Outbound Routes. The PIN can also be added to "
 "the CDR record's 'accountcode' field."
 msgstr ""
-"ºﬁ‘„€Ï ·ﬂÿ·⁄ﬁ“ PIN-⁄ﬁ‘ﬁ“ ÿ·ﬂﬁ€Ï◊„’‚·Ô ‘€Ô ﬁ‡”–›ÿ◊–Êÿÿ ‘ﬁ·‚„ﬂ– ⁄ ·ﬂ’Êÿ–€Ï›Î‹ "
-"ÿ·Âﬁ‘ÔÈÿ‹ ‹–‡Ë‡„‚–‹ · ﬁ”‡–›ÿÁ’››Î‹ÿ ﬂ‡–“–‹ÿ. ¡–‹ ›–—ÿ‡–’‹ÎŸ PIN-⁄ﬁ‘ ‹ﬁ÷›ﬁ "
-"‘ﬁ—–“€Ô‚Ï ‚–⁄÷’ “ ﬁ‚ÁÒ‚ ﬁ ◊“ﬁ›⁄–Â “ ·ﬂ’Êÿ–€Ï›ﬁ’ ﬂﬁ€’ 'accountcode'."
+"–ú–æ–¥—É–ª—å —Å–ø–∏—Å–∫–æ–≤ PIN-–∫–æ–¥–æ–≤ –∏—Å–ø–æ–ª—å–∑—É–µ—Ç—Å—è –¥–ª—è –æ—Ä–≥–∞–Ω–∏–∑–∞—Ü–∏–∏ –¥–æ—Å—Ç—É–ø–∞ –∫ —Å–ø–µ—Ü–∏–∞–ª—å–Ω—ã–º "
+"–∏—Å—Ö–æ–¥—è—â–∏–º –º–∞—Ä—à—Ä—É—Ç–∞–º —Å –æ–≥—Ä–∞–Ω–∏—á–µ–Ω–Ω—ã–º–∏ –ø—Ä–∞–≤–∞–º–∏. –°–∞–º –Ω–∞–±–∏—Ä–∞–µ–º—ã–π PIN-–∫–æ–¥ –º–æ–∂–Ω–æ "
+"–¥–æ–±–∞–≤–ª—è—Ç—å —Ç–∞–∫–∂–µ –≤ –æ—Ç—á—ë—Ç –æ –∑–≤–æ–Ω–∫–∞—Ö –≤ —Å–ø–µ—Ü–∏–∞–ª—å–Ω–æ–µ –ø–æ–ª–µ 'accountcode'."
 
 msgid "Edit PIN Set"
-msgstr "∏◊‹’›ÿ‚Ï €ÿ·‚ PIN-⁄ﬁ‘ﬁ“"
+msgstr "–ò–∑–º–µ–Ω–∏—Ç—å –ª–∏—Å—Ç PIN-–∫–æ–¥–æ–≤"
 
 msgid "New PIN Set"
-msgstr "Ωﬁ“ÎŸ €ÿ·‚ PIN-⁄ﬁ‘ﬁ“"
+msgstr "–ù–æ–≤—ã–π –ª–∏—Å—Ç PIN-–∫–æ–¥–æ–≤"
 
 msgid "PIN Set Description:"
-msgstr "æﬂÿ·–›ÿ’:"
+msgstr "–û–ø–∏—Å–∞–Ω–∏–µ:"
 
 msgid "Record In CDR?:"
-msgstr "∑–ﬂÿ·Î“–‚Ï “ CDR?"
+msgstr "–ó–∞–ø–∏—Å—ã–≤–∞—Ç—å –≤ CDR?"
 
 msgid ""
 "Select this box if you would like to record the PIN in the call detail "
 "records when used"
 msgstr ""
-"≤Î—’‡ÿ‚’ Ì‚„ ﬁﬂÊÿÓ, ’·€ÿ ›„÷›ﬁ ◊–ﬂÿ·Î“–‚Ï PIN “ ÷„‡›–€ ◊“ﬁ›⁄ﬁ“ ‘€Ô "
-"‘’‚–€ÿ◊–Êÿÿ."
+"–í—ã–±–µ—Ä–∏—Ç–µ —ç—Ç—É –æ–ø—Ü–∏—é, –µ—Å–ª–∏ –Ω—É–∂–Ω–æ –∑–∞–ø–∏—Å—ã–≤–∞—Ç—å PIN –≤ –∂—É—Ä–Ω–∞–ª –∑–≤–æ–Ω–∫–æ–≤ –¥–ª—è "
+"–¥–µ—Ç–∞–ª–∏–∑–∞—Ü–∏–∏."
 
 msgid "PIN List:"
-msgstr "¡ﬂÿ·ﬁ⁄ PIN:"
+msgstr "–°–ø–∏—Å–æ–∫ PIN:"
 
 msgid "Enter a list of one or more PINs.  One PIN per line."
-msgstr "≤“’‘ÿ‚’ PIN-⁄ﬁ‘Î “ ·ﬂÿ·ﬁ⁄, ﬂﬁ ﬁ‘›ﬁ‹„ “ ·‚‡ﬁ⁄’."
+msgstr "–í–≤–µ–¥–∏—Ç–µ PIN-–∫–æ–¥—ã –≤ —Å–ø–∏—Å–æ–∫, –ø–æ –æ–¥–Ω–æ–º—É –≤ —Å—Ç—Ä–æ–∫–µ."
 
 msgid "Submit Changes"
-msgstr "ø‡ÿ‹’›ÿ‚Ï ÿ◊‹’›’›ÿÔ"
+msgstr "–ü—Ä–∏–º–µ–Ω–∏—Ç—å –∏–∑–º–µ–Ω–µ–Ω–∏—è"
 
 msgid "Please enter a valid Description"
-msgstr "√⁄–÷ÿ‚’ ‡–◊‡’Ë’››ﬁ’ ﬁﬂÿ·–›ÿ’"
+msgstr "–£–∫–∞–∂–∏—Ç–µ —Ä–∞–∑—Ä–µ—à–µ–Ω–Ω–æ–µ –æ–ø–∏—Å–∞–Ω–∏–µ"
 
 msgid "PIN Sets"
-msgstr "ªÿ·‚Î PIN-⁄ﬁ‘ﬁ“"
+msgstr "–õ–∏—Å—Ç—ã PIN-–∫–æ–¥–æ–≤"
 
 msgid "Settings"
-msgstr ""
+msgstr "–£—Å—Ç–∞–Ω–æ–≤–∫–∏"
 
 msgid ""
 "Allow creation of lists of PINs (numbers for passwords) that can be used by "
 "other modules (eg, trunks)."
 msgstr ""
+"–î–∞—ë—Ç –≤–æ–∑–º–æ–∂–Ω–æ—Å—Ç—å —Å–æ–∑–¥–∞–≤–∞—Ç—å —Å–ø–∏—Å–∫–∏ –Ω–∞–±–æ—Ä–æ–≤ PIN, –∫–æ—Ç–æ—Ä—ã–µ –∑–∞—Ç–µ–º –º–æ–∂–Ω–æ –∏—Å–ø–æ–ª—å–∑–æ–≤–∞—Ç—å "
+"–≤ –¥—Ä—É–≥–∏—Ö –º–æ–¥—É–ª—è—Ö (–Ω–∞–ø—Ä–∏–º–µ—Ä - –≤ —Ç—Ä–∞–∫–∞—Ö)."
