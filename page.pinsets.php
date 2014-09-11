@@ -35,7 +35,7 @@ $pinsetss = pinsets_list();
 
 <!-- right side menu -->
 <div class="rnav"><ul>
-    <li><a id="<?php echo ($itemid=='' ? 'current':'') ?>" href="config.php?display=<?php echo urlencode($dispnum)?>"><?php echo _("Add Password Set")?></a></li>
+    <li><a id="<?php echo ($itemid=='' ? 'current':'') ?>" href="config.php?display=<?php echo urlencode($dispnum)?>"><?php echo _("Add PIN Set")?></a></li>
 <?php
 if (isset($pinsetss)) {
 	foreach ($pinsetss as $pinsets) {
