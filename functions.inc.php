@@ -22,7 +22,7 @@ class pinsets_conf {
 	public function __construct() {
 		self::$obj = $this;
 	}
-	
+
 	function get_filename() {
 		$files = array();
 		foreach (array_keys($this->_pinsets) as $pinset) {
@@ -30,11 +30,11 @@ class pinsets_conf {
 		}
 		return $files;
 	}
-	
+
 	function addPinsets($setid, $pins) {
 		$this->_pinsets[$setid] = $pins;
 	}
-	
+
 	// return the output that goes in each of the files
 	function generateConf($file) {
 		$setid = ltrim($file,'pinset_');
@@ -81,7 +81,7 @@ function pinsets_get_config($engine) {
 			foreach ($patterns as $pattern) {
 				$fpattern = core_routing_formatpattern($pattern);
 				$exten = $fpattern['dial_pattern'];
-				$ext->splice($context, $exten, 1, new ext_macro('pinsets', $thisroute['pinsets_id'].','.$addtocdr[$thisroute['pinsets_id']]));
+				$ext->splice($context, $exten, 1, new ext_macro('pinsets', $thisroute['pinsets_id'].','.$addtocdr[$thisroute['pinsets_id']]), 'pinsets');
 			}
 		}
 	}
@@ -109,7 +109,7 @@ function pinsets_list($getAll=false) {
 	}
 	if (isset($allowed)) {
 		return $allowed;
-	} else { 
+	} else {
 		return null;
 	}
 }
@@ -121,7 +121,7 @@ function pinsets_get($id){
 
 function pinsets_del($id){
 	global $amp_conf;
-	
+
 	$filename = $amp_conf['ASTETCDIR'].'/pinset_'.$id;
 	if (file_exists($filename)) {
 		unlink($filename);
@@ -156,24 +156,24 @@ function pinsets_clean($passwords) {
 	if (!$passwords) {
 		$passwords = null;
 	}
-	
+
 	foreach (array_keys($passwords) as $key) {
 		//trim it
 		$passwords[$key] = trim($passwords[$key]);
-		
+
 		// remove invalid chars
 		$passwords[$key] = preg_replace("/[^0-9#*]/", "", $passwords[$key]);
-		
+
 		// remove blanks
 		if ($passwords[$key] == "") unset($passwords[$key]);
 	}
-	
+
 	// check for duplicates, and re-sequence
 	$passwords = array_values(array_unique($passwords));
-	
+
 	if (is_array($passwords))
 		return implode($passwords,"\n");
-	else 
+	else
 		return "";
 }
 
@@ -195,7 +195,7 @@ function pinsets_adjustroute($route_id,$action,$routepinset='') {
     break;
   case 'addroute';
     if ($routepinset != '') {
-      // we don't have the route_id yet, it hasn't been inserted yet :(, put it in the session 
+      // we don't have the route_id yet, it hasn't been inserted yet :(, put it in the session
       // and when returned it will be available on the redirect_standard
       $_SESSION['pinsetsAddRoute'] = $routepinset;
     }
@@ -268,8 +268,8 @@ function pinsets_hookProcess_core($viewing_itemid, $request) {
 	// Record any hook selections made by target modules
 	// We'll add these to the pinset's "used_by" column in the format <targetmodule>_<viewing_itemid>
 	// multiple targets could select a single pinset, so we'll comma delimiter them
-	
-	// this is really a crappy way to store things.  
+
+	// this is really a crappy way to store things.
 	// Any module that is hooked by pinsets when submitted will result in all the "used_by" fields being re-written
 	switch ($request['display']) {
   case 'routing':
@@ -278,7 +278,7 @@ function pinsets_hookProcess_core($viewing_itemid, $request) {
     if (isset($request['Submit']) ) {
       $action = (isset($action))?$action:'editroute';
     }
-    
+
     // $action won't be set on the redirect but pinsetsAddRoute will be in the session
     //
     if (!$action && isset($_SESSION['pinsetsAddRoute']) && $_SESSION['pinsetsAddRoute'] != '') {
