@@ -217,50 +217,66 @@ function pinsets_adjustroute($route_id,$action,$routepinset='') {
 
 // provide hook for routing
 function pinsets_hook_core($viewing_itemid, $target_menuid) {
-  global $db;
-
+	global $db;
 	switch ($target_menuid) {
 		case 'routing':
 			//create a selection of available pinsets
 			$pinsets = pinsets_list();
-      if ($viewing_itemid == '') {
-        $selected_pinset = '';
-      } else {
-        // if this is set, we just added it so get it out of the session
-        if (isset($_SESSION['pinsetsAddRoute']) && $_SESSION['pinsetsAddRoute'] != '') {
-          $selected_pinset = $_SESSION['pinsetsAddRoute'];
-        } else {
-          $selected_pinset = $db->getOne("SELECT pinsets_id FROM pinset_usage WHERE dispname='routing' AND foreign_id='".$db->escapeSimple($viewing_itemid)."'");
-          if(DB::IsError($selected_pinset)) {
-            die_freepbx($selected_pinset->getMessage());
-          }
-        }
-      }
-
+			if ($viewing_itemid == '') {
+				$selected_pinset = '';
+			} else {
+				// if this is set, we just added it so get it out of the session
+				if (isset($_SESSION['pinsetsAddRoute']) && $_SESSION['pinsetsAddRoute'] != '') {
+					$selected_pinset = $_SESSION['pinsetsAddRoute'];
+				} else {
+					$selected_pinset = $db->getOne("SELECT pinsets_id FROM pinset_usage WHERE dispname='routing' AND foreign_id='".$db->escapeSimple($viewing_itemid)."'");
+					if(DB::IsError($selected_pinset)) {
+						die_freepbx($selected_pinset->getMessage());
+					}
+				}
+			}
+			
 			$hookhtml = '
-        <tr>
-          <td><a href="#" class="info">'._("PIN Set").'<span>'._('Optional: Select a PIN set to use. If using this option, leave the Route Password field blank.').'</span></a>:</td>
-          <td>
-            <select name="pinsets">
-              <option value="">'._('None').'</option>
-      ';
-      if (is_array($pinsets)) {
-        foreach($pinsets as $item) {
-          $selected = $selected_pinset == $item['pinsets_id'] ? 'selected' : '';
-          $hookhtml .= "<option value={$item['pinsets_id']} ".$selected.">{$item['description']}</option>";
-        }
-      }
-      $hookhtml .= '
-						</select>
-					</td>
-				</tr>
-			';
-      return $hookhtml;
-    break;
-    default:
-      return false;
-    break;
-  }
+				<!--PINSET HOOK-->
+				<div class="element-container">
+					<div class="row">
+						<div class="col-md-12">
+							<div class="row">
+								<div class="form-group">
+									<div class="col-md-3">
+										<label class="control-label" for="pinsets">'. _("PIN Set").'</label>
+										<i class="fa fa-question-circle fpbx-help-icon" data-for="pinsets"></i>
+									</div>
+									<div class="col-md-9">
+										<select name="pinsets" class="form-control">
+											<option value="">'._('None').'</option>';
+			if (is_array($pinsets)) {
+				foreach($pinsets as $item) {
+					$selected = $selected_pinset == $item['pinsets_id'] ? 'selected' : '';
+					$hookhtml .= "<option value={$item['pinsets_id']} ".$selected.">{$item['description']}</option>";
+				}
+			}
+			
+			$hookhtml .= '				</select>					
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12">
+							<span id="pinsets-help" class="help-block fpbx-help-block">'._('Optional: Select a PIN set to use. If using this option, leave the Route Password field blank.').'</span>
+						</div>
+					</div>
+				</div>
+				<!--END PINSETHOOK-->
+				';
+			return $hookhtml;
+		break;
+		default:
+			return false;
+		break;
+	}
 }
 
 function pinsets_hookProcess_core($viewing_itemid, $request) {
