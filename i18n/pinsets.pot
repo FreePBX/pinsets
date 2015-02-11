@@ -1,11 +1,15 @@
-# FreePBX language template
-# Copyright 2013 Schmooze Com Inc
+# This file is part of FreePBX.
+#
+# For licensing information, please see the file named LICENSE located in the module directory
+#
+# FreePBX language template for pinsets
+# Copyright (C) 2008-2015 Sangoma, Inc.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-09-23 09:52+0000\n"
+"POT-Creation-Date: 2015-02-11 18:05-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -13,110 +17,131 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-msgid "Unnamed"
+#: /usr/src/freepbx/pinsets/page.pinsets.php:38
+#: /usr/src/freepbx/pinsets/page.pinsets.php:67
+msgid "Add PIN Set"
 msgstr ""
 
-msgid "PIN Set"
+#: /usr/src/freepbx/pinsets/page.pinsets.php:62
+msgid "Delete PIN Set"
 msgstr ""
 
+#: /usr/src/freepbx/pinsets/page.pinsets.php:79
+msgid "Edit PIN Set"
+msgstr ""
+
+#: /usr/src/freepbx/pinsets/page.pinsets.php:94
+msgid "Enter a list of one or more PINs.  One PIN per line."
+msgstr ""
+
+#: /usr/src/freepbx/pinsets/page.pinsets.php:79
+msgid "New PIN Set"
+msgstr ""
+
+#: /usr/src/freepbx/pinsets/functions.inc.php:252
+msgid "None"
+msgstr ""
+
+#: /usr/src/freepbx/pinsets/functions.inc.php:268
 msgid ""
 "Optional: Select a PIN set to use. If using this option, leave the Route "
 "Password field blank."
 msgstr ""
 
-msgid "None"
+#: /usr/src/freepbx/pinsets/page.pinsets.php:94
+msgid "PIN List:"
 msgstr ""
 
-msgid "checking if migration required.."
+#: /usr/src/freepbx/pinsets/functions.inc.php:247
+msgid "PIN Set"
 msgstr ""
 
-msgid "migrating.."
-msgstr ""
-
-msgid "unknown error fetching table data"
-msgstr ""
-
-msgid "migration aborted"
-msgstr ""
-
-msgid "continuing.."
-msgstr ""
-
-msgid "done"
-msgstr ""
-
-msgid "dropping used_by field.."
-msgstr ""
-
-msgid "no used_by field???"
-msgstr ""
-
-msgid "ok"
-msgstr ""
-
-msgid "already done"
-msgstr ""
-
-msgid "Add Password Set"
-msgstr ""
-
+#: /usr/src/freepbx/pinsets/page.pinsets.php:49
 msgid "PIN Set "
 msgstr ""
 
-msgid "deleted"
+#: /usr/src/freepbx/pinsets/page.pinsets.php:86
+msgid "PIN Set Description:"
 msgstr ""
 
-msgid "Delete PIN Set"
-msgstr ""
-
+#: /usr/src/freepbx/pinsets/page.pinsets.php:67
 msgid "PIN Set:"
 msgstr ""
 
-msgid "Add PIN Set"
-msgstr ""
-
+#: /usr/src/freepbx/pinsets/page.pinsets.php:69
 msgid ""
 "PIN Sets are used to manage lists of PINs that can be used to access "
 "restricted features such as Outbound Routes. The PIN can also be added to "
 "the CDR record's 'accountcode' field."
 msgstr ""
 
-msgid "Edit PIN Set"
+#: /usr/src/freepbx/pinsets/page.pinsets.php:121
+msgid "Please enter a valid Description"
 msgstr ""
 
-msgid "New PIN Set"
-msgstr ""
-
-msgid "PIN Set Description:"
-msgstr ""
-
+#: /usr/src/freepbx/pinsets/page.pinsets.php:90
 msgid "Record In CDR?:"
 msgstr ""
 
+#: /usr/src/freepbx/pinsets/page.pinsets.php:90
 msgid ""
 "Select this box if you would like to record the PIN in the call detail "
 "records when used"
 msgstr ""
 
-msgid "PIN List:"
-msgstr ""
-
-msgid "Enter a list of one or more PINs.  One PIN per line."
-msgstr ""
-
+#: /usr/src/freepbx/pinsets/page.pinsets.php:101
 msgid "Submit Changes"
 msgstr ""
 
-msgid "Please enter a valid Description"
+#: /usr/src/freepbx/pinsets/page.pinsets.php:117
+msgid "The PIN Set Description provided is too long."
 msgstr ""
 
-msgid "PIN Sets"
+#: /usr/src/freepbx/pinsets/functions.inc.php:138
+#: /usr/src/freepbx/pinsets/functions.inc.php:147
+msgid "Unnamed"
 msgstr ""
 
-msgid "Settings"
+#: /usr/src/freepbx/pinsets/install.php:99
+msgid "already done"
 msgstr ""
 
-msgid ""
-"Allow creation of lists of PINs (numbers for passwords) that can be used by "
-"other modules (eg, trunks)."
+#: /usr/src/freepbx/pinsets/install.php:30
+msgid "checking if migration required.."
+msgstr ""
+
+#: /usr/src/freepbx/pinsets/install.php:73
+msgid "continuing.."
+msgstr ""
+
+#: /usr/src/freepbx/pinsets/page.pinsets.php:49
+msgid "deleted"
+msgstr ""
+
+#: /usr/src/freepbx/pinsets/install.php:86
+msgid "done"
+msgstr ""
+
+#: /usr/src/freepbx/pinsets/install.php:88
+msgid "dropping used_by field.."
+msgstr ""
+
+#: /usr/src/freepbx/pinsets/install.php:34
+msgid "migrating.."
+msgstr ""
+
+#: /usr/src/freepbx/pinsets/install.php:44
+msgid "migration aborted"
+msgstr ""
+
+#: /usr/src/freepbx/pinsets/install.php:92
+msgid "no used_by field???"
+msgstr ""
+
+#: /usr/src/freepbx/pinsets/install.php:94
+msgid "ok"
+msgstr ""
+
+#: /usr/src/freepbx/pinsets/install.php:43
+msgid "unknown error fetching table data"
 msgstr ""
