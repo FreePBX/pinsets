@@ -37,7 +37,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX 2.10.02\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-02-11 18:05-0500\n"
+"POT-Creation-Date: 2015-02-20 19:48-0500\n"
 "PO-Revision-Date: 2014-02-19 20:56+0200\n"
 "Last-Translator: Chise Mishima <c.mishima@qloog.com>\n"
 "Language-Team: Japanese <http://example.com/projects/freepbx/pinsets/ja/>\n"
@@ -48,32 +48,51 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Weblate 1.8\n"
 
-#: /usr/src/freepbx/pinsets/page.pinsets.php:38
-#: /usr/src/freepbx/pinsets/page.pinsets.php:67
-msgid "Add PIN Set"
-msgstr "PINセットを追加"
+#: views/grid.php:24
+msgid "Actions"
+msgstr ""
 
-#: /usr/src/freepbx/pinsets/page.pinsets.php:62
-msgid "Delete PIN Set"
-msgstr "PINセットを削除"
+#: views/bootnav.php:2
+msgid "Add PIN Sets"
+msgstr ""
 
-#: /usr/src/freepbx/pinsets/page.pinsets.php:79
+#: pinsets.i18n.php:5
+msgid ""
+"Allow creation of lists of PINs (numbers for passwords) that can be used by "
+"other modules (eg, trunks)."
+msgstr ""
+"他のモジュール(例：トランク)によって使用される可能性のあるPINのリスト(パス"
+"ワードとしての数値)作成を許可します。"
+
+#: Pinsets.class.php:51
+msgid "Delete"
+msgstr ""
+
+#: views/form.php:16
 msgid "Edit PIN Set"
 msgstr "PINセットを編集"
 
-#: /usr/src/freepbx/pinsets/page.pinsets.php:94
+#: views/form.php:93
 msgid "Enter a list of one or more PINs.  One PIN per line."
 msgstr "PINのリストを入力します。PIN1つにつき1行です。"
 
-#: /usr/src/freepbx/pinsets/page.pinsets.php:79
+#: views/bootnav.php:1
+msgid "List PIN Sets"
+msgstr ""
+
+#: views/form.php:16
 msgid "New PIN Set"
 msgstr "新しいPINセット"
 
-#: /usr/src/freepbx/pinsets/functions.inc.php:252
+#: views/form.php:61
+msgid "No"
+msgstr ""
+
+#: functions.inc.php:252
 msgid "None"
 msgstr "なし"
 
-#: /usr/src/freepbx/pinsets/functions.inc.php:268
+#: functions.inc.php:268
 msgid ""
 "Optional: Select a PIN set to use. If using this option, leave the Route "
 "Password field blank."
@@ -81,27 +100,23 @@ msgstr ""
 "オプション： 使用するPINセットを選択します。このオプションを使用する場合は、"
 "ルートパスワードフィールドを空欄にしてください。"
 
-#: /usr/src/freepbx/pinsets/page.pinsets.php:94
-msgid "PIN List:"
-msgstr "PINリスト："
+#: views/form.php:81
+msgid "PIN List"
+msgstr ""
 
-#: /usr/src/freepbx/pinsets/functions.inc.php:247
+#: functions.inc.php:247 views/grid.php:23
 msgid "PIN Set"
 msgstr "PINセット"
 
-#: /usr/src/freepbx/pinsets/page.pinsets.php:49
-msgid "PIN Set "
+#: views/form.php:30
+msgid "PIN Set Description"
+msgstr ""
+
+#: pinsets.i18n.php:3 pinsets.i18n.php:6
+msgid "PIN Sets"
 msgstr "PINセット"
 
-#: /usr/src/freepbx/pinsets/page.pinsets.php:86
-msgid "PIN Set Description:"
-msgstr "PINセット説明："
-
-#: /usr/src/freepbx/pinsets/page.pinsets.php:67
-msgid "PIN Set:"
-msgstr "PINセット"
-
-#: /usr/src/freepbx/pinsets/page.pinsets.php:69
+#: page.pinsets.php:6
 msgid ""
 "PIN Sets are used to manage lists of PINs that can be used to access "
 "restricted features such as Outbound Routes. The PIN can also be added to "
@@ -111,91 +126,121 @@ msgstr ""
 "管理に使用します。<br>PINをCDRレコードの'accountcode'フィールドに追加すること"
 "もできます。"
 
-#: /usr/src/freepbx/pinsets/page.pinsets.php:121
+#: page.pinsets.php:7
+msgid "Pin Sets"
+msgstr ""
+
+#: views/form.php:42
+msgid "Please enter a description for this pinset"
+msgstr ""
+
+#: assets/js/pinsets.js:9
 msgid "Please enter a valid Description"
 msgstr "有効な説明を入力してください。"
 
-#: /usr/src/freepbx/pinsets/page.pinsets.php:90
-msgid "Record In CDR?:"
-msgstr "CDRに記録しますか?："
+#: views/form.php:54
+msgid "Record In CDR"
+msgstr ""
 
-#: /usr/src/freepbx/pinsets/page.pinsets.php:90
+#: Pinsets.class.php:56
+msgid "Reset"
+msgstr ""
+
+#: views/form.php:69
 msgid ""
-"Select this box if you would like to record the PIN in the call detail "
-"records when used"
-msgstr ""
-"PINが使用された際に、PINを通話詳細レコードに記録したい場合はこのボックスを選"
-"択してください"
-
-#: /usr/src/freepbx/pinsets/page.pinsets.php:101
-msgid "Submit Changes"
-msgstr "変更を適用"
-
-#: /usr/src/freepbx/pinsets/page.pinsets.php:117
-msgid "The PIN Set Description provided is too long."
+"Select Yes, if you would like to record the PIN in the call detail records "
+"when used"
 msgstr ""
 
-#: /usr/src/freepbx/pinsets/functions.inc.php:138
-#: /usr/src/freepbx/pinsets/functions.inc.php:147
+#: pinsets.i18n.php:4
+msgid "Settings"
+msgstr "設定"
+
+#: Pinsets.class.php:61
+msgid "Submit"
+msgstr ""
+
+#: functions.inc.php:138 functions.inc.php:147
 msgid "Unnamed"
 msgstr "名前がつけられてません"
 
-#: /usr/src/freepbx/pinsets/install.php:99
+#: views/form.php:59
+msgid "Yes"
+msgstr ""
+
+#: install.php:99
 msgid "already done"
 msgstr "既に実行済みです"
 
-#: /usr/src/freepbx/pinsets/install.php:30
+#: install.php:30
 msgid "checking if migration required.."
 msgstr "移行が必要かチェック中.."
 
-#: /usr/src/freepbx/pinsets/install.php:73
+#: install.php:73
 msgid "continuing.."
 msgstr "続行.."
 
-#: /usr/src/freepbx/pinsets/page.pinsets.php:49
-msgid "deleted"
-msgstr "削除されました"
-
-#: /usr/src/freepbx/pinsets/install.php:86
+#: install.php:86
 msgid "done"
 msgstr "完了"
 
-#: /usr/src/freepbx/pinsets/install.php:88
+#: install.php:88
 msgid "dropping used_by field.."
 msgstr "used_byフィールドをドロップ.."
 
-#: /usr/src/freepbx/pinsets/install.php:34
+#: install.php:34
 msgid "migrating.."
 msgstr "移行中.."
 
-#: /usr/src/freepbx/pinsets/install.php:44
+#: install.php:44
 msgid "migration aborted"
 msgstr "移行を中断"
 
-#: /usr/src/freepbx/pinsets/install.php:92
+#: install.php:92
 msgid "no used_by field???"
 msgstr "userd_byフィールドがありません???"
 
-#: /usr/src/freepbx/pinsets/install.php:94
+#: install.php:94
 msgid "ok"
 msgstr "ok"
 
-#: /usr/src/freepbx/pinsets/install.php:43
+#: install.php:43
 msgid "unknown error fetching table data"
 msgstr "テーブルデータのフェッチ中の不明なエラー"
 
-#~ msgid "Add Password Set"
-#~ msgstr "パスワードセットを追加"
+#~ msgid "Add PIN Set"
+#~ msgstr "PINセットを追加"
 
-#~ msgid "PIN Sets"
+#~ msgid "Delete PIN Set"
+#~ msgstr "PINセットを削除"
+
+#~ msgid "PIN List:"
+#~ msgstr "PINリスト："
+
+#~ msgid "PIN Set "
 #~ msgstr "PINセット"
 
-#~ msgid "Settings"
-#~ msgstr "設定"
+#~ msgid "PIN Set Description:"
+#~ msgstr "PINセット説明："
+
+#~ msgid "PIN Set:"
+#~ msgstr "PINセット"
+
+#~ msgid "Record In CDR?:"
+#~ msgstr "CDRに記録しますか?："
 
 #~ msgid ""
-#~ "Allow creation of lists of PINs (numbers for passwords) that can be used "
-#~ "by other modules (eg, trunks)."
+#~ "Select this box if you would like to record the PIN in the call detail "
+#~ "records when used"
 #~ msgstr ""
-#~ "他のモジュール(例：トランク)によって使用される可能性のあるPINのリスト(パス"
-#~ "ワードとしての数値)作成を許可します。"
+#~ "PINが使用された際に、PINを通話詳細レコードに記録したい場合はこのボックスを"
+#~ "選択してください"
+
+#~ msgid "Submit Changes"
+#~ msgstr "変更を適用"
+
+#~ msgid "deleted"
+#~ msgstr "削除されました"
+
+#~ msgid "Add Password Set"
+#~ msgstr "パスワードセットを追加"

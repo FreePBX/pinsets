@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-02-11 18:05-0500\n"
+"POT-Creation-Date: 2015-02-20 19:48-0500\n"
 "PO-Revision-Date: 2009-04-15 22:43+0100\n"
 "Last-Translator: Séverine GUTIERREZ <severine@medialsace.fr>\n"
 "Language-Team: Français <LL@li.org>\n"
@@ -16,32 +16,49 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: /usr/src/freepbx/pinsets/page.pinsets.php:38
-#: /usr/src/freepbx/pinsets/page.pinsets.php:67
-msgid "Add PIN Set"
-msgstr "Ajouter un jeu de PIN"
+#: views/grid.php:24
+msgid "Actions"
+msgstr ""
 
-#: /usr/src/freepbx/pinsets/page.pinsets.php:62
-msgid "Delete PIN Set"
-msgstr "Supprimer le jeu de PIN"
+#: views/bootnav.php:2
+msgid "Add PIN Sets"
+msgstr ""
 
-#: /usr/src/freepbx/pinsets/page.pinsets.php:79
+#: pinsets.i18n.php:5
+msgid ""
+"Allow creation of lists of PINs (numbers for passwords) that can be used by "
+"other modules (eg, trunks)."
+msgstr ""
+
+#: Pinsets.class.php:51
+msgid "Delete"
+msgstr ""
+
+#: views/form.php:16
 msgid "Edit PIN Set"
 msgstr "Editer le jeu de PIN"
 
-#: /usr/src/freepbx/pinsets/page.pinsets.php:94
+#: views/form.php:93
 msgid "Enter a list of one or more PINs.  One PIN per line."
 msgstr "Entrez une liste d'un ou plusieurs PINs. Un PIN par ligne."
 
-#: /usr/src/freepbx/pinsets/page.pinsets.php:79
+#: views/bootnav.php:1
+msgid "List PIN Sets"
+msgstr ""
+
+#: views/form.php:16
 msgid "New PIN Set"
 msgstr "Nouveau jeu de PIN"
 
-#: /usr/src/freepbx/pinsets/functions.inc.php:252
+#: views/form.php:61
+msgid "No"
+msgstr ""
+
+#: functions.inc.php:252
 msgid "None"
 msgstr "Aucun"
 
-#: /usr/src/freepbx/pinsets/functions.inc.php:268
+#: functions.inc.php:268
 msgid ""
 "Optional: Select a PIN set to use. If using this option, leave the Route "
 "Password field blank."
@@ -49,27 +66,23 @@ msgstr ""
 "Optionnel : Sélectionnez un jeu de PIN à utiliser. Si vous utilisez cette "
 "option, laissez le champ Mot de Passe de Route (Route Password) vide."
 
-#: /usr/src/freepbx/pinsets/page.pinsets.php:94
-msgid "PIN List:"
-msgstr "Liste PIN :"
+#: views/form.php:81
+msgid "PIN List"
+msgstr ""
 
-#: /usr/src/freepbx/pinsets/functions.inc.php:247
+#: functions.inc.php:247 views/grid.php:23
 msgid "PIN Set"
 msgstr "Jeu de PIN"
 
-#: /usr/src/freepbx/pinsets/page.pinsets.php:49
-msgid "PIN Set "
-msgstr "Jeu de PIN "
+#: views/form.php:30
+msgid "PIN Set Description"
+msgstr ""
 
-#: /usr/src/freepbx/pinsets/page.pinsets.php:86
-msgid "PIN Set Description:"
-msgstr "Description du jeu de PIN"
+#: pinsets.i18n.php:3 pinsets.i18n.php:6
+msgid "PIN Sets"
+msgstr "Jeux de PIN"
 
-#: /usr/src/freepbx/pinsets/page.pinsets.php:67
-msgid "PIN Set:"
-msgstr "Jeu de PIN :"
-
-#: /usr/src/freepbx/pinsets/page.pinsets.php:69
+#: page.pinsets.php:6
 msgid ""
 "PIN Sets are used to manage lists of PINs that can be used to access "
 "restricted features such as Outbound Routes. The PIN can also be added to "
@@ -80,81 +93,121 @@ msgstr ""
 "Sortantes. Le PIN peut également être ajouté au champ 'accountcode' de "
 "l'enregistrement CDR."
 
-#: /usr/src/freepbx/pinsets/page.pinsets.php:121
+#: page.pinsets.php:7
+msgid "Pin Sets"
+msgstr ""
+
+#: views/form.php:42
+msgid "Please enter a description for this pinset"
+msgstr ""
+
+#: assets/js/pinsets.js:9
 msgid "Please enter a valid Description"
 msgstr "Entrez une description valide"
 
-#: /usr/src/freepbx/pinsets/page.pinsets.php:90
-msgid "Record In CDR?:"
-msgstr "Enregistrer dans CDR ?"
+#: views/form.php:54
+msgid "Record In CDR"
+msgstr ""
 
-#: /usr/src/freepbx/pinsets/page.pinsets.php:90
+#: Pinsets.class.php:56
+msgid "Reset"
+msgstr ""
+
+#: views/form.php:69
 msgid ""
-"Select this box if you would like to record the PIN in the call detail "
-"records when used"
-msgstr ""
-"Cochez cette case si vous voulez enregistrer le PIN dans les enregistrements "
-"détaillés de l'appel lorsqu'ils sont utilisés."
-
-#: /usr/src/freepbx/pinsets/page.pinsets.php:101
-msgid "Submit Changes"
-msgstr "Appliquer les modifications"
-
-#: /usr/src/freepbx/pinsets/page.pinsets.php:117
-msgid "The PIN Set Description provided is too long."
+"Select Yes, if you would like to record the PIN in the call detail records "
+"when used"
 msgstr ""
 
-#: /usr/src/freepbx/pinsets/functions.inc.php:138
-#: /usr/src/freepbx/pinsets/functions.inc.php:147
+#: pinsets.i18n.php:4
+msgid "Settings"
+msgstr ""
+
+#: Pinsets.class.php:61
+msgid "Submit"
+msgstr ""
+
+#: functions.inc.php:138 functions.inc.php:147
 msgid "Unnamed"
 msgstr ""
 
-#: /usr/src/freepbx/pinsets/install.php:99
+#: views/form.php:59
+msgid "Yes"
+msgstr ""
+
+#: install.php:99
 msgid "already done"
 msgstr ""
 
-#: /usr/src/freepbx/pinsets/install.php:30
+#: install.php:30
 msgid "checking if migration required.."
 msgstr ""
 
-#: /usr/src/freepbx/pinsets/install.php:73
+#: install.php:73
 msgid "continuing.."
 msgstr ""
 
-#: /usr/src/freepbx/pinsets/page.pinsets.php:49
-msgid "deleted"
-msgstr "supprimé"
-
-#: /usr/src/freepbx/pinsets/install.php:86
+#: install.php:86
 msgid "done"
 msgstr ""
 
-#: /usr/src/freepbx/pinsets/install.php:88
+#: install.php:88
 msgid "dropping used_by field.."
 msgstr ""
 
-#: /usr/src/freepbx/pinsets/install.php:34
+#: install.php:34
 msgid "migrating.."
 msgstr ""
 
-#: /usr/src/freepbx/pinsets/install.php:44
+#: install.php:44
 msgid "migration aborted"
 msgstr ""
 
-#: /usr/src/freepbx/pinsets/install.php:92
+#: install.php:92
 msgid "no used_by field???"
 msgstr ""
 
-#: /usr/src/freepbx/pinsets/install.php:94
+#: install.php:94
 msgid "ok"
 msgstr ""
 
-#: /usr/src/freepbx/pinsets/install.php:43
+#: install.php:43
 msgid "unknown error fetching table data"
 msgstr ""
 
+#~ msgid "Add PIN Set"
+#~ msgstr "Ajouter un jeu de PIN"
+
+#~ msgid "Delete PIN Set"
+#~ msgstr "Supprimer le jeu de PIN"
+
+#~ msgid "PIN List:"
+#~ msgstr "Liste PIN :"
+
+#~ msgid "PIN Set "
+#~ msgstr "Jeu de PIN "
+
+#~ msgid "PIN Set Description:"
+#~ msgstr "Description du jeu de PIN"
+
+#~ msgid "PIN Set:"
+#~ msgstr "Jeu de PIN :"
+
+#~ msgid "Record In CDR?:"
+#~ msgstr "Enregistrer dans CDR ?"
+
+#~ msgid ""
+#~ "Select this box if you would like to record the PIN in the call detail "
+#~ "records when used"
+#~ msgstr ""
+#~ "Cochez cette case si vous voulez enregistrer le PIN dans les "
+#~ "enregistrements détaillés de l'appel lorsqu'ils sont utilisés."
+
+#~ msgid "Submit Changes"
+#~ msgstr "Appliquer les modifications"
+
+#~ msgid "deleted"
+#~ msgstr "supprimé"
+
 #~ msgid "Add Password Set"
 #~ msgstr "Ajouter un jeu de mots de passe"
-
-#~ msgid "PIN Sets"
-#~ msgstr "Jeux de PIN"
