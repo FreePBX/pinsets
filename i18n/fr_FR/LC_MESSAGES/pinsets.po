@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-02-20 19:48-0500\n"
+"POT-Creation-Date: 2015-03-09 13:30-0400\n"
 "PO-Revision-Date: 2009-04-15 22:43+0100\n"
 "Last-Translator: Séverine GUTIERREZ <severine@medialsace.fr>\n"
 "Language-Team: Français <LL@li.org>\n"
@@ -24,7 +24,7 @@ msgstr ""
 msgid "Add PIN Sets"
 msgstr ""
 
-#: pinsets.i18n.php:5
+#: pinsets.i18n.php:8
 msgid ""
 "Allow creation of lists of PINs (numbers for passwords) that can be used by "
 "other modules (eg, trunks)."
@@ -78,7 +78,7 @@ msgstr "Jeu de PIN"
 msgid "PIN Set Description"
 msgstr ""
 
-#: pinsets.i18n.php:3 pinsets.i18n.php:6
+#: pinsets.i18n.php:4 pinsets.i18n.php:10
 msgid "PIN Sets"
 msgstr "Jeux de PIN"
 
@@ -119,7 +119,7 @@ msgid ""
 "when used"
 msgstr ""
 
-#: pinsets.i18n.php:4
+#: pinsets.i18n.php:6 pinsets.i18n.php:12
 msgid "Settings"
 msgstr ""
 

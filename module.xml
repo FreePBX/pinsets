@@ -2,13 +2,14 @@
 	<rawname>pinsets</rawname>
 	<repo>standard</repo>
 	<name>PIN Sets</name>
-	<version>13.0.1</version>
+	<version>13.0.1alpha1</version>
 	<publisher>Schmooze Com Inc</publisher>
 	<license>GPLv3+</license>
 	<licenselink>http://www.gnu.org/licenses/gpl-3.0.txt</licenselink>
 	<category>Settings</category>
 	<description>Allow creation of lists of PINs (numbers for passwords) that can be used by other modules (eg, trunks).</description>
 	<changelog>
+		*13.0.1alpha1* Visual Changes
 		*2.11.0.8* FREEPBX-7745 Wording consistency: add password Set
 		*2.11.0.7* FREEPBX-7908 readjust priorities
 		*2.11.0.6* #7885
