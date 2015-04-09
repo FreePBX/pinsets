@@ -22,7 +22,7 @@ class pinsets_conf {
 	public function __construct() {
 		self::$obj = $this;
 	}
-	
+
 	function get_filename() {
 		$files = array();
 		foreach (array_keys($this->_pinsets) as $pinset) {
@@ -30,11 +30,11 @@ class pinsets_conf {
 		}
 		return $files;
 	}
-	
+
 	function addPinsets($setid, $pins) {
 		$this->_pinsets[$setid] = $pins;
 	}
-	
+
 	// return the output that goes in each of the files
 	function generateConf($file) {
 		$setid = ltrim($file,'pinset_');
@@ -52,7 +52,7 @@ function pinsets_get_config($engine) {
 
 	$pinsets_conf = pinsets_conf::create();
 
-	$allpinsets = pinsets_list(true);
+	$allpinsets = pinsets_list();
 	if(is_array($allpinsets)) {
 		foreach($allpinsets as $item) {
 			// write our own pin list files
@@ -70,7 +70,7 @@ function pinsets_get_config($engine) {
 
 	$usage_list = pinsets_list_usage('routing');
 	if (is_array($usage_list) && count($usage_list)) {
-		$pinsets = pinsets_list(true);
+		$pinsets = pinsets_list();
 		$addtocdr = array();
 		foreach ($pinsets as $pinset) {
 			$addtocdr[$pinset['pinsets_id']] = $pinset['addtocdr'];
@@ -96,22 +96,12 @@ function pinsets_list_usage($dispname=true) {
 }
 
 //get the existing meetme extensions
-function pinsets_list($getAll=false) {
+function pinsets_list() {
 	$results = sql("SELECT * FROM pinsets","getAll",DB_FETCHMODE_ASSOC);
 	if(is_array($results)){
-		foreach($results as $result){
-			// check to see if we have a dept match for the current AMP User.
-			if ($getAll || checkDept($result['deptname'])){
-				// return this item's dialplan destination, and the description
-				$allowed[] = $result;
-			}
-		}
+		return $results;
 	}
-	if (isset($allowed)) {
-		return $allowed;
-	} else { 
-		return null;
-	}
+	return null;
 }
 
 function pinsets_get($id){
@@ -121,7 +111,7 @@ function pinsets_get($id){
 
 function pinsets_del($id){
 	global $amp_conf;
-	
+
 	$filename = $amp_conf['ASTETCDIR'].'/pinset_'.$id;
 	if (file_exists($filename)) {
 		unlink($filename);
@@ -156,24 +146,24 @@ function pinsets_clean($passwords) {
 	if (!$passwords) {
 		$passwords = null;
 	}
-	
+
 	foreach (array_keys($passwords) as $key) {
 		//trim it
 		$passwords[$key] = trim($passwords[$key]);
-		
+
 		// remove invalid chars
 		$passwords[$key] = preg_replace("/[^0-9#*]/", "", $passwords[$key]);
-		
+
 		// remove blanks
 		if ($passwords[$key] == "") unset($passwords[$key]);
 	}
-	
+
 	// check for duplicates, and re-sequence
 	$passwords = array_values(array_unique($passwords));
-	
+
 	if (is_array($passwords))
 		return implode($passwords,"\n");
-	else 
+	else
 		return "";
 }
 
@@ -195,7 +185,7 @@ function pinsets_adjustroute($route_id,$action,$routepinset='') {
     break;
   case 'addroute';
     if ($routepinset != '') {
-      // we don't have the route_id yet, it hasn't been inserted yet :(, put it in the session 
+      // we don't have the route_id yet, it hasn't been inserted yet :(, put it in the session
       // and when returned it will be available on the redirect_standard
       $_SESSION['pinsetsAddRoute'] = $routepinset;
     }
@@ -235,7 +225,7 @@ function pinsets_hook_core($viewing_itemid, $target_menuid) {
 					}
 				}
 			}
-			
+
 			$hookhtml = '
 				<!--PINSET HOOK-->
 				<div class="element-container">
@@ -256,8 +246,8 @@ function pinsets_hook_core($viewing_itemid, $target_menuid) {
 					$hookhtml .= "<option value={$item['pinsets_id']} ".$selected.">{$item['description']}</option>";
 				}
 			}
-			
-			$hookhtml .= '				</select>					
+
+			$hookhtml .= '				</select>
 									</div>
 								</div>
 							</div>
@@ -284,8 +274,8 @@ function pinsets_hookProcess_core($viewing_itemid, $request) {
 	// Record any hook selections made by target modules
 	// We'll add these to the pinset's "used_by" column in the format <targetmodule>_<viewing_itemid>
 	// multiple targets could select a single pinset, so we'll comma delimiter them
-	
-	// this is really a crappy way to store things.  
+
+	// this is really a crappy way to store things.
 	// Any module that is hooked by pinsets when submitted will result in all the "used_by" fields being re-written
 	switch ($request['display']) {
   case 'routing':
@@ -294,7 +284,7 @@ function pinsets_hookProcess_core($viewing_itemid, $request) {
     if (isset($request['Submit']) ) {
       $action = (isset($action))?$action:'editroute';
     }
-    
+
     // $action won't be set on the redirect but pinsetsAddRoute will be in the session
     //
     if (!$action && isset($_SESSION['pinsetsAddRoute']) && $_SESSION['pinsetsAddRoute'] != '') {

@@ -18,7 +18,6 @@ if ($itemid){
 	<input type="hidden" name="display" value="pinsets">
 	<input type="hidden" name="view" value="form">
 	<input type="hidden" name="action" value="<?php echo ($itemid ? 'edit' : 'add') ?>">
-	<input type="hidden" name="deptname" value="">
 	<input type="hidden" name="account" value="<?php echo $itemid; ?>">
 <!--PIN Set Description-->
 <div class="element-container">
