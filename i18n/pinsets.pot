@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-03-09 13:30-0400\n"
+"POT-Creation-Date: 2015-04-14 19:39-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -39,7 +39,7 @@ msgstr ""
 msgid "Edit PIN Set"
 msgstr ""
 
-#: views/form.php:93
+#: views/form.php:92
 msgid "Enter a list of one or more PINs.  One PIN per line."
 msgstr ""
 
@@ -51,30 +51,30 @@ msgstr ""
 msgid "New PIN Set"
 msgstr ""
 
-#: views/form.php:61
+#: views/form.php:60
 msgid "No"
 msgstr ""
 
-#: functions.inc.php:252
+#: functions.inc.php:242
 msgid "None"
 msgstr ""
 
-#: functions.inc.php:268
+#: functions.inc.php:258
 msgid ""
 "Optional: Select a PIN set to use. If using this option, leave the Route "
 "Password field blank."
 msgstr ""
 
-#: views/form.php:81
+#: views/form.php:80
 msgid "PIN List"
 msgstr ""
 
-#: functions.inc.php:247
+#: functions.inc.php:237
 #: views/grid.php:23
 msgid "PIN Set"
 msgstr ""
 
-#: views/form.php:30
+#: views/form.php:29
 msgid "PIN Set Description"
 msgstr ""
 
@@ -94,7 +94,7 @@ msgstr ""
 msgid "Pin Sets"
 msgstr ""
 
-#: views/form.php:42
+#: views/form.php:41
 msgid "Please enter a description for this pinset"
 msgstr ""
 
@@ -102,7 +102,7 @@ msgstr ""
 msgid "Please enter a valid Description"
 msgstr ""
 
-#: views/form.php:54
+#: views/form.php:53
 msgid "Record In CDR"
 msgstr ""
 
@@ -110,7 +110,7 @@ msgstr ""
 msgid "Reset"
 msgstr ""
 
-#: views/form.php:69
+#: views/form.php:68
 msgid ""
 "Select Yes, if you would like to record the PIN in the call detail records "
 "when used"
@@ -125,12 +125,12 @@ msgstr ""
 msgid "Submit"
 msgstr ""
 
-#: functions.inc.php:138
-#: functions.inc.php:147
+#: functions.inc.php:128
+#: functions.inc.php:137
 msgid "Unnamed"
 msgstr ""
 
-#: views/form.php:59
+#: views/form.php:58
 msgid "Yes"
 msgstr ""
 
