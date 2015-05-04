@@ -7,25 +7,25 @@ msgstr ""
 "Project-Id-Version: 1.4\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-04-14 19:39-0400\n"
-"PO-Revision-Date: 2014-02-28 04:51+0200\n"
-"Last-Translator: Andrew <andrew.nagy@the159.com>\n"
-"Language-Team: Russian <http://example.com/projects/freepbx-211/pinsets/ru/"
-">\n"
+"PO-Revision-Date: 2015-05-04 00:04+0200\n"
+"Last-Translator: Yuriy <alliancesko@gmail.com>\n"
+"Language-Team: Russian "
+"<http://weblate.freepbx.org/projects/freepbx/pinsets/ru_RU/>\n"
+"Language: ru_RU\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: ru_RU\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%"
-"10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 1.9-dev\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<="
+"4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 2.2-dev\n"
 
 #: views/grid.php:24
 msgid "Actions"
-msgstr ""
+msgstr "Действия"
 
 #: views/bootnav.php:2
 msgid "Add PIN Sets"
-msgstr ""
+msgstr "Добавить наборы ПИНов"
 
 #: pinsets.i18n.php:8
 msgid ""
@@ -37,7 +37,7 @@ msgstr ""
 
 #: Pinsets.class.php:51
 msgid "Delete"
-msgstr ""
+msgstr "Удалить"
 
 #: views/form.php:16
 msgid "Edit PIN Set"
@@ -49,7 +49,7 @@ msgstr "Введите PIN-коды в список, по одному в стр
 
 #: views/bootnav.php:1
 msgid "List PIN Sets"
-msgstr ""
+msgstr "Список наборов ПИН"
 
 #: views/form.php:16
 msgid "New PIN Set"
@@ -57,7 +57,7 @@ msgstr "Новый лист PIN-кодов"
 
 #: views/form.php:60
 msgid "No"
-msgstr ""
+msgstr "Нет"
 
 #: functions.inc.php:242
 msgid "None"
@@ -73,7 +73,7 @@ msgstr ""
 
 #: views/form.php:80
 msgid "PIN List"
-msgstr ""
+msgstr "Список ПИН"
 
 #: functions.inc.php:237 views/grid.php:23
 msgid "PIN Set"
@@ -81,7 +81,7 @@ msgstr "Лист PIN-кодов"
 
 #: views/form.php:29
 msgid "PIN Set Description"
-msgstr ""
+msgstr "Описание набора ПИН"
 
 #: pinsets.i18n.php:4 pinsets.i18n.php:10
 msgid "PIN Sets"
@@ -99,11 +99,11 @@ msgstr ""
 
 #: page.pinsets.php:7
 msgid "Pin Sets"
-msgstr ""
+msgstr "Наборы ПИН"
 
 #: views/form.php:41
 msgid "Please enter a description for this pinset"
-msgstr ""
+msgstr "Пожалуйста, введите описание для этого набора ПИН"
 
 #: assets/js/pinsets.js:9
 msgid "Please enter a valid Description"
@@ -111,17 +111,19 @@ msgstr "Укажите разрешенное описание"
 
 #: views/form.php:53
 msgid "Record In CDR"
-msgstr ""
+msgstr "Запись в CDR"
 
 #: Pinsets.class.php:56
 msgid "Reset"
-msgstr ""
+msgstr "Сброс"
 
 #: views/form.php:68
 msgid ""
 "Select Yes, if you would like to record the PIN in the call detail records "
 "when used"
 msgstr ""
+"Выберите Да, если Вы хотели бы сделать запись PIN в информации о вызове, "
+"когда используется"
 
 #: pinsets.i18n.php:6 pinsets.i18n.php:12
 msgid "Settings"
@@ -129,7 +131,7 @@ msgstr "Установки"
 
 #: Pinsets.class.php:61
 msgid "Submit"
-msgstr ""
+msgstr "Сохранить"
 
 #: functions.inc.php:128 functions.inc.php:137
 msgid "Unnamed"
@@ -137,7 +139,7 @@ msgstr "Без названия"
 
 #: views/form.php:58
 msgid "Yes"
-msgstr ""
+msgstr "Да"
 
 #: install.php:99
 msgid "already done"
