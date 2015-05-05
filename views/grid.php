@@ -4,7 +4,7 @@
 //
 
 $pinsets = pinsets_list();
-
+$lrows = '';
 foreach ($pinsets as $pinset) {
 	$lrows .= '<tr>';
 	$lrows .= '<td>';

@@ -7,6 +7,7 @@ $helptext = _("PIN Sets are used to manage lists of PINs that can be used to acc
 $heading = _("Pin Sets");
 
 $request = $_REQUEST;
+$request['view'] = !empty($request['view']) ? $request['view'] : '';
 switch ($request['view']) {
 	case 'form':
 		$content = load_view(__DIR__.'/views/form.php', array('request' => $request));
