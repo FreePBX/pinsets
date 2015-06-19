@@ -23,7 +23,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX 2.2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-04-14 19:39-0400\n"
+"POT-Creation-Date: 2015-06-19 18:27-0400\n"
 "PO-Revision-Date: 2006-10-17 17:30+0300\n"
 "Last-Translator: Isaac Gal <gal@allegronet.co.il>\n"
 "MIME-Version: 1.0\n"
@@ -37,14 +37,6 @@ msgstr ""
 #: views/bootnav.php:2
 msgid "Add PIN Sets"
 msgstr ""
-
-#: pinsets.i18n.php:8
-msgid ""
-"Allow creation of lists of PINs (numbers for passwords) that can be used by "
-"other modules (eg, trunks)."
-msgstr ""
-"מאפשר יצירת סטים של סיסמאות שניתנים לשימושעל ידי מודלים אחרים כגון (ניתוב "
-"שיחות יוצאות וכד)"
 
 #: Pinsets.class.php:51
 msgid "Delete"
@@ -94,10 +86,6 @@ msgstr "סט סיסמאות"
 msgid "PIN Set Description"
 msgstr ""
 
-#: pinsets.i18n.php:4 pinsets.i18n.php:10
-msgid "PIN Sets"
-msgstr "סט סיסמאות"
-
 #: page.pinsets.php:6
 msgid ""
 "PIN Sets are used to manage lists of PINs that can be used to access "
@@ -132,10 +120,6 @@ msgstr ""
 msgid ""
 "Select Yes, if you would like to record the PIN in the call detail records "
 "when used"
-msgstr ""
-
-#: pinsets.i18n.php:6 pinsets.i18n.php:12
-msgid "Settings"
 msgstr ""
 
 #: Pinsets.class.php:61
@@ -189,6 +173,16 @@ msgstr "טוב"
 #: install.php:43
 msgid "unknown error fetching table data"
 msgstr "תקלה לא ידוע בקריאת בסיס הנתונים"
+
+#~ msgid ""
+#~ "Allow creation of lists of PINs (numbers for passwords) that can be used "
+#~ "by other modules (eg, trunks)."
+#~ msgstr ""
+#~ "מאפשר יצירת סטים של סיסמאות שניתנים לשימושעל ידי מודלים אחרים כגון (ניתוב "
+#~ "שיחות יוצאות וכד)"
+
+#~ msgid "PIN Sets"
+#~ msgstr "סט סיסמאות"
 
 #~ msgid "Add PIN Set"
 #~ msgstr "הוסף סט סיסמאות"

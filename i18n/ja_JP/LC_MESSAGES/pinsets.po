@@ -37,7 +37,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX 2.10.02\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-04-14 19:39-0400\n"
+"POT-Creation-Date: 2015-06-19 18:27-0400\n"
 "PO-Revision-Date: 2014-02-19 20:56+0200\n"
 "Last-Translator: Chise Mishima <c.mishima@qloog.com>\n"
 "Language-Team: Japanese <http://example.com/projects/freepbx/pinsets/ja/>\n"
@@ -55,14 +55,6 @@ msgstr ""
 #: views/bootnav.php:2
 msgid "Add PIN Sets"
 msgstr ""
-
-#: pinsets.i18n.php:8
-msgid ""
-"Allow creation of lists of PINs (numbers for passwords) that can be used by "
-"other modules (eg, trunks)."
-msgstr ""
-"他のモジュール(例：トランク)によって使用される可能性のあるPINのリスト(パス"
-"ワードとしての数値)作成を許可します。"
 
 #: Pinsets.class.php:51
 msgid "Delete"
@@ -112,10 +104,6 @@ msgstr "PINセット"
 msgid "PIN Set Description"
 msgstr ""
 
-#: pinsets.i18n.php:4 pinsets.i18n.php:10
-msgid "PIN Sets"
-msgstr "PINセット"
-
 #: page.pinsets.php:6
 msgid ""
 "PIN Sets are used to manage lists of PINs that can be used to access "
@@ -151,10 +139,6 @@ msgid ""
 "Select Yes, if you would like to record the PIN in the call detail records "
 "when used"
 msgstr ""
-
-#: pinsets.i18n.php:6 pinsets.i18n.php:12
-msgid "Settings"
-msgstr "設定"
 
 #: Pinsets.class.php:61
 msgid "Submit"
@@ -207,6 +191,19 @@ msgstr "ok"
 #: install.php:43
 msgid "unknown error fetching table data"
 msgstr "テーブルデータのフェッチ中の不明なエラー"
+
+#~ msgid ""
+#~ "Allow creation of lists of PINs (numbers for passwords) that can be used "
+#~ "by other modules (eg, trunks)."
+#~ msgstr ""
+#~ "他のモジュール(例：トランク)によって使用される可能性のあるPINのリスト(パス"
+#~ "ワードとしての数値)作成を許可します。"
+
+#~ msgid "PIN Sets"
+#~ msgstr "PINセット"
+
+#~ msgid "Settings"
+#~ msgstr "設定"
 
 #~ msgid "Add PIN Set"
 #~ msgstr "PINセットを追加"
