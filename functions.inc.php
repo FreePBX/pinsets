@@ -81,7 +81,7 @@ function pinsets_get_config($engine) {
 			foreach ($patterns as $pattern) {
 				$fpattern = core_routing_formatpattern($pattern);
 				$exten = $fpattern['dial_pattern'];
-				$ext->splice($context, $exten, 1, new ext_macro('pinsets', $thisroute['pinsets_id'].','.$addtocdr[$thisroute['pinsets_id']]));
+				$ext->splice($context, $exten, 1, new ext_macro('pinsets', $thisroute['pinsets_id'].','.$addtocdr[$thisroute['pinsets_id']]),'pinsets');
 			}
 		}
 	}
