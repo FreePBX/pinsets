@@ -10,66 +10,70 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-06-19 18:27-0400\n"
-"PO-Revision-Date: 2015-06-19 18:27-0400\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2015-10-16 08:31+0200\n"
+"Last-Translator: Media <mousavi.media@gmail.com>\n"
+"Language-Team: Persian "
+"<http://weblate.freepbx.org/projects/freepbx/pinsets/fa/>\n"
+"Language: fa\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 2.2-dev\n"
 
 #: views/grid.php:24
 msgid "Actions"
-msgstr ""
+msgstr "عملیات"
 
 #: views/bootnav.php:2
 msgid "Add PIN Sets"
-msgstr ""
+msgstr "افزودن  PIN"
 
 #: Pinsets.class.php:51
 msgid "Delete"
-msgstr ""
+msgstr "حذف"
 
 #: views/form.php:16
 msgid "Edit PIN Set"
-msgstr ""
+msgstr "ویرایش PIN"
 
 #: views/form.php:92
 msgid "Enter a list of one or more PINs.  One PIN per line."
-msgstr ""
+msgstr "فهرستی از یک یا چند PIN وارد کنید. هر PIN در یک خط."
 
 #: views/bootnav.php:1
 msgid "List PIN Sets"
-msgstr ""
+msgstr "فهرست PIN"
 
 #: views/form.php:16
 msgid "New PIN Set"
-msgstr ""
+msgstr "PIN جدید"
 
 #: views/form.php:60
 msgid "No"
-msgstr ""
+msgstr "خیر"
 
 #: functions.inc.php:242
 msgid "None"
-msgstr ""
+msgstr "هیچ"
 
 #: functions.inc.php:258
 msgid ""
 "Optional: Select a PIN set to use. If using this option, leave the Route "
 "Password field blank."
-msgstr ""
+msgstr "اختیاری：یک PIN برای کاربر انتخاب کنید."
 
 #: views/form.php:80
 msgid "PIN List"
-msgstr ""
+msgstr "فهرست PIN"
 
 #: functions.inc.php:237 views/grid.php:23
 msgid "PIN Set"
-msgstr ""
+msgstr "تنظیمات PIN"
 
 #: views/form.php:29
 msgid "PIN Set Description"
-msgstr ""
+msgstr "شرح PIN"
 
 #: page.pinsets.php:6
 msgid ""
@@ -80,23 +84,23 @@ msgstr ""
 
 #: page.pinsets.php:7
 msgid "Pin Sets"
-msgstr ""
+msgstr "تنظیمات PIN"
 
 #: views/form.php:41
 msgid "Please enter a description for this pinset"
-msgstr ""
+msgstr "لطفا یک توضیح وارد کنید"
 
 #: assets/js/pinsets.js:9
 msgid "Please enter a valid Description"
-msgstr ""
+msgstr "لطفا شرح معتبر وارد کنید"
 
 #: views/form.php:53
 msgid "Record In CDR"
-msgstr ""
+msgstr "ذخیره در CDR"
 
 #: Pinsets.class.php:56
 msgid "Reset"
-msgstr ""
+msgstr "بازنشانی"
 
 #: views/form.php:68
 msgid ""
@@ -106,31 +110,31 @@ msgstr ""
 
 #: Pinsets.class.php:61
 msgid "Submit"
-msgstr ""
+msgstr "ثبت"
 
 #: functions.inc.php:128 functions.inc.php:137
 msgid "Unnamed"
-msgstr ""
+msgstr "بدون نام"
 
 #: views/form.php:58
 msgid "Yes"
-msgstr ""
+msgstr "بله"
 
 #: install.php:99
 msgid "already done"
-msgstr ""
+msgstr "انجام شد"
 
 #: install.php:30
 msgid "checking if migration required.."
-msgstr ""
+msgstr "بررسی نیاز به انتقال.."
 
 #: install.php:73
 msgid "continuing.."
-msgstr ""
+msgstr "ادامه.."
 
 #: install.php:86
 msgid "done"
-msgstr ""
+msgstr "انجام شده"
 
 #: install.php:88
 msgid "dropping used_by field.."
@@ -138,11 +142,11 @@ msgstr ""
 
 #: install.php:34
 msgid "migrating.."
-msgstr ""
+msgstr "انتقال.."
 
 #: install.php:44
 msgid "migration aborted"
-msgstr ""
+msgstr "شکست انتقال"
 
 #: install.php:92
 msgid "no used_by field???"
@@ -150,8 +154,8 @@ msgstr ""
 
 #: install.php:94
 msgid "ok"
-msgstr ""
+msgstr "تایید"
 
 #: install.php:43
 msgid "unknown error fetching table data"
-msgstr ""
+msgstr "خطا نامشخص در جدول دیتا"
