@@ -9,15 +9,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-06-19 18:27-0400\n"
+"POT-Creation-Date: 2015-11-03 15:28-0800\n"
 "PO-Revision-Date: 2015-10-16 08:31+0200\n"
 "Last-Translator: Media <mousavi.media@gmail.com>\n"
-"Language-Team: Persian "
-"<http://weblate.freepbx.org/projects/freepbx/pinsets/fa/>\n"
-"Language: fa\n"
+"Language-Team: Persian <http://weblate.freepbx.org/projects/freepbx/pinsets/"
+"fa/>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: fa\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 2.2-dev\n"
 
@@ -53,11 +53,11 @@ msgstr "PIN جدید"
 msgid "No"
 msgstr "خیر"
 
-#: functions.inc.php:242
+#: functions.inc.php:244
 msgid "None"
 msgstr "هیچ"
 
-#: functions.inc.php:258
+#: functions.inc.php:260
 msgid ""
 "Optional: Select a PIN set to use. If using this option, leave the Route "
 "Password field blank."
@@ -67,7 +67,7 @@ msgstr "اختیاری：یک PIN برای کاربر انتخاب کنید."
 msgid "PIN List"
 msgstr "فهرست PIN"
 
-#: functions.inc.php:237 views/grid.php:23
+#: functions.inc.php:239 views/grid.php:23
 msgid "PIN Set"
 msgstr "تنظیمات PIN"
 
@@ -112,7 +112,7 @@ msgstr ""
 msgid "Submit"
 msgstr "ثبت"
 
-#: functions.inc.php:128 functions.inc.php:137
+#: functions.inc.php:130 functions.inc.php:139
 msgid "Unnamed"
 msgstr "بدون نام"
 

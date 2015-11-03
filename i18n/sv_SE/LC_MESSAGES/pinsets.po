@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeÅBX pinsets\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-06-19 18:27-0400\n"
+"POT-Creation-Date: 2015-11-03 15:28-0800\n"
 "PO-Revision-Date: 2011-03-20 00:00+0100\n"
 "Last-Translator: Mikael Carlsson <mickecamino@gmail.com>\n"
 "Language-Team: \n"
@@ -62,11 +62,11 @@ msgstr "Ny PIN-kod"
 msgid "No"
 msgstr ""
 
-#: functions.inc.php:242
+#: functions.inc.php:244
 msgid "None"
 msgstr "Ingen"
 
-#: functions.inc.php:258
+#: functions.inc.php:260
 msgid ""
 "Optional: Select a PIN set to use. If using this option, leave the Route "
 "Password field blank."
@@ -78,7 +78,7 @@ msgstr ""
 msgid "PIN List"
 msgstr ""
 
-#: functions.inc.php:237 views/grid.php:23
+#: functions.inc.php:239 views/grid.php:23
 msgid "PIN Set"
 msgstr "PIN-kod"
 
@@ -126,7 +126,7 @@ msgstr ""
 msgid "Submit"
 msgstr ""
 
-#: functions.inc.php:128 functions.inc.php:137
+#: functions.inc.php:130 functions.inc.php:139
 msgid "Unnamed"
 msgstr "Inget namn"
 

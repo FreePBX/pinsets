@@ -37,7 +37,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX 2.10.02\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-06-19 18:27-0400\n"
+"POT-Creation-Date: 2015-11-03 15:28-0800\n"
 "PO-Revision-Date: 2014-02-19 20:56+0200\n"
 "Last-Translator: Chise Mishima <c.mishima@qloog.com>\n"
 "Language-Team: Japanese <http://example.com/projects/freepbx/pinsets/ja/>\n"
@@ -80,11 +80,11 @@ msgstr "新しいPINセット"
 msgid "No"
 msgstr ""
 
-#: functions.inc.php:242
+#: functions.inc.php:244
 msgid "None"
 msgstr "なし"
 
-#: functions.inc.php:258
+#: functions.inc.php:260
 msgid ""
 "Optional: Select a PIN set to use. If using this option, leave the Route "
 "Password field blank."
@@ -96,7 +96,7 @@ msgstr ""
 msgid "PIN List"
 msgstr ""
 
-#: functions.inc.php:237 views/grid.php:23
+#: functions.inc.php:239 views/grid.php:23
 msgid "PIN Set"
 msgstr "PINセット"
 
@@ -144,7 +144,7 @@ msgstr ""
 msgid "Submit"
 msgstr ""
 
-#: functions.inc.php:128 functions.inc.php:137
+#: functions.inc.php:130 functions.inc.php:139
 msgid "Unnamed"
 msgstr "名前がつけられてません"
 
