@@ -156,18 +156,20 @@ function pinsets_clean($passwords) {
 		// remove invalid chars
 		$passwords[$key] = preg_replace("/[^0-9#*]/", "", $passwords[$key]);
 
-		// remove blanks
-		if ($passwords[$key] == "")
+		// remove empty passwords
+		if ($passwords[$key] == "") {
 			unset($passwords[$key]);
+		}
 	}
 
 	// check for duplicates, and re-sequence
 	$passwords = array_values(array_unique($passwords));
 
-	if (is_array($passwords))
+	if (is_array($passwords)) {
 		return implode($passwords,"\n");
-	else
+	} else {
 		return "";
+	}
 }
 
 // ensures post vars is valid
@@ -212,63 +214,63 @@ function pinsets_adjustroute($route_id,$action,$routepinset='') {
 function pinsets_hook_core($viewing_itemid, $target_menuid) {
 	global $db;
 	switch ($target_menuid) {
-		case 'routing':
-			//create a selection of available pinsets
-			$pinsets = pinsets_list();
-			if ($viewing_itemid == '') {
-				$selected_pinset = '';
+	case 'routing':
+		//create a selection of available pinsets
+		$pinsets = pinsets_list();
+		if ($viewing_itemid == '') {
+			$selected_pinset = '';
+		} else {
+			// if this is set, we just added it so get it out of the session
+			if (isset($_SESSION['pinsetsAddRoute']) && $_SESSION['pinsetsAddRoute'] != '') {
+				$selected_pinset = $_SESSION['pinsetsAddRoute'];
 			} else {
-				// if this is set, we just added it so get it out of the session
-				if (isset($_SESSION['pinsetsAddRoute']) && $_SESSION['pinsetsAddRoute'] != '') {
-					$selected_pinset = $_SESSION['pinsetsAddRoute'];
-				} else {
-					$selected_pinset = $db->getOne("SELECT pinsets_id FROM pinset_usage WHERE dispname='routing' AND foreign_id='".$db->escapeSimple($viewing_itemid)."'");
-					if(DB::IsError($selected_pinset)) {
-						die_freepbx($selected_pinset->getMessage());
-					}
+				$selected_pinset = $db->getOne("SELECT pinsets_id FROM pinset_usage WHERE dispname='routing' AND foreign_id='".$db->escapeSimple($viewing_itemid)."'");
+				if(DB::IsError($selected_pinset)) {
+					die_freepbx($selected_pinset->getMessage());
 				}
 			}
+		}
 
-			$hookhtml = '
-				<!--PINSET HOOK-->
-				<div class="element-container">
-					<div class="row">
-						<div class="col-md-12">
-							<div class="row">
-								<div class="form-group">
-									<div class="col-md-3">
-										<label class="control-label" for="pinsets">'. _("PIN Set").'</label>
-										<i class="fa fa-question-circle fpbx-help-icon" data-for="pinsets"></i>
-									</div>
-									<div class="col-md-9">
-										<select name="pinsets" class="form-control">
-											<option value="">'._('None').'</option>';
-			if (is_array($pinsets)) {
-				foreach($pinsets as $item) {
-					$selected = $selected_pinset == $item['pinsets_id'] ? 'selected' : '';
-					$hookhtml .= "<option value={$item['pinsets_id']} ".$selected.">{$item['description']}</option>";
-				}
+		$hookhtml = '
+			<!--PINSET HOOK-->
+			<div class="element-container">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="row">
+							<div class="form-group">
+								<div class="col-md-3">
+									<label class="control-label" for="pinsets">'. _("PIN Set").'</label>
+									<i class="fa fa-question-circle fpbx-help-icon" data-for="pinsets"></i>
+								</div>
+								<div class="col-md-9">
+									<select name="pinsets" class="form-control">
+										<option value="">'._('None').'</option>';
+		if (is_array($pinsets)) {
+			foreach($pinsets as $item) {
+				$selected = $selected_pinset == $item['pinsets_id'] ? 'selected' : '';
+				$hookhtml .= "<option value={$item['pinsets_id']} ".$selected.">{$item['description']}</option>";
 			}
+		}
 
-			$hookhtml .= '				</select>
-									</div>
+		$hookhtml .= '				</select>
 								</div>
 							</div>
 						</div>
 					</div>
-					<div class="row">
-						<div class="col-md-12">
-							<span id="pinsets-help" class="help-block fpbx-help-block">'._('Optional: Select a PIN set to use. If using this option, leave the Route Password field blank.').'</span>
-						</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12">
+						<span id="pinsets-help" class="help-block fpbx-help-block">'._('Optional: Select a PIN set to use. If using this option, leave the Route Password field blank.').'</span>
 					</div>
 				</div>
-				<!--END PINSETHOOK-->
-				';
-			return $hookhtml;
-			break;
-		default:
-			return false;
-			break;
+			</div>
+			<!--END PINSETHOOK-->
+			';
+		return $hookhtml;
+		break;
+	default:
+		return false;
+		break;
 	}
 }
 
@@ -293,7 +295,7 @@ function pinsets_hookProcess_core($viewing_itemid, $request) {
 		if (!$action && isset($_SESSION['pinsetsAddRoute']) && $_SESSION['pinsetsAddRoute'] != '') {
 			pinsets_adjustroute($route_id,'delayed_insert_route',$_SESSION['pinsetsAddRoute']);
 			unset($_SESSION['pinsetsAddRoute']);
-		} elseif ($action){
+		} elseif ($action) {
 			pinsets_adjustroute($route_id,$action,$request['pinsets']);
 		}
 		break;
