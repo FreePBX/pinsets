@@ -3,6 +3,7 @@ if (!defined('FREEPBX_IS_AUTH')) { die('No direct script access allowed'); }
 //	License for all code of this FreePBX module can be found in the license file inside the module directory
 //	Copyright 2013 Schmooze Com Inc.
 //
+
 // a class for generating passwdfile
 class pinsets_conf {
 	// return an array of filenames to write
@@ -90,11 +91,11 @@ function pinsets_get_config($engine) {
 }
 
 function pinsets_list_usage($dispname=true) {
-  $sql = 'SELECT * FROM `pinset_usage`';
-  if ($dispname !== true) {
-    $sql .= " WHERE `dispname` = '$dispname'";
-  }
-  return sql($sql,'getAll',DB_FETCHMODE_ASSOC);
+	$sql = 'SELECT * FROM `pinset_usage`';
+	if ($dispname !== true) {
+		$sql .= " WHERE `dispname` = '$dispname'";
+	}
+	return sql($sql,'getAll',DB_FETCHMODE_ASSOC);
 }
 
 //get the existing meetme extensions
@@ -142,7 +143,6 @@ function pinsets_edit($id,$post){
 
 // clean and remove duplicates
 function pinsets_clean($passwords) {
-
 	$passwords = explode("\n",$passwords);
 
 	if (!$passwords) {
@@ -157,7 +157,8 @@ function pinsets_clean($passwords) {
 		$passwords[$key] = preg_replace("/[^0-9#*]/", "", $passwords[$key]);
 
 		// remove blanks
-		if ($passwords[$key] == "") unset($passwords[$key]);
+		if ($passwords[$key] == "")
+			unset($passwords[$key]);
 	}
 
 	// check for duplicates, and re-sequence
@@ -176,35 +177,35 @@ function pinsets_chk($post){
 
 //removes a pinset from a route and shifts priority for all outbound routing pinsets
 function pinsets_adjustroute($route_id,$action,$routepinset='') {
-  global $db;
-  $dispname = 'routing';
-  $route_id = $db->escapeSimple($route_id);
-  $routepinset = $db->escapeSimple($routepinset);
+	global $db;
+	$dispname = 'routing';
+	$route_id = $db->escapeSimple($route_id);
+	$routepinset = $db->escapeSimple($routepinset);
 
-  switch ($action) {
-  case 'delroute':
-    sql('DELETE FROM pinset_usage WHERE foreign_id ='.q($route_id)." AND dispname = '$dispname'");
-    break;
-  case 'addroute';
-    if ($routepinset != '') {
-      // we don't have the route_id yet, it hasn't been inserted yet :(, put it in the session
-      // and when returned it will be available on the redirect_standard
-      $_SESSION['pinsetsAddRoute'] = $routepinset;
-    }
-    break;
-  case 'delayed_insert_route';
-    if ($routepinset != '') {
-		sql("INSERT INTO pinset_usage (pinsets_id, dispname, foreign_id) VALUES ($routepinset, '$dispname', '$route_id')");
-    }
-    break;
-  case 'editroute';
-    if ($routepinset != '') {
-      sql("REPLACE INTO pinset_usage (pinsets_id, dispname, foreign_id) VALUES ($routepinset, '$dispname', '$route_id')");
-    } else {
-      sql('DELETE FROM pinset_usage WHERE foreign_id ='.q($route_id)." AND dispname = '$dispname'");
-    }
-    break;
-  }
+	switch ($action) {
+	case 'delroute':
+		sql('DELETE FROM pinset_usage WHERE foreign_id ='.q($route_id)." AND dispname = '$dispname'");
+		break;
+	case 'addroute';
+		if ($routepinset != '') {
+			// we don't have the route_id yet, it hasn't been inserted yet :(, put it in the session
+			// and when returned it will be available on the redirect_standard
+			$_SESSION['pinsetsAddRoute'] = $routepinset;
+		}
+		break;
+	case 'delayed_insert_route';
+		if ($routepinset != '') {
+			sql("INSERT INTO pinset_usage (pinsets_id, dispname, foreign_id) VALUES ($routepinset, '$dispname', '$route_id')");
+		}
+		break;
+	case 'editroute';
+		if ($routepinset != '') {
+			sql("REPLACE INTO pinset_usage (pinsets_id, dispname, foreign_id) VALUES ($routepinset, '$dispname', '$route_id')");
+		} else {
+			sql('DELETE FROM pinset_usage WHERE foreign_id ='.q($route_id)." AND dispname = '$dispname'");
+		}
+		break;
+	}
 }
 
 // provide hook for routing
@@ -264,10 +265,10 @@ function pinsets_hook_core($viewing_itemid, $target_menuid) {
 				<!--END PINSETHOOK-->
 				';
 			return $hookhtml;
-		break;
+			break;
 		default:
 			return false;
-		break;
+			break;
 	}
 }
 
@@ -280,22 +281,22 @@ function pinsets_hookProcess_core($viewing_itemid, $request) {
 	// this is really a crappy way to store things.
 	// Any module that is hooked by pinsets when submitted will result in all the "used_by" fields being re-written
 	switch ($request['display']) {
-  case 'routing':
-    $action = (isset($request['action']))?$request['action']:null;
-    $route_id = $viewing_itemid;
-    if (isset($request['Submit']) ) {
-      $action = (isset($action))?$action:'editroute';
-    }
+	case 'routing':
+		$action = (isset($request['action']))?$request['action']:null;
+		$route_id = $viewing_itemid;
+		if (isset($request['Submit']) ) {
+			$action = (isset($action))?$action:'editroute';
+		}
 
-    // $action won't be set on the redirect but pinsetsAddRoute will be in the session
-    //
-    if (!$action && isset($_SESSION['pinsetsAddRoute']) && $_SESSION['pinsetsAddRoute'] != '') {
-      pinsets_adjustroute($route_id,'delayed_insert_route',$_SESSION['pinsetsAddRoute']);
-      unset($_SESSION['pinsetsAddRoute']);
-    } elseif ($action){
-      pinsets_adjustroute($route_id,$action,$request['pinsets']);
-    }
-    break;
+		// $action won't be set on the redirect but pinsetsAddRoute will be in the session
+		//
+		if (!$action && isset($_SESSION['pinsetsAddRoute']) && $_SESSION['pinsetsAddRoute'] != '') {
+			pinsets_adjustroute($route_id,'delayed_insert_route',$_SESSION['pinsetsAddRoute']);
+			unset($_SESSION['pinsetsAddRoute']);
+		} elseif ($action){
+			pinsets_adjustroute($route_id,$action,$request['pinsets']);
+		}
+		break;
 	}
 }
 ?>
