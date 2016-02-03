@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeÅBX pinsets\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-11-03 15:28-0800\n"
+"POT-Creation-Date: 2016-02-03 11:56-0800\n"
 "PO-Revision-Date: 2011-03-20 00:00+0100\n"
 "Last-Translator: Mikael Carlsson <mickecamino@gmail.com>\n"
 "Language-Team: \n"
@@ -37,6 +37,14 @@ msgstr ""
 #: views/bootnav.php:2
 msgid "Add PIN Sets"
 msgstr ""
+
+#: pinsets.i18n.php:8
+msgid ""
+"Allow creation of lists of PINs (numbers for passwords) that can be used by "
+"other modules (eg, trunks)."
+msgstr ""
+"Ger möjlighet att skapa listor med PINs (nummer för lösenord) somkan "
+"användas av andra moduler (trunkar)."
 
 #: Pinsets.class.php:51
 msgid "Delete"
@@ -62,11 +70,11 @@ msgstr "Ny PIN-kod"
 msgid "No"
 msgstr ""
 
-#: functions.inc.php:244
+#: functions.inc.php:247
 msgid "None"
 msgstr "Ingen"
 
-#: functions.inc.php:260
+#: functions.inc.php:263
 msgid ""
 "Optional: Select a PIN set to use. If using this option, leave the Route "
 "Password field blank."
@@ -78,13 +86,17 @@ msgstr ""
 msgid "PIN List"
 msgstr ""
 
-#: functions.inc.php:239 views/grid.php:23
+#: functions.inc.php:242 views/grid.php:23
 msgid "PIN Set"
 msgstr "PIN-kod"
 
 #: views/form.php:29
 msgid "PIN Set Description"
 msgstr ""
+
+#: pinsets.i18n.php:4 pinsets.i18n.php:10
+msgid "PIN Sets"
+msgstr "PIN-koder"
 
 #: page.pinsets.php:6
 msgid ""
@@ -122,11 +134,15 @@ msgid ""
 "when used"
 msgstr ""
 
+#: pinsets.i18n.php:6 pinsets.i18n.php:12
+msgid "Settings"
+msgstr ""
+
 #: Pinsets.class.php:61
 msgid "Submit"
 msgstr ""
 
-#: functions.inc.php:130 functions.inc.php:139
+#: functions.inc.php:131 functions.inc.php:140
 msgid "Unnamed"
 msgstr "Inget namn"
 
@@ -173,16 +189,6 @@ msgstr "ok"
 #: install.php:43
 msgid "unknown error fetching table data"
 msgstr "okänt fel när tabelldata skulle hämtas"
-
-#~ msgid ""
-#~ "Allow creation of lists of PINs (numbers for passwords) that can be used "
-#~ "by other modules (eg, trunks)."
-#~ msgstr ""
-#~ "Ger möjlighet att skapa listor med PINs (nummer för lösenord) somkan "
-#~ "användas av andra moduler (trunkar)."
-
-#~ msgid "PIN Sets"
-#~ msgstr "PIN-koder"
 
 #~ msgid "Add PIN Set"
 #~ msgstr "Lägg till PIN-kod"

@@ -37,7 +37,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX 2.10.02\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-11-03 15:28-0800\n"
+"POT-Creation-Date: 2016-02-03 11:56-0800\n"
 "PO-Revision-Date: 2014-02-19 20:56+0200\n"
 "Last-Translator: Chise Mishima <c.mishima@qloog.com>\n"
 "Language-Team: Japanese <http://example.com/projects/freepbx/pinsets/ja/>\n"
@@ -55,6 +55,14 @@ msgstr ""
 #: views/bootnav.php:2
 msgid "Add PIN Sets"
 msgstr ""
+
+#: pinsets.i18n.php:8
+msgid ""
+"Allow creation of lists of PINs (numbers for passwords) that can be used by "
+"other modules (eg, trunks)."
+msgstr ""
+"他のモジュール(例：トランク)によって使用される可能性のあるPINのリスト(パス"
+"ワードとしての数値)作成を許可します。"
 
 #: Pinsets.class.php:51
 msgid "Delete"
@@ -80,11 +88,11 @@ msgstr "新しいPINセット"
 msgid "No"
 msgstr ""
 
-#: functions.inc.php:244
+#: functions.inc.php:247
 msgid "None"
 msgstr "なし"
 
-#: functions.inc.php:260
+#: functions.inc.php:263
 msgid ""
 "Optional: Select a PIN set to use. If using this option, leave the Route "
 "Password field blank."
@@ -96,13 +104,17 @@ msgstr ""
 msgid "PIN List"
 msgstr ""
 
-#: functions.inc.php:239 views/grid.php:23
+#: functions.inc.php:242 views/grid.php:23
 msgid "PIN Set"
 msgstr "PINセット"
 
 #: views/form.php:29
 msgid "PIN Set Description"
 msgstr ""
+
+#: pinsets.i18n.php:4 pinsets.i18n.php:10
+msgid "PIN Sets"
+msgstr "PINセット"
 
 #: page.pinsets.php:6
 msgid ""
@@ -140,11 +152,15 @@ msgid ""
 "when used"
 msgstr ""
 
+#: pinsets.i18n.php:6 pinsets.i18n.php:12
+msgid "Settings"
+msgstr "設定"
+
 #: Pinsets.class.php:61
 msgid "Submit"
 msgstr ""
 
-#: functions.inc.php:130 functions.inc.php:139
+#: functions.inc.php:131 functions.inc.php:140
 msgid "Unnamed"
 msgstr "名前がつけられてません"
 
@@ -191,19 +207,6 @@ msgstr "ok"
 #: install.php:43
 msgid "unknown error fetching table data"
 msgstr "テーブルデータのフェッチ中の不明なエラー"
-
-#~ msgid ""
-#~ "Allow creation of lists of PINs (numbers for passwords) that can be used "
-#~ "by other modules (eg, trunks)."
-#~ msgstr ""
-#~ "他のモジュール(例：トランク)によって使用される可能性のあるPINのリスト(パス"
-#~ "ワードとしての数値)作成を許可します。"
-
-#~ msgid "PIN Sets"
-#~ msgstr "PINセット"
-
-#~ msgid "Settings"
-#~ msgstr "設定"
 
 #~ msgid "Add PIN Set"
 #~ msgstr "PINセットを追加"

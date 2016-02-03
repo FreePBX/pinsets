@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-11-03 15:28-0800\n"
+"POT-Creation-Date: 2016-02-03 11:56-0800\n"
 "PO-Revision-Date: 2015-05-04 00:04+0200\n"
 "Last-Translator: Yuriy <alliancesko@gmail.com>\n"
 "Language-Team: Russian <http://weblate.freepbx.org/projects/freepbx/pinsets/"
@@ -26,6 +26,14 @@ msgstr "Действия"
 #: views/bootnav.php:2
 msgid "Add PIN Sets"
 msgstr "Добавить наборы ПИНов"
+
+#: pinsets.i18n.php:8
+msgid ""
+"Allow creation of lists of PINs (numbers for passwords) that can be used by "
+"other modules (eg, trunks)."
+msgstr ""
+"Даёт возможность создавать списки наборов PIN, которые затем можно "
+"использовать в других модулях (например - в траках)."
 
 #: Pinsets.class.php:51
 msgid "Delete"
@@ -51,11 +59,11 @@ msgstr "Новый лист PIN-кодов"
 msgid "No"
 msgstr "Нет"
 
-#: functions.inc.php:244
+#: functions.inc.php:247
 msgid "None"
 msgstr "Нет"
 
-#: functions.inc.php:260
+#: functions.inc.php:263
 msgid ""
 "Optional: Select a PIN set to use. If using this option, leave the Route "
 "Password field blank."
@@ -67,13 +75,17 @@ msgstr ""
 msgid "PIN List"
 msgstr "Список ПИН"
 
-#: functions.inc.php:239 views/grid.php:23
+#: functions.inc.php:242 views/grid.php:23
 msgid "PIN Set"
 msgstr "Лист PIN-кодов"
 
 #: views/form.php:29
 msgid "PIN Set Description"
 msgstr "Описание набора ПИН"
+
+#: pinsets.i18n.php:4 pinsets.i18n.php:10
+msgid "PIN Sets"
+msgstr "Листы PIN-кодов"
 
 #: page.pinsets.php:6
 msgid ""
@@ -113,11 +125,15 @@ msgstr ""
 "Выберите Да, если Вы хотели бы сделать запись PIN в информации о вызове, "
 "когда используется"
 
+#: pinsets.i18n.php:6 pinsets.i18n.php:12
+msgid "Settings"
+msgstr "Установки"
+
 #: Pinsets.class.php:61
 msgid "Submit"
 msgstr "Сохранить"
 
-#: functions.inc.php:130 functions.inc.php:139
+#: functions.inc.php:131 functions.inc.php:140
 msgid "Unnamed"
 msgstr "Без названия"
 
@@ -164,19 +180,6 @@ msgstr "ok"
 #: install.php:43
 msgid "unknown error fetching table data"
 msgstr "произошла непонятная ошибка при попытке анализа данных таблицы"
-
-#~ msgid ""
-#~ "Allow creation of lists of PINs (numbers for passwords) that can be used "
-#~ "by other modules (eg, trunks)."
-#~ msgstr ""
-#~ "Даёт возможность создавать списки наборов PIN, которые затем можно "
-#~ "использовать в других модулях (например - в траках)."
-
-#~ msgid "PIN Sets"
-#~ msgstr "Листы PIN-кодов"
-
-#~ msgid "Settings"
-#~ msgstr "Установки"
 
 #~ msgid "Add PIN Set"
 #~ msgstr "Добавить лист PIN-кодов"
