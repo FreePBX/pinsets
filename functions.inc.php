@@ -97,11 +97,7 @@ function pinsets_list_usage($dispname=true) {
 
 //get the existing meetme extensions
 function pinsets_list() {
-	$results = sql("SELECT * FROM pinsets","getAll",DB_FETCHMODE_ASSOC);
-	if(is_array($results)){
-		return $results;
-	}
-	return null;
+	return \FreePBX::Pinsets()->listPinsets();
 }
 
 function pinsets_get($id){

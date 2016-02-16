@@ -40,6 +40,16 @@ class Pinsets implements \BMO {
 		}
 
 	}
+	function listPinsets() {
+		$sql = "SELECT * FROM pinsets";
+		$stmt = $this->db->prepare($sql);
+ 		$stmt->execute();
+ 		$ret = $stmt->fetchAll(\PDO::FETCH_ASSOC);
+		if(is_array($ret)){
+			return $ret;
+		}
+		return null;
+	}
 	public function getActionBar($request) {
 		$buttons = array();
 		switch($request['display']) {
@@ -70,5 +80,40 @@ class Pinsets implements \BMO {
 			break;
 		}
 		return $buttons;
+	}
+	public function ajaxRequest($req, &$setting) {
+        switch ($req) {
+            case 'getJSON':
+                return true;
+            break;
+            default:
+                return false;
+            break;
+        }
+    }
+    public function ajaxHandler(){
+        switch ($_REQUEST['command']) {
+            case 'getJSON':
+                switch ($_REQUEST['jdata']) {
+                    case 'grid':
+                        return $this->listPinsets();
+                    break;
+
+                    default:
+                        return false;
+                    break;
+                }
+            break;
+
+            default:
+                return false;
+            break;
+        }
+    }
+
+	public function getRightNav($request) {
+		if(isset($request['view']) && $request['view'] == 'form'){
+	    return load_view(__DIR__."/views/bootnav.php",array());
+		}
 	}
 }
