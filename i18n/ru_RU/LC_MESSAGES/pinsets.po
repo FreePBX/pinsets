@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-02-03 11:56-0800\n"
+"POT-Creation-Date: 2016-02-29 11:30-0800\n"
 "PO-Revision-Date: 2015-05-04 00:04+0200\n"
 "Last-Translator: Yuriy <alliancesko@gmail.com>\n"
 "Language-Team: Russian <http://weblate.freepbx.org/projects/freepbx/pinsets/"
@@ -19,13 +19,13 @@ msgstr ""
 "10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Weblate 2.2-dev\n"
 
-#: views/grid.php:24
+#: views/grid.php:26
 msgid "Actions"
 msgstr "Действия"
 
-#: views/bootnav.php:2
-msgid "Add PIN Sets"
-msgstr "Добавить наборы ПИНов"
+#: views/bootnav.php:2 views/grid.php:8
+msgid "Add Pinset"
+msgstr ""
 
 #: pinsets.i18n.php:8
 msgid ""
@@ -35,7 +35,7 @@ msgstr ""
 "Даёт возможность создавать списки наборов PIN, которые затем можно "
 "использовать в других модулях (например - в траках)."
 
-#: Pinsets.class.php:51
+#: Pinsets.class.php:61
 msgid "Delete"
 msgstr "Удалить"
 
@@ -47,10 +47,6 @@ msgstr "Изменить лист PIN-кодов"
 msgid "Enter a list of one or more PINs.  One PIN per line."
 msgstr "Введите PIN-коды в список, по одному в строке."
 
-#: views/bootnav.php:1
-msgid "List PIN Sets"
-msgstr "Список наборов ПИН"
-
 #: views/form.php:16
 msgid "New PIN Set"
 msgstr "Новый лист PIN-кодов"
@@ -59,11 +55,11 @@ msgstr "Новый лист PIN-кодов"
 msgid "No"
 msgstr "Нет"
 
-#: functions.inc.php:247
+#: functions.inc.php:242
 msgid "None"
 msgstr "Нет"
 
-#: functions.inc.php:263
+#: functions.inc.php:258
 msgid ""
 "Optional: Select a PIN set to use. If using this option, leave the Route "
 "Password field blank."
@@ -75,7 +71,7 @@ msgstr ""
 msgid "PIN List"
 msgstr "Список ПИН"
 
-#: functions.inc.php:242 views/grid.php:23
+#: functions.inc.php:237
 msgid "PIN Set"
 msgstr "Лист PIN-кодов"
 
@@ -101,6 +97,10 @@ msgstr ""
 msgid "Pin Sets"
 msgstr "Наборы ПИН"
 
+#: views/bootnav.php:8 views/grid.php:25
+msgid "Pinset"
+msgstr ""
+
 #: views/form.php:41
 msgid "Please enter a description for this pinset"
 msgstr "Пожалуйста, введите описание для этого набора ПИН"
@@ -113,7 +113,7 @@ msgstr "Укажите разрешенное описание"
 msgid "Record In CDR"
 msgstr "Запись в CDR"
 
-#: Pinsets.class.php:56
+#: Pinsets.class.php:66
 msgid "Reset"
 msgstr "Сброс"
 
@@ -129,11 +129,11 @@ msgstr ""
 msgid "Settings"
 msgstr "Установки"
 
-#: Pinsets.class.php:61
+#: Pinsets.class.php:71
 msgid "Submit"
 msgstr "Сохранить"
 
-#: functions.inc.php:131 functions.inc.php:140
+#: functions.inc.php:126 functions.inc.php:135
 msgid "Unnamed"
 msgstr "Без названия"
 
@@ -180,6 +180,12 @@ msgstr "ok"
 #: install.php:43
 msgid "unknown error fetching table data"
 msgstr "произошла непонятная ошибка при попытке анализа данных таблицы"
+
+#~ msgid "Add PIN Sets"
+#~ msgstr "Добавить наборы ПИНов"
+
+#~ msgid "List PIN Sets"
+#~ msgstr "Список наборов ПИН"
 
 #~ msgid "Add PIN Set"
 #~ msgstr "Добавить лист PIN-кодов"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX 2.5 Chinese Translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-02-03 11:56-0800\n"
+"POT-Creation-Date: 2016-02-29 11:30-0800\n"
 "PO-Revision-Date: 2009-02-01 12:04+0800\n"
 "Last-Translator: 周征晟 <zhougongjizhe@163.com>\n"
 "Language-Team: EdwardBadBoy <zhougongjizhe@163.com>\n"
@@ -18,12 +18,12 @@ msgstr ""
 "X-Poedit-Country: CHINA\n"
 "X-Poedit-SourceCharset: utf-8\n"
 
-#: views/grid.php:24
+#: views/grid.php:26
 msgid "Actions"
 msgstr ""
 
-#: views/bootnav.php:2
-msgid "Add PIN Sets"
+#: views/bootnav.php:2 views/grid.php:8
+msgid "Add Pinset"
 msgstr ""
 
 #: pinsets.i18n.php:8
@@ -32,7 +32,7 @@ msgid ""
 "other modules (eg, trunks)."
 msgstr ""
 
-#: Pinsets.class.php:51
+#: Pinsets.class.php:61
 msgid "Delete"
 msgstr ""
 
@@ -44,10 +44,6 @@ msgstr "编辑PIN码集合"
 msgid "Enter a list of one or more PINs.  One PIN per line."
 msgstr "请输入一个或多个PIN码，一行输一个PIN码。"
 
-#: views/bootnav.php:1
-msgid "List PIN Sets"
-msgstr ""
-
 #: views/form.php:16
 msgid "New PIN Set"
 msgstr "新建PIN码集合"
@@ -56,11 +52,11 @@ msgstr "新建PIN码集合"
 msgid "No"
 msgstr ""
 
-#: functions.inc.php:247
+#: functions.inc.php:242
 msgid "None"
 msgstr "无"
 
-#: functions.inc.php:263
+#: functions.inc.php:258
 msgid ""
 "Optional: Select a PIN set to use. If using this option, leave the Route "
 "Password field blank."
@@ -72,7 +68,7 @@ msgstr ""
 msgid "PIN List"
 msgstr ""
 
-#: functions.inc.php:242 views/grid.php:23
+#: functions.inc.php:237
 msgid "PIN Set"
 msgstr "PIN码集合"
 
@@ -97,6 +93,10 @@ msgstr ""
 msgid "Pin Sets"
 msgstr ""
 
+#: views/bootnav.php:8 views/grid.php:25
+msgid "Pinset"
+msgstr ""
+
 #: views/form.php:41
 msgid "Please enter a description for this pinset"
 msgstr ""
@@ -109,7 +109,7 @@ msgstr "请输入有效的描述"
 msgid "Record In CDR"
 msgstr ""
 
-#: Pinsets.class.php:56
+#: Pinsets.class.php:66
 msgid "Reset"
 msgstr ""
 
@@ -123,11 +123,11 @@ msgstr ""
 msgid "Settings"
 msgstr ""
 
-#: Pinsets.class.php:61
+#: Pinsets.class.php:71
 msgid "Submit"
 msgstr ""
 
-#: functions.inc.php:131 functions.inc.php:140
+#: functions.inc.php:126 functions.inc.php:135
 msgid "Unnamed"
 msgstr ""
 
