@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-02-29 11:30-0800\n"
+"POT-Creation-Date: 2016-03-02 15:15-0800\n"
 "PO-Revision-Date: 2015-10-16 08:31+0200\n"
 "Last-Translator: Media <mousavi.media@gmail.com>\n"
 "Language-Team: Persian <http://weblate.freepbx.org/projects/freepbx/pinsets/"
@@ -55,11 +55,11 @@ msgstr "PIN جدید"
 msgid "No"
 msgstr "خیر"
 
-#: functions.inc.php:242
+#: functions.inc.php:241
 msgid "None"
 msgstr "هیچ"
 
-#: functions.inc.php:258
+#: functions.inc.php:257
 msgid ""
 "Optional: Select a PIN set to use. If using this option, leave the Route "
 "Password field blank."
@@ -69,7 +69,7 @@ msgstr "اختیاری：یک PIN برای کاربر انتخاب کنید."
 msgid "PIN List"
 msgstr "فهرست PIN"
 
-#: functions.inc.php:237
+#: functions.inc.php:236
 msgid "PIN Set"
 msgstr "تنظیمات PIN"
 
@@ -126,7 +126,7 @@ msgstr ""
 msgid "Submit"
 msgstr "ثبت"
 
-#: functions.inc.php:126 functions.inc.php:135
+#: functions.inc.php:125 functions.inc.php:134
 msgid "Unnamed"
 msgstr "بدون نام"
 
