@@ -49,7 +49,6 @@ class pinsets_conf {
  */
 function pinsets_get_config($engine) {
 	global $ext;  // is this the best way to pass this?
-	global $asterisk_conf;
 
 	$pinsets_conf = pinsets_conf::create();
 
@@ -66,7 +65,7 @@ function pinsets_get_config($engine) {
 		$ext->add('macro-pinsets', 's', '', new ext_gotoif('${ARG2} = 1','cdr,1'));
 		$ext->add('macro-pinsets', 's', '', new ext_execif('$["${DB(AMPUSER/${AMPUSER}/pinless)}" != "NOPASSWD"]', 'ResetCDR','v'));
 		// authenticate with the CDR option (a)
-		$ext->add('macro-pinsets', 'cdr', '', new ext_execif('$["${DB(AMPUSER/${AMPUSER}/pinless)}" != "NOPASSWD"]', 'Authenticate',$asterisk_conf['astetcdir'].'/pinset_${ARG1},a'));
+		$ext->add('macro-pinsets', 'cdr', '', new ext_execif('$["${DB(AMPUSER/${AMPUSER}/pinless)}" != "NOPASSWD"]', 'Authenticate',$astetcdir.'/pinset_${ARG1},a'));
 		$ext->add('macro-pinsets', 'cdr', '', new ext_execif('$["${DB(AMPUSER/${AMPUSER}/pinless)}" != "NOPASSWD"]', 'ResetCDR','v'));
 	}
 
