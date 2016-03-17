@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-03-02 15:15-0800\n"
-"PO-Revision-Date: 2016-03-15 15:30+0300\n"
+"PO-Revision-Date: 2016-03-17 01:13+0200\n"
 "Last-Translator: Media <mousavi.media@gmail.com>\n"
 "Language-Team: Persian "
 "<http://weblate.freepbx.org/projects/freepbx/pinsets/fa/>\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2.2-dev\n"
+"X-Generator: Weblate 2.4\n"
 
 #: views/grid.php:26
 msgid "Actions"
@@ -33,7 +33,7 @@ msgstr "افزودن پین"
 msgid ""
 "Allow creation of lists of PINs (numbers for passwords) that can be used by "
 "other modules (eg, trunks)."
-msgstr ""
+msgstr "مجوز ایجاد فهرست پین هایی که میتوانند توسط سایر ماژول ها استفاده شوند."
 
 #: Pinsets.class.php:61
 msgid "Delete"
@@ -79,7 +79,7 @@ msgstr "شرح PIN"
 
 #: pinsets.i18n.php:4 pinsets.i18n.php:10
 msgid "PIN Sets"
-msgstr ""
+msgstr "تنظیمات پین"
 
 #: page.pinsets.php:6
 msgid ""
@@ -87,6 +87,9 @@ msgid ""
 "restricted features such as Outbound Routes. The PIN can also be added to "
 "the CDR record's 'accountcode' field."
 msgstr ""
+"PIN Sets are used to manage lists of PINs that can be used to access "
+"restricted features such as Outbound Routes. The PIN can also be added to "
+"the CDR record's 'accountcode' field ."
 
 #: page.pinsets.php:7
 msgid "Pin Sets"
@@ -116,7 +119,7 @@ msgstr "بازنشانی"
 msgid ""
 "Select Yes, if you would like to record the PIN in the call detail records "
 "when used"
-msgstr ""
+msgstr "اگر میخواهید پین در جزییات تماس ضبط شود بله را انتخاب کنید"
 
 #: pinsets.i18n.php:6 pinsets.i18n.php:12
 msgid "Settings"
@@ -152,7 +155,7 @@ msgstr "انجام شده"
 
 #: install.php:88
 msgid "dropping used_by field.."
-msgstr ""
+msgstr "انداختن فیلد استفاده شده توسط.."
 
 #: install.php:34
 msgid "migrating.."
@@ -164,7 +167,7 @@ msgstr "شکست انتقال"
 
 #: install.php:92
 msgid "no used_by field???"
-msgstr ""
+msgstr "بدون فیلد استفاده شده؟؟؟"
 
 #: install.php:94
 msgid "ok"
