@@ -10,16 +10,16 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-03-02 15:15-0800\n"
-"PO-Revision-Date: 2015-10-16 08:31+0200\n"
+"PO-Revision-Date: 2016-05-05 04:23+0200\n"
 "Last-Translator: Media <mousavi.media@gmail.com>\n"
-"Language-Team: Persian <http://weblate.freepbx.org/projects/freepbx/pinsets/"
-"fa/>\n"
+"Language-Team: Persian (Iran) "
+"<http://weblate.freepbx.org/projects/freepbx/pinsets/fa_IR/>\n"
+"Language: fa_IR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: fa\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2.2-dev\n"
+"X-Generator: Weblate 2.4\n"
 
 #: views/grid.php:26
 msgid "Actions"
@@ -27,13 +27,13 @@ msgstr "عملیات"
 
 #: views/bootnav.php:2 views/grid.php:8
 msgid "Add Pinset"
-msgstr ""
+msgstr "افزودن پین"
 
 #: pinsets.i18n.php:8
 msgid ""
 "Allow creation of lists of PINs (numbers for passwords) that can be used by "
 "other modules (eg, trunks)."
-msgstr ""
+msgstr "مجوز ایجاد فهرست پین هایی که میتوانند توسط سایر ماژول ها استفاده شوند."
 
 #: Pinsets.class.php:61
 msgid "Delete"
@@ -79,7 +79,7 @@ msgstr "شرح PIN"
 
 #: pinsets.i18n.php:4 pinsets.i18n.php:10
 msgid "PIN Sets"
-msgstr ""
+msgstr "تنظیمات پین"
 
 #: page.pinsets.php:6
 msgid ""
@@ -87,6 +87,9 @@ msgid ""
 "restricted features such as Outbound Routes. The PIN can also be added to "
 "the CDR record's 'accountcode' field."
 msgstr ""
+"PIN Sets are used to manage lists of PINs that can be used to access "
+"restricted features such as Outbound Routes. The PIN can also be added to "
+"the CDR record's 'accountcode' field ."
 
 #: page.pinsets.php:7
 msgid "Pin Sets"
@@ -94,7 +97,7 @@ msgstr "تنظیمات PIN"
 
 #: views/bootnav.php:8 views/grid.php:25
 msgid "Pinset"
-msgstr ""
+msgstr "پین ست"
 
 #: views/form.php:41
 msgid "Please enter a description for this pinset"
@@ -106,7 +109,7 @@ msgstr "لطفا شرح معتبر وارد کنید"
 
 #: views/form.php:53
 msgid "Record In CDR"
-msgstr "ذخیره در CDR"
+msgstr "ذخیره در جزئیات تماس"
 
 #: Pinsets.class.php:66
 msgid "Reset"
@@ -116,11 +119,11 @@ msgstr "بازنشانی"
 msgid ""
 "Select Yes, if you would like to record the PIN in the call detail records "
 "when used"
-msgstr ""
+msgstr "اگر میخواهید پین در جزییات تماس ضبط شود بله را انتخاب کنید"
 
 #: pinsets.i18n.php:6 pinsets.i18n.php:12
 msgid "Settings"
-msgstr ""
+msgstr "پیکربندی"
 
 #: Pinsets.class.php:71
 msgid "Submit"
@@ -152,7 +155,7 @@ msgstr "انجام شده"
 
 #: install.php:88
 msgid "dropping used_by field.."
-msgstr ""
+msgstr "انداختن فیلد استفاده شده توسط.."
 
 #: install.php:34
 msgid "migrating.."
@@ -164,7 +167,7 @@ msgstr "شکست انتقال"
 
 #: install.php:92
 msgid "no used_by field???"
-msgstr ""
+msgstr "بدون فیلد استفاده شده؟؟؟"
 
 #: install.php:94
 msgid "ok"
