@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX v2.5\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-03-02 15:15-0800\n"
+"POT-Creation-Date: 2016-08-10 18:02-0700\n"
 "PO-Revision-Date: 2014-07-22 12:37+0200\n"
 "Last-Translator: Chavdar <chavdar_75@yahoo.com>\n"
 "Language-Team: Bulgarian <http://git.freepbx.org/projects/freepbx/pinsets/bg/"
@@ -58,11 +58,11 @@ msgstr "Ново PIN Въвеждане"
 msgid "No"
 msgstr ""
 
-#: functions.inc.php:241
+#: functions.inc.php:242
 msgid "None"
 msgstr "Няма"
 
-#: functions.inc.php:257
+#: functions.inc.php:258
 msgid ""
 "Optional: Select a PIN set to use. If using this option, leave the Route "
 "Password field blank."
@@ -74,7 +74,7 @@ msgstr ""
 msgid "PIN List"
 msgstr ""
 
-#: functions.inc.php:236
+#: functions.inc.php:237
 msgid "PIN Set"
 msgstr "PIN Въвеждане"
 
@@ -134,7 +134,7 @@ msgstr "Настройки"
 msgid "Submit"
 msgstr ""
 
-#: functions.inc.php:125 functions.inc.php:134
+#: functions.inc.php:126 functions.inc.php:135
 msgid "Unnamed"
 msgstr "Без име"
 
