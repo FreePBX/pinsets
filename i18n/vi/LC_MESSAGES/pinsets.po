@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-08-10 18:02-0700\n"
-"PO-Revision-Date: 2017-07-11 16:00+0200\n"
+"PO-Revision-Date: 2017-07-14 08:25+0200\n"
 "Last-Translator: PETER <ftek@ymail.com>\n"
 "Language-Team: Vietnamese "
 "<http://weblate.freepbx.org/projects/freepbx/pinsets/vi/>\n"
@@ -92,8 +92,8 @@ msgid ""
 "the CDR record's 'accountcode' field."
 msgstr ""
 "Các cài đặt PIN được sử dụng để quản lý danh sách các PIN cho việc truy nhập "
-"các tính năng giới hạn ví dụ như các tuyến ra (Outbound Route). PIN cũng có "
-"thể được thêm vào trường  'accountcode' của các bản ghi CDR."
+"các tính năng giới hạn ví dụ như các tuyến gọi ra (Outbound Route). PIN cũng "
+"có thể được thêm vào trường  'accountcode' của các bản ghi CDR."
 
 #: page.pinsets.php:7
 msgid "Pin Sets"
@@ -135,48 +135,48 @@ msgstr "Gửi đi"
 
 #: functions.inc.php:126 functions.inc.php:135
 msgid "Unnamed"
-msgstr ""
+msgstr "Không được đặt tên"
 
 #: views/form.php:58
 msgid "Yes"
-msgstr ""
+msgstr "Có"
 
 #: install.php:99
 msgid "already done"
-msgstr ""
+msgstr "Đã xong"
 
 #: install.php:30
 msgid "checking if migration required.."
-msgstr ""
+msgstr "Đang kiểm tra xem việc dịch chuyển (migration) có được yêu cầu không..."
 
 #: install.php:73
 msgid "continuing.."
-msgstr ""
+msgstr "Đang tiếp tục..."
 
 #: install.php:86
 msgid "done"
-msgstr ""
+msgstr "Đã xong"
 
 #: install.php:88
 msgid "dropping used_by field.."
-msgstr ""
+msgstr "Đang thả trường used_by.."
 
 #: install.php:34
 msgid "migrating.."
-msgstr ""
+msgstr "Đang dịch chuyển.."
 
 #: install.php:44
 msgid "migration aborted"
-msgstr ""
+msgstr "Việc dịch chuyển bị hủy bỏ"
 
 #: install.php:92
 msgid "no used_by field???"
-msgstr ""
+msgstr "Không có trường used_by???"
 
 #: install.php:94
 msgid "ok"
-msgstr ""
+msgstr "Ok"
 
 #: install.php:43
 msgid "unknown error fetching table data"
-msgstr ""
+msgstr "Xảy ra lỗi không xác định khi đang tìm nạp bảng dữ liệu"
