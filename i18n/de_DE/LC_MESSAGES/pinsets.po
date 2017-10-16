@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-08-10 18:02-0700\n"
-"PO-Revision-Date: 2017-08-24 03:15+0200\n"
+"PO-Revision-Date: 2017-10-15 22:08+0200\n"
 "Last-Translator: hammer125 <auswertung@aon.at>\n"
 "Language-Team: German "
 "<http://weblate.freepbx.org/projects/freepbx/pinsets/de_DE/>\n"
@@ -110,7 +110,7 @@ msgstr ""
 
 #: Pinsets.class.php:66
 msgid "Reset"
-msgstr ""
+msgstr "Zurücksetzen"
 
 #: views/form.php:68
 msgid ""
@@ -120,23 +120,23 @@ msgstr ""
 
 #: pinsets.i18n.php:6 pinsets.i18n.php:12
 msgid "Settings"
-msgstr ""
+msgstr "Einstellungen"
 
 #: Pinsets.class.php:71
 msgid "Submit"
-msgstr ""
+msgstr "Senden"
 
 #: functions.inc.php:126 functions.inc.php:135
 msgid "Unnamed"
-msgstr ""
+msgstr "Unbenannt"
 
 #: views/form.php:58
 msgid "Yes"
-msgstr ""
+msgstr "Ja"
 
 #: install.php:99
 msgid "already done"
-msgstr ""
+msgstr "bereits erledigt"
 
 #: install.php:30
 msgid "checking if migration required.."
