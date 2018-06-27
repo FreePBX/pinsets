@@ -2,7 +2,10 @@
 //	License for all code of this FreePBX module can be found in the license file inside the module directory
 //	Copyright (C) 2014 Schmooze Com Inc.
 namespace FreePBX\modules;
-class Pinsets implements \BMO {
+use UnexpectedValueException;
+use BMO;
+use PDO;
+class Pinsets implements BMO {
 	public function __construct($freepbx = null) {
 		if ($freepbx == null) {
 			throw new Exception("Not given a FreePBX Object");
@@ -11,9 +14,8 @@ class Pinsets implements \BMO {
 		$this->db = $freepbx->Database;
 	}
 	public function install() {}
-	public function uninstall() {}
-	public function backup() {}
-	public function restore($backup) {}
+    public function uninstall() {}
+        
 	public function doConfigPageInit($page) {
 		$request = $_REQUEST;
 		isset($request['action'])?$action = $request['action']:$action='';
@@ -24,17 +26,14 @@ class Pinsets implements \BMO {
 				case "add":
 					pinsets_add($request);
 					needreload();
-					redirect_standard();
 				break;
 				case "delete":
 					pinsets_del($itemid);
 					needreload();
-					redirect_standard();
 				break;
 				case "edit":
 					pinsets_edit($itemid,$request);
 					needreload();
-					redirect_standard('itemid','view');
 				break;
 			}
 		}
@@ -42,9 +41,8 @@ class Pinsets implements \BMO {
 	}
 	function listPinsets() {
 		$sql = "SELECT * FROM pinsets";
-		$stmt = $this->db->prepare($sql);
- 		$stmt->execute();
- 		$ret = $stmt->fetchAll(\PDO::FETCH_ASSOC);
+        $ret = $this->db->query($sql)
+            ->fetchAll(PDO::FETCH_ASSOC);
 		if(is_array($ret)){
 			return $ret;
 		}
@@ -115,5 +113,21 @@ class Pinsets implements \BMO {
 		if(isset($request['view']) && $request['view'] == 'form'){
 	    return load_view(__DIR__."/views/bootnav.php",array());
 		}
-	}
+    }
+    public function upsert($vars){
+        /** TODO: Not this */
+        $valid = ['pinsets_id', 'description', 'passwords', 'addocdr', 'deptname'];
+        $final = [];
+        foreach ($valid as $key) {
+            $final[':'.$key] = isset($vars[$key])?$vars[$key]:'';
+        }
+        $final[':description'] = !empty($final[':description'])?$final[':description']:_("Unnamed");
+        $final[':passwords'] = pinsets_clean($final[':passwords']);
+        if(count($final) !== 5){
+            throw new UnexpectedValueException("Upsert expects exactly 5 items");
+        }
+        $sql = 'REPLACE INTO pinsets (pinsets_id, description, passwords, addocdr, deptname) VALUES (:pinsets_id, :description, :passwords, :addtocdr, :deptname)';
+        $this->db->prepare($sql)
+            ->execute($final);
+    }
 }

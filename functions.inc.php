@@ -5,56 +5,16 @@ if (!defined('FREEPBX_IS_AUTH')) { die('No direct script access allowed'); }
 //
 
 // a class for generating passwdfile
-class pinsets_conf {
-	// return an array of filenames to write
-	// files named like pinset_N
-	var $_pinsets = array();
-
-	private static $obj;
-
-	// FreePBX magic ::create() call
-	public static function create() {
-		if (!isset(self::$obj))
-			self::$obj = new pinsets_conf();
-
-		return self::$obj;
-	}
-
-	public function __construct() {
-		self::$obj = $this;
-	}
-
-	function get_filename() {
-		$files = array();
-		foreach (array_keys($this->_pinsets) as $pinset) {
-			$files[] = 'pinset_'.$pinset;
-		}
-		return $files;
-	}
-
-	function addPinsets($setid, $pins) {
-		$this->_pinsets[$setid] = $pins;
-	}
-
-	// return the output that goes in each of the files
-	function generateConf($file) {
-		$setid = ltrim($file,'pinset_');
-		$output = $this->_pinsets[$setid];
-		return $output;
-	}
-}
-
 /* 	Generates passwd files for pinsets
 	We call this with retrieve_conf
  */
 function pinsets_get_config($engine) {
 	global $ext;  // is this the best way to pass this?
+	$pinsets_conf = FreePBX\modules\Pinsets\Components\ConfigFile::create();
+    $FreePBX = FreePBX::Create();
+	$astetcdir = $FreePBX->Config->get("ASTETCDIR");
 
-	$pinsets_conf = pinsets_conf::create();
-
-	$astetcdir = \FreePBX::Config()->get("ASTETCDIR");
-
-	$allpinsets = pinsets_list();
+	$allpinsets = $FreePBX->Pinsets->listPinsets();
 	if(is_array($allpinsets)) {
 		foreach($allpinsets as $item) {
 			// write our own pin list files
@@ -72,9 +32,8 @@ function pinsets_get_config($engine) {
 
 	$usage_list = pinsets_list_usage('routing');
 	if (is_array($usage_list) && count($usage_list)) {
-		$pinsets = pinsets_list();
-		$addtocdr = array();
-		foreach ($pinsets as $pinset) {
+        $addtocdr = array();
+		foreach ($allpinsets as $pinset) {
 			$addtocdr[$pinset['pinsets_id']] = $pinset['addtocdr'];
 		}
 		foreach ($usage_list as $thisroute) {
@@ -99,7 +58,8 @@ function pinsets_list_usage($dispname=true) {
 
 //get the existing meetme extensions
 function pinsets_list() {
-	return \FreePBX::Pinsets()->listPinsets();
+    FreePBX::Modules()->deprecatedFunction();
+	return FreePBX::Pinsets()->listPinsets();
 }
 
 function pinsets_get($id){
@@ -167,7 +127,7 @@ function pinsets_clean($passwords) {
 	}
 }
 
-// ensures post vars is valid
+// ensures post vars is valid <~~No it doesn't
 function pinsets_chk($post){
 	return true;
 }
@@ -211,7 +171,8 @@ function pinsets_hook_core($viewing_itemid, $target_menuid) {
 	switch ($target_menuid) {
 	case 'routing':
 		//create a selection of available pinsets
-		$pinsets = pinsets_list();
+		$pinsets = FreePBX::Pinsets()->listPinsets();
+;
 		if ($viewing_itemid == '') {
 			$selected_pinset = '';
 		} else {
