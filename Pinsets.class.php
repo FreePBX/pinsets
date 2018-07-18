@@ -115,19 +115,10 @@ class Pinsets implements BMO {
 		}
     }
     public function upsert($vars){
-        /** TODO: Not this */
-        $valid = ['pinsets_id', 'description', 'passwords', 'addocdr', 'deptname'];
-        $final = [];
-        foreach ($valid as $key) {
-            $final[':'.$key] = isset($vars[$key])?$vars[$key]:'';
-        }
-        $final[':description'] = !empty($final[':description'])?$final[':description']:_("Unnamed");
-        $final[':passwords'] = pinsets_clean($final[':passwords']);
-        if(count($final) !== 5){
-            throw new UnexpectedValueException("Upsert expects exactly 5 items");
-        }
-        $sql = 'REPLACE INTO pinsets (pinsets_id, description, passwords, addocdr, deptname) VALUES (:pinsets_id, :description, :passwords, :addtocdr, :deptname)';
+        $vars['description'] = !empty($vars['description'])?$vars['description']:_("Unnamed");
+        $vars['passwords'] = pinsets_clean($vars['passwords']);
+        $sql = 'REPLACE INTO pinsets (pinsets_id, description, passwords, addtocdr, deptname) VALUES (:pinsets_id, :description, :passwords, :addtocdr, :deptname)';
         $this->db->prepare($sql)
-            ->execute($final);
+            ->execute($vars);
     }
 }
