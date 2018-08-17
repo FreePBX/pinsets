@@ -8,4 +8,19 @@ class Restore Extends Base\RestoreBase{
         $this->FreePBX->Pinsets->upsert($pinset);
     }
   }
+  public function processLegacy($pdo, $data, $tables, $unknownTables, $tmpfiledir)
+  {
+    $tables = array_flip($tables + $unknownTables);
+    if (!isset($tables['pinsets'])) {
+      return $this;
+    }
+    $cb = $this->FreePBX->Pinsets;
+    $cb->setDatabase($pdo);
+    $configs = $cb->listPinsets();
+    $cb->resetDatabase();
+    foreach (reset($configs) as $pinset) {
+      $cb->upsert($pinset);
+    }
+    return $this;
+  }
 }
