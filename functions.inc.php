@@ -11,7 +11,7 @@ if (!defined('FREEPBX_IS_AUTH')) { die('No direct script access allowed'); }
 function pinsets_get_config($engine) {
 	global $ext;  // is this the best way to pass this?
 	$pinsets_conf = FreePBX\modules\Pinsets\Components\ConfigFile::create();
-    $FreePBX = FreePBX::Create();
+	$FreePBX = FreePBX::Create();
 	$astetcdir = $FreePBX->Config->get("ASTETCDIR");
 
 	$allpinsets = $FreePBX->Pinsets->listPinsets();
@@ -19,15 +19,42 @@ function pinsets_get_config($engine) {
 		foreach($allpinsets as $item) {
 			// write our own pin list files
 			$pinsets_conf->addPinsets($item['pinsets_id'],$item['passwords']);
+			//lets write to astDB
+			$astman->database_deltree("PINSETS/".$item['pinsets_id']);
+			$pass =  explode("\n",$item['passwords']);
+			foreach($pass as $pin) {
+				$astman->database_put("PINSETS/".$item['pinsets_id'],$pin,$item['pinsets_id']);
+			}
 		}
-
+		$c = 'macro-pinsets';
 		// write out a macro that handles the authenticate
-		$ext->add('macro-pinsets', 's', '', new ext_gotoif('$[${ARG2} = 1]','cdr,1'));
-		$ext->add('macro-pinsets', 's', '', new ext_execif('$["${DB(AMPUSER/${AMPUSER}/pinless)}" != "NOPASSWD"]', 'Authenticate',$astetcdir.'/pinset_${ARG1}'));
-		$ext->add('macro-pinsets', 's', '', new ext_execif('$["${DB(AMPUSER/${AMPUSER}/pinless)}" != "NOPASSWD"]', 'ResetCDR','v'));
+		$ext->add($c, 's', '', new ext_set('try','1'));
+		$ext->add($c, 's', '', new ext_gotoif('$[${ARG2} = 1]','cdr,1'));
+		$ext->add($c, 's', '', new ext_gotoif('$["${DB(AMPUSER/${AMPUSER}/pinless)}" != "NOPASSWD"]','auth:return'));
+		$ext->add($c, 's', 'auth', new ext_progress());
+		$ext->add($c, 's', '', new ext_read('dtmf','agent-pass',0,'n',1,10));
+		$ext->add($c, 's', '', new ext_gotoif('$["${DB(PINSETS/${ARG1}/${dtmf})}" = ${ARG1}"]', 'return:askpin'));
+		$ext->add($c, 's', 'askpin', new ext_set('try','$[${try}+1]'));
+		$ext->add($c, 's', '', new ext_gotoif('$[${try} > 4]', 'hangup'));
+		$ext->add($c, 's', '', new ext_read('dtmf','auth-incorrect',0,'n',1,10));
+		$ext->add($c, 's', 'validate', new ext_gotoif('$["${DB(PINSETS/${ARG1}/${dtmf})}" = "${ARG1}"]', 'return:askpin'));
+		$ext->add($c, 's', 'hangup', new ext_hangup());
+		$ext->add($c, 's', 'return', new ext_noop('returning back'));
+
 		// authenticate with the CDR option (a)
-		$ext->add('macro-pinsets', 'cdr', '', new ext_execif('$["${DB(AMPUSER/${AMPUSER}/pinless)}" != "NOPASSWD"]', 'Authenticate',$astetcdir.'/pinset_${ARG1},a'));
-		$ext->add('macro-pinsets', 'cdr', '', new ext_execif('$["${DB(AMPUSER/${AMPUSER}/pinless)}" != "NOPASSWD"]', 'ResetCDR','v'));
+		$ext->add($c, 'cdr', '', new ext_gotoif('$["${DB(AMPUSER/${AMPUSER}/pinless)}" != "NOPASSWD"]', 'auth:return'));
+		$ext->add($c, 'cdr', '', new ext_set('try','1'));
+		$ext->add($c, 'cdr', 'auth', new ext_progress());
+		$ext->add($c, 'cdr', '', new ext_read('dtmf','agent-pass',0,'n',1,10));
+		$ext->add($c, 'cdr', '', new ext_gotoif('$["${DB(PINSETS/${ARG1}/${dtmf})}" = "${ARG1}"]', 'setaccountcode:askpin'));
+		$ext->add($c, 'cdr', 'askpin', new ext_set('try','$[${try}+1]'));
+		$ext->add($c, 'cdr', '', new ext_gotoif('$[${try} > 4]', 'hangup'));
+		$ext->add($c, 'cdr', '', new ext_read('dtmf','auth-incorrect',0,'n',1,10));
+		$ext->add($c, 'cdr', 'validate', new ext_gotoif('$["${DB(PINSETS/${ARG1}/${dtmf})}" = "${ARG1}"]', 'setaccountcode:askpin'));
+		$ext->add($c, 'cdr', 'hangup', new ext_hangup());
+		$ext->add($c, 'cdr', 'setaccountcode', new ext_set('CHANNEL(accountcode)','${dtmf}'));
+		$ext->add($c, 'cdr', 'return', new ext_noop('returning back'));
+
 	}
 
 	$usage_list = pinsets_list_usage('routing');
@@ -69,11 +96,12 @@ function pinsets_get($id){
 
 function pinsets_del($id){
 	global $amp_conf;
-
+	global $astman;
 	$filename = $amp_conf['ASTETCDIR'].'/pinset_'.$id;
 	if (file_exists($filename)) {
 		unlink($filename);
 	}
+	$astman->database_deltree("PINSETS/".$id);
 	$results = sql("DELETE FROM pinsets WHERE pinsets_id = '$id'","query");
 	$results = sql("DELETE FROM pinset_usage WHERE pinsets_id = '$id'","query");
 }

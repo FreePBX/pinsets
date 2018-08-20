@@ -7,33 +7,38 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-08-10 18:02-0700\n"
-"PO-Revision-Date: 2008-11-06 14:53+0100\n"
-"Last-Translator: Francesco Romano <francesco.romano@alteclab.it>\n"
-"Language-Team: Italian\n"
+"POT-Creation-Date: 2018-07-27 19:23-0400\n"
+"PO-Revision-Date: 2018-05-30 09:33+0000\n"
+"Last-Translator: Stell0 <stefano.fancello@nethesis.it>\n"
+"Language-Team: Italian <http://*/projects/freepbx/pinsets/it/>\n"
+"Language: it_IT\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 2.19.1\n"
 "X-Poedit-Language: Italian\n"
 "X-Poedit-Country: ITALY\n"
 
 #: views/grid.php:26
 msgid "Actions"
-msgstr ""
+msgstr "Azioni"
 
 #: views/bootnav.php:2 views/grid.php:8
 msgid "Add Pinset"
-msgstr ""
+msgstr "Aggiungi Pinset"
 
 #: pinsets.i18n.php:8
 msgid ""
 "Allow creation of lists of PINs (numbers for passwords) that can be used by "
 "other modules (eg, trunks)."
 msgstr ""
+"Permetti la creazione di elenchi di PIN (numeri per password) che possono "
+"essere utilizzati da altri moduli (ad es. Tronchi)."
 
 #: Pinsets.class.php:61
 msgid "Delete"
-msgstr ""
+msgstr "Elimina"
 
 #: views/form.php:16
 msgid "Edit PIN Set"
@@ -49,13 +54,13 @@ msgstr "Nuovo Gruppo PIN"
 
 #: views/form.php:60
 msgid "No"
-msgstr ""
+msgstr "No"
 
-#: functions.inc.php:242
+#: functions.inc.php:270
 msgid "None"
 msgstr "Nessuno"
 
-#: functions.inc.php:258
+#: functions.inc.php:286
 msgid ""
 "Optional: Select a PIN set to use. If using this option, leave the Route "
 "Password field blank."
@@ -65,15 +70,15 @@ msgstr ""
 
 #: views/form.php:80
 msgid "PIN List"
-msgstr ""
+msgstr "Lista PIN"
 
-#: functions.inc.php:237
+#: functions.inc.php:265
 msgid "PIN Set"
 msgstr "Gruppo PIN"
 
 #: views/form.php:29
 msgid "PIN Set Description"
-msgstr ""
+msgstr "PIN Imposta descrizione"
 
 #: pinsets.i18n.php:4 pinsets.i18n.php:10
 msgid "PIN Sets"
@@ -92,15 +97,15 @@ msgstr ""
 
 #: page.pinsets.php:7
 msgid "Pin Sets"
-msgstr ""
+msgstr "Set di pin"
 
 #: views/bootnav.php:8 views/grid.php:25
 msgid "Pinset"
-msgstr ""
+msgstr "pinset"
 
 #: views/form.php:41
 msgid "Please enter a description for this pinset"
-msgstr ""
+msgstr "Si prega di inserire una descrizione per questo set di pin"
 
 #: assets/js/pinsets.js:9
 msgid "Please enter a valid Description"
@@ -108,73 +113,75 @@ msgstr "Prego immettere una Descrizione valida"
 
 #: views/form.php:53
 msgid "Record In CDR"
-msgstr ""
+msgstr "Registra in CDR"
 
 #: Pinsets.class.php:66
 msgid "Reset"
-msgstr ""
+msgstr "Azzera"
 
 #: views/form.php:68
 msgid ""
 "Select Yes, if you would like to record the PIN in the call detail records "
 "when used"
 msgstr ""
+"Selezionare Sì, se si desidera registrare il PIN nei record dei dettagli "
+"delle chiamate quando viene utilizzato"
 
-#: pinsets.i18n.php:6 pinsets.i18n.php:12
+#: pinsets.i18n.php:6
 msgid "Settings"
-msgstr ""
+msgstr "Impostazioni"
 
 #: Pinsets.class.php:71
 msgid "Submit"
-msgstr ""
+msgstr "Sottoscrivi"
 
-#: functions.inc.php:126 functions.inc.php:135
+#: functions.inc.php:154 functions.inc.php:163
 msgid "Unnamed"
-msgstr ""
+msgstr "Senza nome"
 
 #: views/form.php:58
 msgid "Yes"
-msgstr ""
+msgstr "Si"
 
 #: install.php:99
 msgid "already done"
-msgstr ""
+msgstr "già fatto"
 
 #: install.php:30
 msgid "checking if migration required.."
-msgstr ""
+msgstr "controllando se la migrazione è richiesta .."
 
 #: install.php:73
 msgid "continuing.."
-msgstr ""
+msgstr "continua .."
 
 #: install.php:86
 msgid "done"
-msgstr ""
+msgstr "fatto"
 
 #: install.php:88
 msgid "dropping used_by field.."
-msgstr ""
+msgstr "lasciando cadere il campo used_by .."
 
 #: install.php:34
 msgid "migrating.."
-msgstr ""
+msgstr "migrazione .."
 
 #: install.php:44
 msgid "migration aborted"
-msgstr ""
+msgstr "migrazione interrotta"
 
 #: install.php:92
 msgid "no used_by field???"
-msgstr ""
+msgstr "non usato dal campo ???"
 
 #: install.php:94
 msgid "ok"
-msgstr ""
+msgstr "ok"
 
 #: install.php:43
 msgid "unknown error fetching table data"
-msgstr ""
+msgstr "errore sconosciuto durante il recupero dei dati della tabella"
 
 #~ msgid "Add PIN Set"
 #~ msgstr "Aggiungi Gruppo PIN"
