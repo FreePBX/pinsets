@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeÅBX pinsets\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-07-27 19:23-0400\n"
+"POT-Creation-Date: 2018-08-20 13:54-0400\n"
 "PO-Revision-Date: 2011-03-20 00:00+0100\n"
 "Last-Translator: Mikael Carlsson <mickecamino@gmail.com>\n"
 "Language-Team: \n"
@@ -47,7 +47,7 @@ msgstr ""
 "Ger möjlighet att skapa listor med PINs (nummer för lösenord) somkan "
 "användas av andra moduler (trunkar)."
 
-#: Pinsets.class.php:61
+#: Pinsets.class.php:67
 msgid "Delete"
 msgstr ""
 
@@ -67,11 +67,11 @@ msgstr "Ny PIN-kod"
 msgid "No"
 msgstr ""
 
-#: functions.inc.php:270
+#: functions.inc.php:231
 msgid "None"
 msgstr "Ingen"
 
-#: functions.inc.php:286
+#: functions.inc.php:247
 msgid ""
 "Optional: Select a PIN set to use. If using this option, leave the Route "
 "Password field blank."
@@ -83,7 +83,7 @@ msgstr ""
 msgid "PIN List"
 msgstr ""
 
-#: functions.inc.php:265
+#: functions.inc.php:226
 msgid "PIN Set"
 msgstr "PIN-kod"
 
@@ -125,7 +125,7 @@ msgstr "Skriv in en giltig beskrivining"
 msgid "Record In CDR"
 msgstr ""
 
-#: Pinsets.class.php:66
+#: Pinsets.class.php:72
 msgid "Reset"
 msgstr ""
 
@@ -139,11 +139,11 @@ msgstr ""
 msgid "Settings"
 msgstr ""
 
-#: Pinsets.class.php:71
+#: Pinsets.class.php:77
 msgid "Submit"
 msgstr ""
 
-#: functions.inc.php:154 functions.inc.php:163
+#: Pinsets.class.php:126 functions.inc.php:114 functions.inc.php:123
 msgid "Unnamed"
 msgstr "Inget namn"
 
@@ -151,45 +151,35 @@ msgstr "Inget namn"
 msgid "Yes"
 msgstr ""
 
-#: install.php:99
-msgid "already done"
-msgstr "redan gjort"
+#~ msgid "already done"
+#~ msgstr "redan gjort"
 
-#: install.php:30
-msgid "checking if migration required.."
-msgstr "kontrollerar om migrering behövs.."
+#~ msgid "checking if migration required.."
+#~ msgstr "kontrollerar om migrering behövs.."
 
-#: install.php:73
-msgid "continuing.."
-msgstr "fortsätter.."
+#~ msgid "continuing.."
+#~ msgstr "fortsätter.."
 
-#: install.php:86
-msgid "done"
-msgstr "klar"
+#~ msgid "done"
+#~ msgstr "klar"
 
-#: install.php:88
-msgid "dropping used_by field.."
-msgstr "tar bort fältet used_by.."
+#~ msgid "dropping used_by field.."
+#~ msgstr "tar bort fältet used_by.."
 
-#: install.php:34
-msgid "migrating.."
-msgstr "migrerar.."
+#~ msgid "migrating.."
+#~ msgstr "migrerar.."
 
-#: install.php:44
-msgid "migration aborted"
-msgstr "migreringen avbruten"
+#~ msgid "migration aborted"
+#~ msgstr "migreringen avbruten"
 
-#: install.php:92
-msgid "no used_by field???"
-msgstr "inget fält med namnet used_by???"
+#~ msgid "no used_by field???"
+#~ msgstr "inget fält med namnet used_by???"
 
-#: install.php:94
-msgid "ok"
-msgstr "ok"
+#~ msgid "ok"
+#~ msgstr "ok"
 
-#: install.php:43
-msgid "unknown error fetching table data"
-msgstr "okänt fel när tabelldata skulle hämtas"
+#~ msgid "unknown error fetching table data"
+#~ msgstr "okänt fel när tabelldata skulle hämtas"
 
 #~ msgid "Add PIN Set"
 #~ msgstr "Lägg till PIN-kod"

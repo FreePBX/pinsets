@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-07-27 19:23-0400\n"
+"POT-Creation-Date: 2018-08-20 13:54-0400\n"
 "PO-Revision-Date: 2016-05-05 04:23+0200\n"
 "Last-Translator: Media <mousavi.media@gmail.com>\n"
 "Language-Team: Persian (Iran) <http://weblate.freepbx.org/projects/freepbx/"
@@ -35,7 +35,7 @@ msgid ""
 "other modules (eg, trunks)."
 msgstr "مجوز ایجاد فهرست پین هایی که میتوانند توسط سایر ماژول ها استفاده شوند."
 
-#: Pinsets.class.php:61
+#: Pinsets.class.php:67
 msgid "Delete"
 msgstr "حذف"
 
@@ -55,11 +55,11 @@ msgstr "PIN جدید"
 msgid "No"
 msgstr "خیر"
 
-#: functions.inc.php:270
+#: functions.inc.php:231
 msgid "None"
 msgstr "هیچ"
 
-#: functions.inc.php:286
+#: functions.inc.php:247
 msgid ""
 "Optional: Select a PIN set to use. If using this option, leave the Route "
 "Password field blank."
@@ -69,7 +69,7 @@ msgstr "اختیاری：یک PIN برای کاربر انتخاب کنید."
 msgid "PIN List"
 msgstr "فهرست PIN"
 
-#: functions.inc.php:265
+#: functions.inc.php:226
 msgid "PIN Set"
 msgstr "تنظیمات PIN"
 
@@ -111,7 +111,7 @@ msgstr "لطفا شرح معتبر وارد کنید"
 msgid "Record In CDR"
 msgstr "ذخیره در جزئیات تماس"
 
-#: Pinsets.class.php:66
+#: Pinsets.class.php:72
 msgid "Reset"
 msgstr "بازنشانی"
 
@@ -125,11 +125,11 @@ msgstr "اگر میخواهید پین در جزییات تماس ضبط شود 
 msgid "Settings"
 msgstr "پیکربندی"
 
-#: Pinsets.class.php:71
+#: Pinsets.class.php:77
 msgid "Submit"
 msgstr "ثبت"
 
-#: functions.inc.php:154 functions.inc.php:163
+#: Pinsets.class.php:126 functions.inc.php:114 functions.inc.php:123
 msgid "Unnamed"
 msgstr "بدون نام"
 
@@ -137,45 +137,35 @@ msgstr "بدون نام"
 msgid "Yes"
 msgstr "بله"
 
-#: install.php:99
-msgid "already done"
-msgstr "انجام شد"
+#~ msgid "already done"
+#~ msgstr "انجام شد"
 
-#: install.php:30
-msgid "checking if migration required.."
-msgstr "بررسی نیاز به انتقال.."
+#~ msgid "checking if migration required.."
+#~ msgstr "بررسی نیاز به انتقال.."
 
-#: install.php:73
-msgid "continuing.."
-msgstr "ادامه.."
+#~ msgid "continuing.."
+#~ msgstr "ادامه.."
 
-#: install.php:86
-msgid "done"
-msgstr "انجام شده"
+#~ msgid "done"
+#~ msgstr "انجام شده"
 
-#: install.php:88
-msgid "dropping used_by field.."
-msgstr "انداختن فیلد استفاده شده توسط.."
+#~ msgid "dropping used_by field.."
+#~ msgstr "انداختن فیلد استفاده شده توسط.."
 
-#: install.php:34
-msgid "migrating.."
-msgstr "انتقال.."
+#~ msgid "migrating.."
+#~ msgstr "انتقال.."
 
-#: install.php:44
-msgid "migration aborted"
-msgstr "شکست انتقال"
+#~ msgid "migration aborted"
+#~ msgstr "شکست انتقال"
 
-#: install.php:92
-msgid "no used_by field???"
-msgstr "بدون فیلد استفاده شده؟؟؟"
+#~ msgid "no used_by field???"
+#~ msgstr "بدون فیلد استفاده شده؟؟؟"
 
-#: install.php:94
-msgid "ok"
-msgstr "تایید"
+#~ msgid "ok"
+#~ msgstr "تایید"
 
-#: install.php:43
-msgid "unknown error fetching table data"
-msgstr "خطا نامشخص در جدول دیتا"
+#~ msgid "unknown error fetching table data"
+#~ msgstr "خطا نامشخص در جدول دیتا"
 
 #~ msgid "Add PIN Sets"
 #~ msgstr "افزودن  PIN"

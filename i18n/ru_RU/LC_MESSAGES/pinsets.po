@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-07-27 19:23-0400\n"
+"POT-Creation-Date: 2018-08-20 13:54-0400\n"
 "PO-Revision-Date: 2015-05-04 00:04+0200\n"
 "Last-Translator: Yuriy <alliancesko@gmail.com>\n"
 "Language-Team: Russian <http://weblate.freepbx.org/projects/freepbx/pinsets/"
@@ -35,7 +35,7 @@ msgstr ""
 "Даёт возможность создавать списки наборов PIN, которые затем можно "
 "использовать в других модулях (например - в траках)."
 
-#: Pinsets.class.php:61
+#: Pinsets.class.php:67
 msgid "Delete"
 msgstr "Удалить"
 
@@ -55,11 +55,11 @@ msgstr "Новый лист PIN-кодов"
 msgid "No"
 msgstr "Нет"
 
-#: functions.inc.php:270
+#: functions.inc.php:231
 msgid "None"
 msgstr "Нет"
 
-#: functions.inc.php:286
+#: functions.inc.php:247
 msgid ""
 "Optional: Select a PIN set to use. If using this option, leave the Route "
 "Password field blank."
@@ -71,7 +71,7 @@ msgstr ""
 msgid "PIN List"
 msgstr "Список ПИН"
 
-#: functions.inc.php:265
+#: functions.inc.php:226
 msgid "PIN Set"
 msgstr "Лист PIN-кодов"
 
@@ -113,7 +113,7 @@ msgstr "Укажите разрешенное описание"
 msgid "Record In CDR"
 msgstr "Запись в CDR"
 
-#: Pinsets.class.php:66
+#: Pinsets.class.php:72
 msgid "Reset"
 msgstr "Сброс"
 
@@ -129,11 +129,11 @@ msgstr ""
 msgid "Settings"
 msgstr "Установки"
 
-#: Pinsets.class.php:71
+#: Pinsets.class.php:77
 msgid "Submit"
 msgstr "Сохранить"
 
-#: functions.inc.php:154 functions.inc.php:163
+#: Pinsets.class.php:126 functions.inc.php:114 functions.inc.php:123
 msgid "Unnamed"
 msgstr "Без названия"
 
@@ -141,45 +141,35 @@ msgstr "Без названия"
 msgid "Yes"
 msgstr "Да"
 
-#: install.php:99
-msgid "already done"
-msgstr "уже сделано"
+#~ msgid "already done"
+#~ msgstr "уже сделано"
 
-#: install.php:30
-msgid "checking if migration required.."
-msgstr "проверяется необходимость переноса данных.."
+#~ msgid "checking if migration required.."
+#~ msgstr "проверяется необходимость переноса данных.."
 
-#: install.php:73
-msgid "continuing.."
-msgstr "продолжаем.."
+#~ msgid "continuing.."
+#~ msgstr "продолжаем.."
 
-#: install.php:86
-msgid "done"
-msgstr "готово"
+#~ msgid "done"
+#~ msgstr "готово"
 
-#: install.php:88
-msgid "dropping used_by field.."
-msgstr "сбрасываем поле used_by.."
+#~ msgid "dropping used_by field.."
+#~ msgstr "сбрасываем поле used_by.."
 
-#: install.php:34
-msgid "migrating.."
-msgstr "переносим.."
+#~ msgid "migrating.."
+#~ msgstr "переносим.."
 
-#: install.php:44
-msgid "migration aborted"
-msgstr "перенос отменён"
+#~ msgid "migration aborted"
+#~ msgstr "перенос отменён"
 
-#: install.php:92
-msgid "no used_by field???"
-msgstr "отсутствует поле used_by???"
+#~ msgid "no used_by field???"
+#~ msgstr "отсутствует поле used_by???"
 
-#: install.php:94
-msgid "ok"
-msgstr "ok"
+#~ msgid "ok"
+#~ msgstr "ok"
 
-#: install.php:43
-msgid "unknown error fetching table data"
-msgstr "произошла непонятная ошибка при попытке анализа данных таблицы"
+#~ msgid "unknown error fetching table data"
+#~ msgstr "произошла непонятная ошибка при попытке анализа данных таблицы"
 
 #~ msgid "Add PIN Sets"
 #~ msgstr "Добавить наборы ПИНов"

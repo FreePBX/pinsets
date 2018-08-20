@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-07-27 19:23-0400\n"
+"POT-Creation-Date: 2018-08-20 13:54-0400\n"
 "PO-Revision-Date: 2016-12-15 01:48+0200\n"
 "Last-Translator: Alexander <alexander.schley@paranagua.pr.gov.br>\n"
 "Language-Team: Portuguese (Brazil) <http://weblate.freepbx.org/projects/"
@@ -37,7 +37,7 @@ msgstr ""
 "Permite a criação de listas de PINs (números para senhas) que podem ser "
 "usados por outros módulos (por exemplo, troncos)."
 
-#: Pinsets.class.php:61
+#: Pinsets.class.php:67
 msgid "Delete"
 msgstr "Apagar"
 
@@ -57,11 +57,11 @@ msgstr "Novo Conjunto de PIN"
 msgid "No"
 msgstr "Não"
 
-#: functions.inc.php:270
+#: functions.inc.php:231
 msgid "None"
 msgstr "Nenhum"
 
-#: functions.inc.php:286
+#: functions.inc.php:247
 msgid ""
 "Optional: Select a PIN set to use. If using this option, leave the Route "
 "Password field blank."
@@ -73,7 +73,7 @@ msgstr ""
 msgid "PIN List"
 msgstr "Lista de PINs"
 
-#: functions.inc.php:265
+#: functions.inc.php:226
 msgid "PIN Set"
 msgstr "Conjunto de PINs"
 
@@ -115,7 +115,7 @@ msgstr "Por favor, insira uma Descrição válida"
 msgid "Record In CDR"
 msgstr "Gravação em CDR"
 
-#: Pinsets.class.php:66
+#: Pinsets.class.php:72
 msgid "Reset"
 msgstr "Reiniciar"
 
@@ -131,11 +131,11 @@ msgstr ""
 msgid "Settings"
 msgstr "Configurações"
 
-#: Pinsets.class.php:71
+#: Pinsets.class.php:77
 msgid "Submit"
 msgstr "Enviar"
 
-#: functions.inc.php:154 functions.inc.php:163
+#: Pinsets.class.php:126 functions.inc.php:114 functions.inc.php:123
 msgid "Unnamed"
 msgstr "Sem nome"
 
@@ -143,42 +143,32 @@ msgstr "Sem nome"
 msgid "Yes"
 msgstr "Sim"
 
-#: install.php:99
-msgid "already done"
-msgstr "já realizado"
+#~ msgid "already done"
+#~ msgstr "já realizado"
 
-#: install.php:30
-msgid "checking if migration required.."
-msgstr "verificando se a migração é necessária..."
+#~ msgid "checking if migration required.."
+#~ msgstr "verificando se a migração é necessária..."
 
-#: install.php:73
-msgid "continuing.."
-msgstr "continuando..."
+#~ msgid "continuing.."
+#~ msgstr "continuando..."
 
-#: install.php:86
-msgid "done"
-msgstr "terminado"
+#~ msgid "done"
+#~ msgstr "terminado"
 
-#: install.php:88
-msgid "dropping used_by field.."
-msgstr "removendo campo used_by..."
+#~ msgid "dropping used_by field.."
+#~ msgstr "removendo campo used_by..."
 
-#: install.php:34
-msgid "migrating.."
-msgstr "migrando..."
+#~ msgid "migrating.."
+#~ msgstr "migrando..."
 
-#: install.php:44
-msgid "migration aborted"
-msgstr "migração abortada"
+#~ msgid "migration aborted"
+#~ msgstr "migração abortada"
 
-#: install.php:92
-msgid "no used_by field???"
-msgstr "sem campo used_by???"
+#~ msgid "no used_by field???"
+#~ msgstr "sem campo used_by???"
 
-#: install.php:94
-msgid "ok"
-msgstr "ok"
+#~ msgid "ok"
+#~ msgstr "ok"
 
-#: install.php:43
-msgid "unknown error fetching table data"
-msgstr "erro desconhecido ao buscar dados da tabela"
+#~ msgid "unknown error fetching table data"
+#~ msgstr "erro desconhecido ao buscar dados da tabela"

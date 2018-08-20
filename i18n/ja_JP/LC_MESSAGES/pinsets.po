@@ -37,7 +37,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX 2.10.02\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-07-27 19:23-0400\n"
+"POT-Creation-Date: 2018-08-20 13:54-0400\n"
 "PO-Revision-Date: 2014-02-19 20:56+0200\n"
 "Last-Translator: Chise Mishima <c.mishima@qloog.com>\n"
 "Language-Team: Japanese <http://example.com/projects/freepbx/pinsets/ja/>\n"
@@ -64,7 +64,7 @@ msgstr ""
 "他のモジュール(例：トランク)によって使用される可能性のあるPINのリスト(パス"
 "ワードとしての数値)作成を許可します。"
 
-#: Pinsets.class.php:61
+#: Pinsets.class.php:67
 msgid "Delete"
 msgstr ""
 
@@ -84,11 +84,11 @@ msgstr "新しいPINセット"
 msgid "No"
 msgstr ""
 
-#: functions.inc.php:270
+#: functions.inc.php:231
 msgid "None"
 msgstr "なし"
 
-#: functions.inc.php:286
+#: functions.inc.php:247
 msgid ""
 "Optional: Select a PIN set to use. If using this option, leave the Route "
 "Password field blank."
@@ -100,7 +100,7 @@ msgstr ""
 msgid "PIN List"
 msgstr ""
 
-#: functions.inc.php:265
+#: functions.inc.php:226
 msgid "PIN Set"
 msgstr "PINセット"
 
@@ -142,7 +142,7 @@ msgstr "有効な説明を入力してください。"
 msgid "Record In CDR"
 msgstr ""
 
-#: Pinsets.class.php:66
+#: Pinsets.class.php:72
 msgid "Reset"
 msgstr ""
 
@@ -156,11 +156,11 @@ msgstr ""
 msgid "Settings"
 msgstr "設定"
 
-#: Pinsets.class.php:71
+#: Pinsets.class.php:77
 msgid "Submit"
 msgstr ""
 
-#: functions.inc.php:154 functions.inc.php:163
+#: Pinsets.class.php:126 functions.inc.php:114 functions.inc.php:123
 msgid "Unnamed"
 msgstr "名前がつけられてません"
 
@@ -168,45 +168,35 @@ msgstr "名前がつけられてません"
 msgid "Yes"
 msgstr ""
 
-#: install.php:99
-msgid "already done"
-msgstr "既に実行済みです"
+#~ msgid "already done"
+#~ msgstr "既に実行済みです"
 
-#: install.php:30
-msgid "checking if migration required.."
-msgstr "移行が必要かチェック中.."
+#~ msgid "checking if migration required.."
+#~ msgstr "移行が必要かチェック中.."
 
-#: install.php:73
-msgid "continuing.."
-msgstr "続行.."
+#~ msgid "continuing.."
+#~ msgstr "続行.."
 
-#: install.php:86
-msgid "done"
-msgstr "完了"
+#~ msgid "done"
+#~ msgstr "完了"
 
-#: install.php:88
-msgid "dropping used_by field.."
-msgstr "used_byフィールドをドロップ.."
+#~ msgid "dropping used_by field.."
+#~ msgstr "used_byフィールドをドロップ.."
 
-#: install.php:34
-msgid "migrating.."
-msgstr "移行中.."
+#~ msgid "migrating.."
+#~ msgstr "移行中.."
 
-#: install.php:44
-msgid "migration aborted"
-msgstr "移行を中断"
+#~ msgid "migration aborted"
+#~ msgstr "移行を中断"
 
-#: install.php:92
-msgid "no used_by field???"
-msgstr "userd_byフィールドがありません???"
+#~ msgid "no used_by field???"
+#~ msgstr "userd_byフィールドがありません???"
 
-#: install.php:94
-msgid "ok"
-msgstr "ok"
+#~ msgid "ok"
+#~ msgstr "ok"
 
-#: install.php:43
-msgid "unknown error fetching table data"
-msgstr "テーブルデータのフェッチ中の不明なエラー"
+#~ msgid "unknown error fetching table data"
+#~ msgstr "テーブルデータのフェッチ中の不明なエラー"
 
 #~ msgid "Add PIN Set"
 #~ msgstr "PINセットを追加"

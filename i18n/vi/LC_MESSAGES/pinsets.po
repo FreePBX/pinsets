@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-07-27 19:23-0400\n"
+"POT-Creation-Date: 2018-08-20 13:54-0400\n"
 "PO-Revision-Date: 2017-07-14 08:25+0200\n"
 "Last-Translator: PETER <ftek@ymail.com>\n"
 "Language-Team: Vietnamese <http://weblate.freepbx.org/projects/freepbx/"
@@ -37,7 +37,7 @@ msgstr ""
 "Cho phép tạo các danh sách của PIN ( các số cho mật khẩu) có thể được sử "
 "dụng bởi ccas mô đun khác ( cụ thể là các trung kế)."
 
-#: Pinsets.class.php:61
+#: Pinsets.class.php:67
 msgid "Delete"
 msgstr "Xóa"
 
@@ -57,11 +57,11 @@ msgstr "Cài đặt PIN mới"
 msgid "No"
 msgstr "Không"
 
-#: functions.inc.php:270
+#: functions.inc.php:231
 msgid "None"
 msgstr "Không có"
 
-#: functions.inc.php:286
+#: functions.inc.php:247
 msgid ""
 "Optional: Select a PIN set to use. If using this option, leave the Route "
 "Password field blank."
@@ -73,7 +73,7 @@ msgstr ""
 msgid "PIN List"
 msgstr "Danh sách PIN"
 
-#: functions.inc.php:265
+#: functions.inc.php:226
 msgid "PIN Set"
 msgstr "Cài đặt PIN"
 
@@ -115,7 +115,7 @@ msgstr "Vui lòng nhập một mô tả hợp lệ"
 msgid "Record In CDR"
 msgstr "Bản ghi trong CDR"
 
-#: Pinsets.class.php:66
+#: Pinsets.class.php:72
 msgid "Reset"
 msgstr "Cài đặt lại"
 
@@ -129,11 +129,11 @@ msgstr "Chọn Yes, nếu bạn muốn ghi lại PIN trong các bản ghi chi ti
 msgid "Settings"
 msgstr "Các cài đặt"
 
-#: Pinsets.class.php:71
+#: Pinsets.class.php:77
 msgid "Submit"
 msgstr "Gửi đi"
 
-#: functions.inc.php:154 functions.inc.php:163
+#: Pinsets.class.php:126 functions.inc.php:114 functions.inc.php:123
 msgid "Unnamed"
 msgstr "Không được đặt tên"
 
@@ -141,43 +141,33 @@ msgstr "Không được đặt tên"
 msgid "Yes"
 msgstr "Có"
 
-#: install.php:99
-msgid "already done"
-msgstr "Đã xong"
+#~ msgid "already done"
+#~ msgstr "Đã xong"
 
-#: install.php:30
-msgid "checking if migration required.."
-msgstr ""
-"Đang kiểm tra xem việc dịch chuyển (migration) có được yêu cầu không..."
+#~ msgid "checking if migration required.."
+#~ msgstr ""
+#~ "Đang kiểm tra xem việc dịch chuyển (migration) có được yêu cầu không..."
 
-#: install.php:73
-msgid "continuing.."
-msgstr "Đang tiếp tục..."
+#~ msgid "continuing.."
+#~ msgstr "Đang tiếp tục..."
 
-#: install.php:86
-msgid "done"
-msgstr "Đã xong"
+#~ msgid "done"
+#~ msgstr "Đã xong"
 
-#: install.php:88
-msgid "dropping used_by field.."
-msgstr "Đang thả trường used_by.."
+#~ msgid "dropping used_by field.."
+#~ msgstr "Đang thả trường used_by.."
 
-#: install.php:34
-msgid "migrating.."
-msgstr "Đang dịch chuyển.."
+#~ msgid "migrating.."
+#~ msgstr "Đang dịch chuyển.."
 
-#: install.php:44
-msgid "migration aborted"
-msgstr "Việc dịch chuyển bị hủy bỏ"
+#~ msgid "migration aborted"
+#~ msgstr "Việc dịch chuyển bị hủy bỏ"
 
-#: install.php:92
-msgid "no used_by field???"
-msgstr "Không có trường used_by???"
+#~ msgid "no used_by field???"
+#~ msgstr "Không có trường used_by???"
 
-#: install.php:94
-msgid "ok"
-msgstr "Ok"
+#~ msgid "ok"
+#~ msgstr "Ok"
 
-#: install.php:43
-msgid "unknown error fetching table data"
-msgstr "Xảy ra lỗi không xác định khi đang tìm nạp bảng dữ liệu"
+#~ msgid "unknown error fetching table data"
+#~ msgstr "Xảy ra lỗi không xác định khi đang tìm nạp bảng dữ liệu"

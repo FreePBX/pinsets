@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-07-27 19:23-0400\n"
+"POT-Creation-Date: 2018-08-20 13:54-0400\n"
 "PO-Revision-Date: 2018-05-30 09:33+0000\n"
 "Last-Translator: Stell0 <stefano.fancello@nethesis.it>\n"
 "Language-Team: Italian <http://*/projects/freepbx/pinsets/it/>\n"
@@ -36,7 +36,7 @@ msgstr ""
 "Permetti la creazione di elenchi di PIN (numeri per password) che possono "
 "essere utilizzati da altri moduli (ad es. Tronchi)."
 
-#: Pinsets.class.php:61
+#: Pinsets.class.php:67
 msgid "Delete"
 msgstr "Elimina"
 
@@ -56,11 +56,11 @@ msgstr "Nuovo Gruppo PIN"
 msgid "No"
 msgstr "No"
 
-#: functions.inc.php:270
+#: functions.inc.php:231
 msgid "None"
 msgstr "Nessuno"
 
-#: functions.inc.php:286
+#: functions.inc.php:247
 msgid ""
 "Optional: Select a PIN set to use. If using this option, leave the Route "
 "Password field blank."
@@ -72,7 +72,7 @@ msgstr ""
 msgid "PIN List"
 msgstr "Lista PIN"
 
-#: functions.inc.php:265
+#: functions.inc.php:226
 msgid "PIN Set"
 msgstr "Gruppo PIN"
 
@@ -115,7 +115,7 @@ msgstr "Prego immettere una Descrizione valida"
 msgid "Record In CDR"
 msgstr "Registra in CDR"
 
-#: Pinsets.class.php:66
+#: Pinsets.class.php:72
 msgid "Reset"
 msgstr "Azzera"
 
@@ -131,11 +131,11 @@ msgstr ""
 msgid "Settings"
 msgstr "Impostazioni"
 
-#: Pinsets.class.php:71
+#: Pinsets.class.php:77
 msgid "Submit"
 msgstr "Sottoscrivi"
 
-#: functions.inc.php:154 functions.inc.php:163
+#: Pinsets.class.php:126 functions.inc.php:114 functions.inc.php:123
 msgid "Unnamed"
 msgstr "Senza nome"
 
@@ -143,45 +143,35 @@ msgstr "Senza nome"
 msgid "Yes"
 msgstr "Si"
 
-#: install.php:99
-msgid "already done"
-msgstr "già fatto"
+#~ msgid "already done"
+#~ msgstr "già fatto"
 
-#: install.php:30
-msgid "checking if migration required.."
-msgstr "controllando se la migrazione è richiesta .."
+#~ msgid "checking if migration required.."
+#~ msgstr "controllando se la migrazione è richiesta .."
 
-#: install.php:73
-msgid "continuing.."
-msgstr "continua .."
+#~ msgid "continuing.."
+#~ msgstr "continua .."
 
-#: install.php:86
-msgid "done"
-msgstr "fatto"
+#~ msgid "done"
+#~ msgstr "fatto"
 
-#: install.php:88
-msgid "dropping used_by field.."
-msgstr "lasciando cadere il campo used_by .."
+#~ msgid "dropping used_by field.."
+#~ msgstr "lasciando cadere il campo used_by .."
 
-#: install.php:34
-msgid "migrating.."
-msgstr "migrazione .."
+#~ msgid "migrating.."
+#~ msgstr "migrazione .."
 
-#: install.php:44
-msgid "migration aborted"
-msgstr "migrazione interrotta"
+#~ msgid "migration aborted"
+#~ msgstr "migrazione interrotta"
 
-#: install.php:92
-msgid "no used_by field???"
-msgstr "non usato dal campo ???"
+#~ msgid "no used_by field???"
+#~ msgstr "non usato dal campo ???"
 
-#: install.php:94
-msgid "ok"
-msgstr "ok"
+#~ msgid "ok"
+#~ msgstr "ok"
 
-#: install.php:43
-msgid "unknown error fetching table data"
-msgstr "errore sconosciuto durante il recupero dei dati della tabella"
+#~ msgid "unknown error fetching table data"
+#~ msgstr "errore sconosciuto durante il recupero dei dati della tabella"
 
 #~ msgid "Add PIN Set"
 #~ msgstr "Aggiungi Gruppo PIN"
