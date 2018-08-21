@@ -4,8 +4,10 @@ use FreePBX\modules\Backup as Base;
 class Restore Extends Base\RestoreBase{
   public function runRestore($jobid){
     $configs = reset($this->getConfigs());
-    foreach ($configs as $pinset) {
-        $this->FreePBX->Pinsets->upsert($pinset);
+    if (!empty($configs)) {
+        foreach ($configs as $pinset) {
+            $this->FreePBX->Pinsets->upsert($pinset);
+        }
     }
   }
   public function processLegacy($pdo, $data, $tables, $unknownTables, $tmpfiledir)
