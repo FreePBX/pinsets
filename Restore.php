@@ -21,7 +21,7 @@ class Restore Extends Base\RestoreBase{
     $configs = $cb->listPinsets();
     $cb->resetDatabase();
     if (!empty($configs)) {
-      foreach (reset($configs) as $pinset) {
+      foreach ($configs as $pinset) {
         $cb->upsert($pinset);
       }
     }
