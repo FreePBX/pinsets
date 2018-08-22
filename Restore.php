@@ -20,8 +20,10 @@ class Restore Extends Base\RestoreBase{
     $cb->setDatabase($pdo);
     $configs = $cb->listPinsets();
     $cb->resetDatabase();
-    foreach (reset($configs) as $pinset) {
-      $cb->upsert($pinset);
+    if (!empty($configs)) {
+      foreach (reset($configs) as $pinset) {
+        $cb->upsert($pinset);
+      }
     }
     return $this;
   }
