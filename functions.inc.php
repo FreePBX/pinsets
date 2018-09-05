@@ -12,10 +12,13 @@ function pinsets_get_config($engine) {
 	global $ext;  // is this the best way to pass this?
 	$pinsets_conf = FreePBX\modules\Pinsets\Components\ConfigFile::create();
 	$FreePBX = FreePBX::Create();
+	$astman = $FreePBX->astman;
 	$astetcdir = $FreePBX->Config->get("ASTETCDIR");
-
 	$allpinsets = $FreePBX->Pinsets->listPinsets();
 	if(is_array($allpinsets)) {
+		if(!$astman->connected()){
+			throw new Exception('Could not talk to the Asterisk Manager. Is Asterisk running and as the correct user?');
+		}
 		foreach($allpinsets as $item) {
 			// write our own pin list files
 			$pinsets_conf->addPinsets($item['pinsets_id'],$item['passwords']);
