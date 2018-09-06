@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-08-20 13:54-0400\n"
+"POT-Creation-Date: 2018-09-06 12:52-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -53,11 +53,11 @@ msgstr ""
 msgid "No"
 msgstr ""
 
-#: functions.inc.php:231
+#: functions.inc.php:234
 msgid "None"
 msgstr ""
 
-#: functions.inc.php:247
+#: functions.inc.php:250
 msgid ""
 "Optional: Select a PIN set to use. If using this option, leave the Route "
 "Password field blank."
@@ -67,7 +67,7 @@ msgstr ""
 msgid "PIN List"
 msgstr ""
 
-#: functions.inc.php:226
+#: functions.inc.php:229
 msgid "PIN Set"
 msgstr ""
 
@@ -127,8 +127,8 @@ msgid "Submit"
 msgstr ""
 
 #: Pinsets.class.php:126
-#: functions.inc.php:114
-#: functions.inc.php:123
+#: functions.inc.php:117
+#: functions.inc.php:126
 msgid "Unnamed"
 msgstr ""
 

@@ -2,30 +2,31 @@
     <rawname>pinsets</rawname>
     <repo>standard</repo>
     <name>PIN Sets</name>
-    <version>15.0.1.1</version>
+    <version>15.0.1.2</version>
     <publisher>Sangoma Technologies Corporation</publisher>
     <license>GPLv3+</license>
     <licenselink>https://www.gnu.org/licenses/gpl-3.0.txt</licenselink>
     <category>Settings</category>
     <description>Allow creation of lists of PINs (numbers for passwords) that can be used by other modules (eg, trunks).</description>
     <changelog>
+		*15.0.1.2* FREEPBX-18127 Bring astman in to the the scope of the calling function 
         *15.0.1* Backup 15
-    </changelog>
+	</changelog>
     <menuitems>
         <pinsets>PIN Sets</pinsets>
     </menuitems>
     <database>
         <table name="pinsets">
-            <field name="pinsets_id" type="integer" primarykey="true" autoincrement="true" />
-            <field name="passwords" type="text" notnull="false" />
-            <field name="description" type="string" length="50" notnull="false" />
-            <field name="addtocdr" type="boolean" notnull="false" />
-            <field name="deptname" type="string" length="50" notnull="false" />
+            <field name="pinsets_id" type="integer" primarykey="true" autoincrement="true"/>
+            <field name="passwords" type="text" notnull="false"/>
+            <field name="description" type="string" length="50" notnull="false"/>
+            <field name="addtocdr" type="boolean" notnull="false"/>
+            <field name="deptname" type="string" length="50" notnull="false"/>
         </table>
         <table name="pinset_usage">
-            <field name="pinsets_id" type="integer" />
-            <field name="dispname" type="string" length="30" default="" primarykey="true" />
-            <field name="foreign_id" type="string" length="30" default="" primarykey="true" />
+            <field name="pinsets_id" type="integer"/>
+            <field name="dispname" type="string" length="30" default="" primarykey="true"/>
+            <field name="foreign_id" type="string" length="30" default="" primarykey="true"/>
         </table>
     </database>
     <supported>

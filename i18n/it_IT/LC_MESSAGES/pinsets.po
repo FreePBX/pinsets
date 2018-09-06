@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-08-20 13:54-0400\n"
+"POT-Creation-Date: 2018-09-06 12:52-0400\n"
 "PO-Revision-Date: 2018-05-30 09:33+0000\n"
 "Last-Translator: Stell0 <stefano.fancello@nethesis.it>\n"
 "Language-Team: Italian <http://*/projects/freepbx/pinsets/it/>\n"
@@ -56,11 +56,11 @@ msgstr "Nuovo Gruppo PIN"
 msgid "No"
 msgstr "No"
 
-#: functions.inc.php:231
+#: functions.inc.php:234
 msgid "None"
 msgstr "Nessuno"
 
-#: functions.inc.php:247
+#: functions.inc.php:250
 msgid ""
 "Optional: Select a PIN set to use. If using this option, leave the Route "
 "Password field blank."
@@ -72,7 +72,7 @@ msgstr ""
 msgid "PIN List"
 msgstr "Lista PIN"
 
-#: functions.inc.php:226
+#: functions.inc.php:229
 msgid "PIN Set"
 msgstr "Gruppo PIN"
 
@@ -135,7 +135,7 @@ msgstr "Impostazioni"
 msgid "Submit"
 msgstr "Sottoscrivi"
 
-#: Pinsets.class.php:126 functions.inc.php:114 functions.inc.php:123
+#: Pinsets.class.php:126 functions.inc.php:117 functions.inc.php:126
 msgid "Unnamed"
 msgstr "Senza nome"
 

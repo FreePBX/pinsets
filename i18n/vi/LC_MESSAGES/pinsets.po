@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-08-20 13:54-0400\n"
+"POT-Creation-Date: 2018-09-06 12:52-0400\n"
 "PO-Revision-Date: 2017-07-14 08:25+0200\n"
 "Last-Translator: PETER <ftek@ymail.com>\n"
 "Language-Team: Vietnamese <http://weblate.freepbx.org/projects/freepbx/"
@@ -57,11 +57,11 @@ msgstr "Cài đặt PIN mới"
 msgid "No"
 msgstr "Không"
 
-#: functions.inc.php:231
+#: functions.inc.php:234
 msgid "None"
 msgstr "Không có"
 
-#: functions.inc.php:247
+#: functions.inc.php:250
 msgid ""
 "Optional: Select a PIN set to use. If using this option, leave the Route "
 "Password field blank."
@@ -73,7 +73,7 @@ msgstr ""
 msgid "PIN List"
 msgstr "Danh sách PIN"
 
-#: functions.inc.php:226
+#: functions.inc.php:229
 msgid "PIN Set"
 msgstr "Cài đặt PIN"
 
@@ -133,7 +133,7 @@ msgstr "Các cài đặt"
 msgid "Submit"
 msgstr "Gửi đi"
 
-#: Pinsets.class.php:126 functions.inc.php:114 functions.inc.php:123
+#: Pinsets.class.php:126 functions.inc.php:117 functions.inc.php:126
 msgid "Unnamed"
 msgstr "Không được đặt tên"
 
