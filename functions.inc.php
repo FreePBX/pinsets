@@ -73,7 +73,7 @@ function pinsets_get_config($engine) {
 		$ext->add($c, 's', '', new ext_gotoif('$["${DB(AMPUSER/${AMPUSER}/pinless)}" != "NOPASSWD"]','auth:return'));
 		$ext->add($c, 's', 'auth', new ext_progress());
 		$ext->add($c, 's', '', new ext_read('dtmf','agent-pass',0,'n',1,10));
-		$ext->add($c, 's', '', new ext_gotoif('$["${DB(PINSETS/${ARG1}/${dtmf})}" = ${ARG1}"]', 'return:askpin'));
+		$ext->add($c, 's', '', new ext_gotoif('$["${DB(PINSETS/${ARG1}/${dtmf})}" = "${ARG1}"]', 'return:askpin'));
 		$ext->add($c, 's', 'askpin', new ext_set('try','$[${try}+1]'));
 		$ext->add($c, 's', '', new ext_gotoif('$[${try} > 4]', 'hangup'));
 		$ext->add($c, 's', '', new ext_read('dtmf','auth-incorrect',0,'n',1,10));
