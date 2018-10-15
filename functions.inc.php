@@ -220,7 +220,13 @@ function pinsets_adjustroute($route_id,$action,$routepinset='') {
 		break;
 	case 'delayed_insert_route';
 		if ($routepinset != '') {
-			sql("INSERT INTO pinset_usage (pinsets_id, dispname, foreign_id) VALUES ($routepinset, '$dispname', '$route_id')");
+			$sql = "SELECT * FROM pinset_usage WHERE pinsets_id = :pinsets_id AND dispname = :dispname AND foreign_id = :foreign_id";
+			$stm = $db->prepare($sql);
+			$stm->execute(array(":pinsets_id" => $routepinset, ":dispname" => $dispname, ":foreign_id" => $route_id));
+			$ret = $stm->fetch(\PDO::FETCH_ASSOC);
+          	if(empty($ret["pinsets_id"])){
+				sql("INSERT INTO pinset_usage (pinsets_id, dispname, foreign_id) VALUES ($routepinset, '$dispname', '$route_id')");
+            }
 		}
 		break;
 	case 'editroute';
