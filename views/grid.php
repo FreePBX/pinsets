@@ -5,7 +5,7 @@
 $dataurl = "ajax.php?module=pinsets&command=getJSON&jdata=grid";
 ?>
 <div id="toolbar-all">
-	<a href="?display=pinsets&view=form" class="btn btn-default"><i class="fa fa-plus"></i>&nbsp;<?php echo _("Add Pinset")?></a>
+	<a href="?display=pinsets&view=form" class="btn btn-default"><i class="fa fa-plus"></i>&nbsp;<?php echo _("Add Pin Sets")?></a>
 </div>
  <table id="pinsets"
         data-url="<?php echo $dataurl?>"
@@ -22,7 +22,7 @@ $dataurl = "ajax.php?module=pinsets&command=getJSON&jdata=grid";
         class="table table-striped">
     <thead>
       <tr>
-        <th data-field="description"><?php echo _("Pinset")?></th>
+        <th data-field="description"><?php echo _("Pin Sets")?></th>
         <th data-field="pinsets_id" data-formatter="linkFormatter" class="col-sm-2"><?php echo _("Actions")?></th>
       </tr>
     </thead>
