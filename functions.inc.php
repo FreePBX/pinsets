@@ -211,25 +211,19 @@ function pinsets_adjustroute($route_id,$action,$routepinset='') {
 	case 'delroute':
 		sql('DELETE FROM pinset_usage WHERE foreign_id ='.q($route_id)." AND dispname = '$dispname'");
 		break;
-	case 'addroute';
+	case 'addroute':
 		if ($routepinset != '') {
 			// we don't have the route_id yet, it hasn't been inserted yet :(, put it in the session
 			// and when returned it will be available on the redirect_standard
 			$_SESSION['pinsetsAddRoute'] = $routepinset;
 		}
 		break;
-	case 'delayed_insert_route';
+	case 'delayed_insert_route':
 		if ($routepinset != '') {
-			$sql = "SELECT * FROM pinset_usage WHERE pinsets_id = :pinsets_id AND dispname = :dispname AND foreign_id = :foreign_id";
-			$stm = $db->prepare($sql);
-			$stm->execute(array(":pinsets_id" => $routepinset, ":dispname" => $dispname, ":foreign_id" => $route_id));
-			$ret = $stm->fetch(\PDO::FETCH_ASSOC);
-          	if(empty($ret["pinsets_id"])){
-				sql("INSERT INTO pinset_usage (pinsets_id, dispname, foreign_id) VALUES ($routepinset, '$dispname', '$route_id')");
-            }
+			sql("REPLACE INTO pinset_usage (pinsets_id, dispname, foreign_id) VALUES ($routepinset, '$dispname', '$route_id')");
 		}
 		break;
-	case 'editroute';
+	case 'editroute':
 		if ($routepinset != '') {
 			sql("REPLACE INTO pinset_usage (pinsets_id, dispname, foreign_id) VALUES ($routepinset, '$dispname', '$route_id')");
 		} else {
