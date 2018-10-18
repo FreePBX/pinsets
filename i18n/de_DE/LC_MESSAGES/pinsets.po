@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-07-27 19:23-0400\n"
-"PO-Revision-Date: 2018-08-25 12:00+0000\n"
+"PO-Revision-Date: 2018-10-19 13:00+0000\n"
 "Last-Translator: Bastian Mertgen <b.mertgen@bastian-mertgen.de>\n"
 "Language-Team: German <http://*/projects/freepbx/pinsets/de/>\n"
 "Language: de_DE\n"
@@ -56,7 +56,7 @@ msgstr "Nein"
 
 #: functions.inc.php:270
 msgid "None"
-msgstr "Nichts"
+msgstr "Kein*e"
 
 #: functions.inc.php:286
 msgid ""
