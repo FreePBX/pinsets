@@ -36,7 +36,7 @@ function pinsets_get_config($engine) {
 		$ext->add($c, 's', '', new ext_gotoif('$["${DB(AMPUSER/${AMPUSER}/pinless)}" != "NOPASSWD"]','auth:return'));
 		$ext->add($c, 's', 'auth', new ext_progress());
 		$ext->add($c, 's', '', new ext_read('dtmf','agent-pass',0,'n',1,10));
-		$ext->add($c, 's', '', new ext_gotoif('$["${DB(PINSETS/${ARG1}/${dtmf})}" = ${ARG1}"]', 'return:askpin'));
+		$ext->add($c, 's', '', new ext_gotoif('$["${DB(PINSETS/${ARG1}/${dtmf})}" = "${ARG1}"]', 'return:askpin'));
 		$ext->add($c, 's', 'askpin', new ext_set('try','$[${try}+1]'));
 		$ext->add($c, 's', '', new ext_gotoif('$[${try} > 4]', 'hangup'));
 		$ext->add($c, 's', '', new ext_read('dtmf','auth-incorrect',0,'n',1,10));
@@ -174,19 +174,19 @@ function pinsets_adjustroute($route_id,$action,$routepinset='') {
 	case 'delroute':
 		sql('DELETE FROM pinset_usage WHERE foreign_id ='.q($route_id)." AND dispname = '$dispname'");
 		break;
-	case 'addroute';
+	case 'addroute':
 		if ($routepinset != '') {
 			// we don't have the route_id yet, it hasn't been inserted yet :(, put it in the session
 			// and when returned it will be available on the redirect_standard
 			$_SESSION['pinsetsAddRoute'] = $routepinset;
 		}
 		break;
-	case 'delayed_insert_route';
+	case 'delayed_insert_route':
 		if ($routepinset != '') {
-			sql("INSERT INTO pinset_usage (pinsets_id, dispname, foreign_id) VALUES ($routepinset, '$dispname', '$route_id')");
+			sql("REPLACE INTO pinset_usage (pinsets_id, dispname, foreign_id) VALUES ($routepinset, '$dispname', '$route_id')");
 		}
 		break;
-	case 'editroute';
+	case 'editroute':
 		if ($routepinset != '') {
 			sql("REPLACE INTO pinset_usage (pinsets_id, dispname, foreign_id) VALUES ($routepinset, '$dispname', '$route_id')");
 		} else {
