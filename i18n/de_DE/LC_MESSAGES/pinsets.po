@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-07-27 19:23-0400\n"
-"PO-Revision-Date: 2018-08-25 12:00+0000\n"
+"PO-Revision-Date: 2018-10-24 15:00+0000\n"
 "Last-Translator: Bastian Mertgen <b.mertgen@bastian-mertgen.de>\n"
 "Language-Team: German <http://*/projects/freepbx/pinsets/de/>\n"
 "Language: de_DE\n"
@@ -26,13 +26,15 @@ msgstr "Aktionen"
 
 #: views/bootnav.php:2 views/grid.php:8
 msgid "Add Pinset"
-msgstr ""
+msgstr "PIN-Liste hinzufügen"
 
 #: pinsets.i18n.php:8
 msgid ""
 "Allow creation of lists of PINs (numbers for passwords) that can be used by "
 "other modules (eg, trunks)."
 msgstr ""
+"Ermöglicht das Erzeugen von PIN-Listen (Nummern für Passwörter), die von "
+"anderen Modulen (z.B. Amtsleitungen) verwendet werden können."
 
 #: Pinsets.class.php:61
 msgid "Delete"
@@ -40,15 +42,15 @@ msgstr "Löschen"
 
 #: views/form.php:16
 msgid "Edit PIN Set"
-msgstr ""
+msgstr "PIN-Liste bearbeiten"
 
 #: views/form.php:92
 msgid "Enter a list of one or more PINs.  One PIN per line."
-msgstr ""
+msgstr "Geben Sie eine oder mehrere PINs an, jeweils eine pro Zeile."
 
 #: views/form.php:16
 msgid "New PIN Set"
-msgstr ""
+msgstr "Neue PIN-Liste"
 
 #: views/form.php:60
 msgid "No"
@@ -56,13 +58,15 @@ msgstr "Nein"
 
 #: functions.inc.php:270
 msgid "None"
-msgstr "Nichts"
+msgstr "Kein*e"
 
 #: functions.inc.php:286
 msgid ""
 "Optional: Select a PIN set to use. If using this option, leave the Route "
 "Password field blank."
 msgstr ""
+"Optional: Wählen Sie eine PIN-Liste, die verwendet werden soll. Wenn Sie "
+"diese Option nutzen, lassen Sie das Passwortfeld der Route leer."
 
 #: views/form.php:80
 msgid "PIN List"
@@ -70,15 +74,15 @@ msgstr "PIN-Liste"
 
 #: functions.inc.php:265
 msgid "PIN Set"
-msgstr ""
+msgstr "PIN-Liste"
 
 #: views/form.php:29
 msgid "PIN Set Description"
-msgstr ""
+msgstr "Beschreibung der PIN-Liste"
 
 #: pinsets.i18n.php:4 pinsets.i18n.php:10
 msgid "PIN Sets"
-msgstr ""
+msgstr "PIN-Listen"
 
 #: page.pinsets.php:6
 msgid ""
@@ -86,26 +90,30 @@ msgid ""
 "restricted features such as Outbound Routes. The PIN can also be added to "
 "the CDR record's 'accountcode' field."
 msgstr ""
+"PIN-Listen werden verwendet, um mehrere PINs zu verwalten, die für den "
+"Zugriff auf eingeschränkte Funktionen, wie z.B. ausgehende Routen, genutzt "
+"werden können. Die PIN kann auch in das Feld <i>accountcode</i> von KDS-"
+"Einträgen geschrieben werden."
 
 #: page.pinsets.php:7
 msgid "Pin Sets"
-msgstr ""
+msgstr "PIN-Listen"
 
 #: views/bootnav.php:8 views/grid.php:25
 msgid "Pinset"
-msgstr ""
+msgstr "PIN-Liste"
 
 #: views/form.php:41
 msgid "Please enter a description for this pinset"
-msgstr ""
+msgstr "Bitte geben Sie eine Beschreibung für diese PIN-Liste ein"
 
 #: assets/js/pinsets.js:9
 msgid "Please enter a valid Description"
-msgstr ""
+msgstr "Bitte geben Sie eine gültige Beschreibung ein"
 
 #: views/form.php:53
 msgid "Record In CDR"
-msgstr ""
+msgstr "Im KDS erfassen"
 
 #: Pinsets.class.php:66
 msgid "Reset"
@@ -116,6 +124,8 @@ msgid ""
 "Select Yes, if you would like to record the PIN in the call detail records "
 "when used"
 msgstr ""
+"Wählen Sie „Ja“ aus, wenn Sie möchten, dass die PIN im "
+"Kommunikationsdatensatz erfasst wird, wenn sie verwendet wird"
 
 #: pinsets.i18n.php:6
 msgid "Settings"
@@ -139,15 +149,15 @@ msgstr "bereits erledigt"
 
 #: install.php:30
 msgid "checking if migration required.."
-msgstr ""
+msgstr "prüfe, ob eine Migration erforderlich ist.."
 
 #: install.php:73
 msgid "continuing.."
-msgstr ""
+msgstr "wird fortgesetzt..."
 
 #: install.php:86
 msgid "done"
-msgstr ""
+msgstr "erledigt"
 
 #: install.php:88
 msgid "dropping used_by field.."
@@ -155,11 +165,11 @@ msgstr ""
 
 #: install.php:34
 msgid "migrating.."
-msgstr ""
+msgstr "migriere.."
 
 #: install.php:44
 msgid "migration aborted"
-msgstr ""
+msgstr "Migration abgebrochen"
 
 #: install.php:92
 msgid "no used_by field???"
@@ -167,8 +177,8 @@ msgstr ""
 
 #: install.php:94
 msgid "ok"
-msgstr ""
+msgstr "OK"
 
 #: install.php:43
 msgid "unknown error fetching table data"
-msgstr ""
+msgstr "unbekannter Fehler beim Laden der Tabellendaten"
