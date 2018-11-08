@@ -2,13 +2,14 @@
     <rawname>pinsets</rawname>
     <repo>standard</repo>
     <name>PIN Sets</name>
-    <version>15.0.1.3</version>
+    <version>15.0.1.4</version>
     <publisher>Sangoma Technologies Corporation</publisher>
     <license>GPLv3+</license>
     <licenselink>https://www.gnu.org/licenses/gpl-3.0.txt</licenselink>
     <category>Settings</category>
     <description>Allow creation of lists of PINs (numbers for passwords) that can be used by other modules (eg, trunks).</description>
     <changelog>
+		*15.0.1.4* FREEPBX-18346 PIN sets module allows to create duplicate entries with same PIN Set Description. 
 		*15.0.1.3* FREEPBX-16314 
 		*15.0.1.2* FREEPBX-18127 Bring astman in to the the scope of the calling function 
         *15.0.1* Backup 15

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX 2.5 Chinese Translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-09-06 12:52-0400\n"
+"POT-Creation-Date: 2018-11-08 14:58-0500\n"
 "PO-Revision-Date: 2009-02-01 12:04+0800\n"
 "Last-Translator: 周征晟 <zhougongjizhe@163.com>\n"
 "Language-Team: EdwardBadBoy <zhougongjizhe@163.com>\n"
@@ -19,12 +19,17 @@ msgstr ""
 "X-Poedit-Country: CHINA\n"
 "X-Poedit-SourceCharset: utf-8\n"
 
+#: assets/js/pinsets.js:12
+#, perl-format
+msgid "%s already used, please use a different description."
+msgstr ""
+
 #: views/grid.php:26
 msgid "Actions"
 msgstr ""
 
 #: views/bootnav.php:2 views/grid.php:8
-msgid "Add Pinset"
+msgid "Add Pin Sets"
 msgstr ""
 
 #: pinsets.i18n.php:8
@@ -37,19 +42,23 @@ msgstr ""
 msgid "Delete"
 msgstr ""
 
-#: views/form.php:16
+#: views/form.php:33
 msgid "Edit PIN Set"
 msgstr "编辑PIN码集合"
 
-#: views/form.php:92
+#: views/form.php:109
 msgid "Enter a list of one or more PINs.  One PIN per line."
 msgstr "请输入一个或多个PIN码，一行输一个PIN码。"
 
-#: views/form.php:16
+#: views/bootnav.php:3
+msgid "List Pin Sets"
+msgstr ""
+
+#: views/form.php:33
 msgid "New PIN Set"
 msgstr "新建PIN码集合"
 
-#: views/form.php:60
+#: views/form.php:77
 msgid "No"
 msgstr ""
 
@@ -65,7 +74,7 @@ msgstr ""
 "可选设置：选择一个要使用的PIN码集合。如果使用了这个选项，就请清空线路密码字"
 "段。"
 
-#: views/form.php:80
+#: views/form.php:97
 msgid "PIN List"
 msgstr ""
 
@@ -73,7 +82,7 @@ msgstr ""
 msgid "PIN Set"
 msgstr "PIN码集合"
 
-#: views/form.php:29
+#: views/form.php:46
 msgid "PIN Set Description"
 msgstr ""
 
@@ -90,15 +99,11 @@ msgstr ""
 "PIN码集合是用来管理PIN码列表的，这些PIN码可以用来访问受限制的功能，比如出局线"
 "路。PIN码也可以添加到CDR记录的“accountcode”字段。"
 
-#: page.pinsets.php:7
+#: page.pinsets.php:7 views/bootnav.php:8 views/grid.php:25
 msgid "Pin Sets"
 msgstr ""
 
-#: views/bootnav.php:8 views/grid.php:25
-msgid "Pinset"
-msgstr ""
-
-#: views/form.php:41
+#: views/form.php:58
 msgid "Please enter a description for this pinset"
 msgstr ""
 
@@ -106,7 +111,7 @@ msgstr ""
 msgid "Please enter a valid Description"
 msgstr "请输入有效的描述"
 
-#: views/form.php:53
+#: views/form.php:70
 msgid "Record In CDR"
 msgstr ""
 
@@ -114,7 +119,7 @@ msgstr ""
 msgid "Reset"
 msgstr ""
 
-#: views/form.php:68
+#: views/form.php:85
 msgid ""
 "Select Yes, if you would like to record the PIN in the call detail records "
 "when used"
@@ -132,7 +137,7 @@ msgstr ""
 msgid "Unnamed"
 msgstr ""
 
-#: views/form.php:58
+#: views/form.php:75
 msgid "Yes"
 msgstr ""
 
