@@ -12,7 +12,24 @@ if ($itemid){
 	$deleteurl = '?display=pinsets&action=delete&itemid='.$thisItem['pinsets_id'];
 }
 
+$pinsetList = FreePBX::Pinsets()->listPinsets();
+if($pinsetList){
+	$pinsetDesc = array();
+	foreach($pinsetList as $tmp_pinsetList){
+		if($itemid !=  $tmp_pinsetList['pinsets_id']){
+			$pinsetDesc[] = $tmp_pinsetList['description'];
+		}
+	}
+}
 ?>
+<script>
+var description = [];
+<?php
+if(!empty($pinsetDesc)){
+	echo "description = " . json_encode($pinsetDesc) . ";";
+}
+?>
+</script>
 <h3><?php echo ($itemid ? _("Edit PIN Set") : _("New PIN Set")) ?></h3>
 <form autocomplete="off" name="edit" action="" method="post" class="fpbx-submit" id="edit" data-fpbx-delete="<?php echo $deleteurl?>" onsubmit="return edit_onsubmit();">
 	<input type="hidden" name="display" value="pinsets">
