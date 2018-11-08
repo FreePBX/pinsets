@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX v2.5\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-07-27 19:23-0400\n"
+"POT-Creation-Date: 2018-11-08 14:57-0500\n"
 "PO-Revision-Date: 2018-07-04 10:15+0000\n"
 "Last-Translator: Chavdar Shtiliyanov <chavdar_75@yahoo.com>\n"
 "Language-Team: Bulgarian <http://*/projects/freepbx/pinsets/bg/>\n"
@@ -21,13 +21,18 @@ msgstr ""
 "X-Poedit-Country: BULGARIA\n"
 "X-Poedit-SourceCharset: utf-8\n"
 
+#: assets/js/pinsets.js:12
+#, perl-format
+msgid "%s already used, please use a different description."
+msgstr ""
+
 #: views/grid.php:26
 msgid "Actions"
 msgstr "Действия"
 
 #: views/bootnav.php:2 views/grid.php:8
-msgid "Add Pinset"
-msgstr "Добави PIN Въвеждане"
+msgid "Add Pin Sets"
+msgstr ""
 
 #: pinsets.i18n.php:8
 msgid ""
@@ -41,19 +46,23 @@ msgstr ""
 msgid "Delete"
 msgstr "Изтрий"
 
-#: views/form.php:16
+#: views/form.php:33
 msgid "Edit PIN Set"
 msgstr "Редактирай PIN Въвеждане"
 
-#: views/form.php:92
+#: views/form.php:109
 msgid "Enter a list of one or more PINs.  One PIN per line."
 msgstr "Въведете списък от един или повече PIN кода. Един PIN на ред."
 
-#: views/form.php:16
+#: views/bootnav.php:3
+msgid "List Pin Sets"
+msgstr ""
+
+#: views/form.php:33
 msgid "New PIN Set"
 msgstr "Ново PIN Въвеждане"
 
-#: views/form.php:60
+#: views/form.php:77
 msgid "No"
 msgstr "Не"
 
@@ -69,7 +78,7 @@ msgstr ""
 "Незадължително: Изберете PIN Въвеждане за използване. Ако използвате тази "
 "опция, оставете полето Парола на Маршрут празно."
 
-#: views/form.php:80
+#: views/form.php:97
 msgid "PIN List"
 msgstr "PIN Списък"
 
@@ -77,7 +86,7 @@ msgstr "PIN Списък"
 msgid "PIN Set"
 msgstr "PIN Въвеждане"
 
-#: views/form.php:29
+#: views/form.php:46
 msgid "PIN Set Description"
 msgstr "Описание на PIN Въвеждане"
 
@@ -95,15 +104,11 @@ msgstr ""
 "да се използват за ограничаване на функции като Изходящи Маршрути. Също така "
 "PIN може да се добави в CDR записите в полето 'акаунт код'."
 
-#: page.pinsets.php:7
+#: page.pinsets.php:7 views/bootnav.php:8 views/grid.php:25
 msgid "Pin Sets"
 msgstr "PIN Въвеждания"
 
-#: views/bootnav.php:8 views/grid.php:25
-msgid "Pinset"
-msgstr "PIN Въвеждане"
-
-#: views/form.php:41
+#: views/form.php:58
 msgid "Please enter a description for this pinset"
 msgstr "Моля въведете описание за това PIN Въвеждане"
 
@@ -111,7 +116,7 @@ msgstr "Моля въведете описание за това PIN Въвеж�
 msgid "Please enter a valid Description"
 msgstr "Моля въведете правилно Описание"
 
-#: views/form.php:53
+#: views/form.php:70
 msgid "Record In CDR"
 msgstr "Запис в CDR"
 
@@ -119,7 +124,7 @@ msgstr "Запис в CDR"
 msgid "Reset"
 msgstr "Изчисти"
 
-#: views/form.php:68
+#: views/form.php:85
 msgid ""
 "Select Yes, if you would like to record the PIN in the call detail records "
 "when used"
@@ -137,7 +142,7 @@ msgstr "Приеми"
 msgid "Unnamed"
 msgstr "Без име"
 
-#: views/form.php:58
+#: views/form.php:75
 msgid "Yes"
 msgstr "Да"
 
@@ -180,6 +185,12 @@ msgstr "ok"
 #: install.php:43
 msgid "unknown error fetching table data"
 msgstr "непозната грешка при извличане на данни от таблицата"
+
+#~ msgid "Add Pinset"
+#~ msgstr "Добави PIN Въвеждане"
+
+#~ msgid "Pinset"
+#~ msgstr "PIN Въвеждане"
 
 #~ msgid "Add PIN Set"
 #~ msgstr "Добави PIN Въвеждане"

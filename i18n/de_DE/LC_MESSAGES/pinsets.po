@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-07-27 19:23-0400\n"
+"POT-Creation-Date: 2018-11-08 14:57-0500\n"
 "PO-Revision-Date: 2018-10-24 15:00+0000\n"
 "Last-Translator: Bastian Mertgen <b.mertgen@bastian-mertgen.de>\n"
 "Language-Team: German <http://*/projects/freepbx/pinsets/de/>\n"
@@ -20,13 +20,18 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 3.0.1\n"
 
+#: assets/js/pinsets.js:12
+#, perl-format
+msgid "%s already used, please use a different description."
+msgstr ""
+
 #: views/grid.php:26
 msgid "Actions"
 msgstr "Aktionen"
 
 #: views/bootnav.php:2 views/grid.php:8
-msgid "Add Pinset"
-msgstr "PIN-Liste hinzufügen"
+msgid "Add Pin Sets"
+msgstr ""
 
 #: pinsets.i18n.php:8
 msgid ""
@@ -40,19 +45,23 @@ msgstr ""
 msgid "Delete"
 msgstr "Löschen"
 
-#: views/form.php:16
+#: views/form.php:33
 msgid "Edit PIN Set"
 msgstr "PIN-Liste bearbeiten"
 
-#: views/form.php:92
+#: views/form.php:109
 msgid "Enter a list of one or more PINs.  One PIN per line."
 msgstr "Geben Sie eine oder mehrere PINs an, jeweils eine pro Zeile."
 
-#: views/form.php:16
+#: views/bootnav.php:3
+msgid "List Pin Sets"
+msgstr ""
+
+#: views/form.php:33
 msgid "New PIN Set"
 msgstr "Neue PIN-Liste"
 
-#: views/form.php:60
+#: views/form.php:77
 msgid "No"
 msgstr "Nein"
 
@@ -68,7 +77,7 @@ msgstr ""
 "Optional: Wählen Sie eine PIN-Liste, die verwendet werden soll. Wenn Sie "
 "diese Option nutzen, lassen Sie das Passwortfeld der Route leer."
 
-#: views/form.php:80
+#: views/form.php:97
 msgid "PIN List"
 msgstr "PIN-Liste"
 
@@ -76,7 +85,7 @@ msgstr "PIN-Liste"
 msgid "PIN Set"
 msgstr "PIN-Liste"
 
-#: views/form.php:29
+#: views/form.php:46
 msgid "PIN Set Description"
 msgstr "Beschreibung der PIN-Liste"
 
@@ -95,15 +104,11 @@ msgstr ""
 "werden können. Die PIN kann auch in das Feld <i>accountcode</i> von KDS-"
 "Einträgen geschrieben werden."
 
-#: page.pinsets.php:7
+#: page.pinsets.php:7 views/bootnav.php:8 views/grid.php:25
 msgid "Pin Sets"
 msgstr "PIN-Listen"
 
-#: views/bootnav.php:8 views/grid.php:25
-msgid "Pinset"
-msgstr "PIN-Liste"
-
-#: views/form.php:41
+#: views/form.php:58
 msgid "Please enter a description for this pinset"
 msgstr "Bitte geben Sie eine Beschreibung für diese PIN-Liste ein"
 
@@ -111,7 +116,7 @@ msgstr "Bitte geben Sie eine Beschreibung für diese PIN-Liste ein"
 msgid "Please enter a valid Description"
 msgstr "Bitte geben Sie eine gültige Beschreibung ein"
 
-#: views/form.php:53
+#: views/form.php:70
 msgid "Record In CDR"
 msgstr "Im KDS erfassen"
 
@@ -119,7 +124,7 @@ msgstr "Im KDS erfassen"
 msgid "Reset"
 msgstr "Zurücksetzen"
 
-#: views/form.php:68
+#: views/form.php:85
 msgid ""
 "Select Yes, if you would like to record the PIN in the call detail records "
 "when used"
@@ -139,7 +144,7 @@ msgstr "Absenden"
 msgid "Unnamed"
 msgstr "Unbenannt"
 
-#: views/form.php:58
+#: views/form.php:75
 msgid "Yes"
 msgstr "Ja"
 
@@ -182,3 +187,9 @@ msgstr "OK"
 #: install.php:43
 msgid "unknown error fetching table data"
 msgstr "unbekannter Fehler beim Laden der Tabellendaten"
+
+#~ msgid "Add Pinset"
+#~ msgstr "PIN-Liste hinzufügen"
+
+#~ msgid "Pinset"
+#~ msgstr "PIN-Liste"

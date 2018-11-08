@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-07-27 19:23-0400\n"
+"POT-Creation-Date: 2018-11-08 14:57-0500\n"
 "PO-Revision-Date: 2015-05-04 00:04+0200\n"
 "Last-Translator: Yuriy <alliancesko@gmail.com>\n"
 "Language-Team: Russian <http://weblate.freepbx.org/projects/freepbx/pinsets/"
@@ -19,12 +19,17 @@ msgstr ""
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Weblate 2.2-dev\n"
 
+#: assets/js/pinsets.js:12
+#, perl-format
+msgid "%s already used, please use a different description."
+msgstr ""
+
 #: views/grid.php:26
 msgid "Actions"
 msgstr "Действия"
 
 #: views/bootnav.php:2 views/grid.php:8
-msgid "Add Pinset"
+msgid "Add Pin Sets"
 msgstr ""
 
 #: pinsets.i18n.php:8
@@ -39,19 +44,23 @@ msgstr ""
 msgid "Delete"
 msgstr "Удалить"
 
-#: views/form.php:16
+#: views/form.php:33
 msgid "Edit PIN Set"
 msgstr "Изменить лист PIN-кодов"
 
-#: views/form.php:92
+#: views/form.php:109
 msgid "Enter a list of one or more PINs.  One PIN per line."
 msgstr "Введите PIN-коды в список, по одному в строке."
 
-#: views/form.php:16
+#: views/bootnav.php:3
+msgid "List Pin Sets"
+msgstr ""
+
+#: views/form.php:33
 msgid "New PIN Set"
 msgstr "Новый лист PIN-кодов"
 
-#: views/form.php:60
+#: views/form.php:77
 msgid "No"
 msgstr "Нет"
 
@@ -67,7 +76,7 @@ msgstr ""
 "Опционально: выбрать лист PIN-кодов. Если используется эта опция - "
 "необходимо оставлять поле Пароль на маршруте пустым."
 
-#: views/form.php:80
+#: views/form.php:97
 msgid "PIN List"
 msgstr "Список ПИН"
 
@@ -75,7 +84,7 @@ msgstr "Список ПИН"
 msgid "PIN Set"
 msgstr "Лист PIN-кодов"
 
-#: views/form.php:29
+#: views/form.php:46
 msgid "PIN Set Description"
 msgstr "Описание набора ПИН"
 
@@ -93,15 +102,11 @@ msgstr ""
 "исходящим маршрутам с ограниченными правами. Сам набираемый PIN-код можно "
 "добавлять также в отчёт о звонках в специальное поле 'accountcode'."
 
-#: page.pinsets.php:7
+#: page.pinsets.php:7 views/bootnav.php:8 views/grid.php:25
 msgid "Pin Sets"
 msgstr "Наборы ПИН"
 
-#: views/bootnav.php:8 views/grid.php:25
-msgid "Pinset"
-msgstr ""
-
-#: views/form.php:41
+#: views/form.php:58
 msgid "Please enter a description for this pinset"
 msgstr "Пожалуйста, введите описание для этого набора ПИН"
 
@@ -109,7 +114,7 @@ msgstr "Пожалуйста, введите описание для этого 
 msgid "Please enter a valid Description"
 msgstr "Укажите разрешенное описание"
 
-#: views/form.php:53
+#: views/form.php:70
 msgid "Record In CDR"
 msgstr "Запись в CDR"
 
@@ -117,7 +122,7 @@ msgstr "Запись в CDR"
 msgid "Reset"
 msgstr "Сброс"
 
-#: views/form.php:68
+#: views/form.php:85
 msgid ""
 "Select Yes, if you would like to record the PIN in the call detail records "
 "when used"
@@ -137,7 +142,7 @@ msgstr "Сохранить"
 msgid "Unnamed"
 msgstr "Без названия"
 
-#: views/form.php:58
+#: views/form.php:75
 msgid "Yes"
 msgstr "Да"
 

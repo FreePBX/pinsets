@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-26 02:18-0400\n"
+"POT-Creation-Date: 2018-11-08 14:57-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,13 +18,18 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
+#: assets/js/pinsets.js:12
+#, perl-format
+msgid "%s already used, please use a different description."
+msgstr ""
+
 #: views/grid.php:26
 msgid "Actions"
 msgstr ""
 
 #: views/bootnav.php:2
 #: views/grid.php:8
-msgid "Add Pinset"
+msgid "Add Pin Sets"
 msgstr ""
 
 #: pinsets.i18n.php:8
@@ -37,19 +42,23 @@ msgstr ""
 msgid "Delete"
 msgstr ""
 
-#: views/form.php:16
+#: views/form.php:33
 msgid "Edit PIN Set"
 msgstr ""
 
-#: views/form.php:92
+#: views/form.php:109
 msgid "Enter a list of one or more PINs.  One PIN per line."
 msgstr ""
 
-#: views/form.php:16
+#: views/bootnav.php:3
+msgid "List Pin Sets"
+msgstr ""
+
+#: views/form.php:33
 msgid "New PIN Set"
 msgstr ""
 
-#: views/form.php:60
+#: views/form.php:77
 msgid "No"
 msgstr ""
 
@@ -63,7 +72,7 @@ msgid ""
 "Password field blank."
 msgstr ""
 
-#: views/form.php:80
+#: views/form.php:97
 msgid "PIN List"
 msgstr ""
 
@@ -71,7 +80,7 @@ msgstr ""
 msgid "PIN Set"
 msgstr ""
 
-#: views/form.php:29
+#: views/form.php:46
 msgid "PIN Set Description"
 msgstr ""
 
@@ -88,15 +97,12 @@ msgid ""
 msgstr ""
 
 #: page.pinsets.php:7
+#: views/bootnav.php:8
+#: views/grid.php:25
 msgid "Pin Sets"
 msgstr ""
 
-#: views/bootnav.php:8
-#: views/grid.php:25
-msgid "Pinset"
-msgstr ""
-
-#: views/form.php:41
+#: views/form.php:58
 msgid "Please enter a description for this pinset"
 msgstr ""
 
@@ -104,7 +110,7 @@ msgstr ""
 msgid "Please enter a valid Description"
 msgstr ""
 
-#: views/form.php:53
+#: views/form.php:70
 msgid "Record In CDR"
 msgstr ""
 
@@ -112,7 +118,7 @@ msgstr ""
 msgid "Reset"
 msgstr ""
 
-#: views/form.php:68
+#: views/form.php:85
 msgid ""
 "Select Yes, if you would like to record the PIN in the call detail records "
 "when used"
@@ -131,7 +137,7 @@ msgstr ""
 msgid "Unnamed"
 msgstr ""
 
-#: views/form.php:58
+#: views/form.php:75
 msgid "Yes"
 msgstr ""
 

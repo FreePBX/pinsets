@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-07-27 19:23-0400\n"
+"POT-Creation-Date: 2018-11-08 14:57-0500\n"
 "PO-Revision-Date: 2017-07-14 08:25+0200\n"
 "Last-Translator: PETER <ftek@ymail.com>\n"
 "Language-Team: Vietnamese <http://weblate.freepbx.org/projects/freepbx/"
@@ -21,13 +21,18 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Weblate 2.4\n"
 
+#: assets/js/pinsets.js:12
+#, perl-format
+msgid "%s already used, please use a different description."
+msgstr ""
+
 #: views/grid.php:26
 msgid "Actions"
 msgstr "Các thao tác"
 
 #: views/bootnav.php:2 views/grid.php:8
-msgid "Add Pinset"
-msgstr "Thêm Pinset"
+msgid "Add Pin Sets"
+msgstr ""
 
 #: pinsets.i18n.php:8
 msgid ""
@@ -41,19 +46,23 @@ msgstr ""
 msgid "Delete"
 msgstr "Xóa"
 
-#: views/form.php:16
+#: views/form.php:33
 msgid "Edit PIN Set"
 msgstr "Chỉnh sửa cài đặt PIN"
 
-#: views/form.php:92
+#: views/form.php:109
 msgid "Enter a list of one or more PINs.  One PIN per line."
 msgstr "Nhập một danh sách của một hay nhiều PIN. Một PIN trên một dòng."
 
-#: views/form.php:16
+#: views/bootnav.php:3
+msgid "List Pin Sets"
+msgstr ""
+
+#: views/form.php:33
 msgid "New PIN Set"
 msgstr "Cài đặt PIN mới"
 
-#: views/form.php:60
+#: views/form.php:77
 msgid "No"
 msgstr "Không"
 
@@ -69,7 +78,7 @@ msgstr ""
 "Tùy chọn: Chọn một PIN được đặt để sử dụng. Nếu dùng tùy chọn này, để trống "
 "trường Route Password ( mật khẩu tuyến)."
 
-#: views/form.php:80
+#: views/form.php:97
 msgid "PIN List"
 msgstr "Danh sách PIN"
 
@@ -77,7 +86,7 @@ msgstr "Danh sách PIN"
 msgid "PIN Set"
 msgstr "Cài đặt PIN"
 
-#: views/form.php:29
+#: views/form.php:46
 msgid "PIN Set Description"
 msgstr "Mô tả cài đặt PIN"
 
@@ -95,15 +104,11 @@ msgstr ""
 "các tính năng giới hạn ví dụ như các tuyến gọi ra (Outbound Route). PIN cũng "
 "có thể được thêm vào trường  'accountcode' của các bản ghi CDR."
 
-#: page.pinsets.php:7
+#: page.pinsets.php:7 views/bootnav.php:8 views/grid.php:25
 msgid "Pin Sets"
 msgstr "Các cài đặt PIN"
 
-#: views/bootnav.php:8 views/grid.php:25
-msgid "Pinset"
-msgstr "Cài đặt pin"
-
-#: views/form.php:41
+#: views/form.php:58
 msgid "Please enter a description for this pinset"
 msgstr "Vui lòng nhập một mô tả cho cài pinset này"
 
@@ -111,7 +116,7 @@ msgstr "Vui lòng nhập một mô tả cho cài pinset này"
 msgid "Please enter a valid Description"
 msgstr "Vui lòng nhập một mô tả hợp lệ"
 
-#: views/form.php:53
+#: views/form.php:70
 msgid "Record In CDR"
 msgstr "Bản ghi trong CDR"
 
@@ -119,7 +124,7 @@ msgstr "Bản ghi trong CDR"
 msgid "Reset"
 msgstr "Cài đặt lại"
 
-#: views/form.php:68
+#: views/form.php:85
 msgid ""
 "Select Yes, if you would like to record the PIN in the call detail records "
 "when used"
@@ -137,7 +142,7 @@ msgstr "Gửi đi"
 msgid "Unnamed"
 msgstr "Không được đặt tên"
 
-#: views/form.php:58
+#: views/form.php:75
 msgid "Yes"
 msgstr "Có"
 
@@ -181,3 +186,9 @@ msgstr "Ok"
 #: install.php:43
 msgid "unknown error fetching table data"
 msgstr "Xảy ra lỗi không xác định khi đang tìm nạp bảng dữ liệu"
+
+#~ msgid "Add Pinset"
+#~ msgstr "Thêm Pinset"
+
+#~ msgid "Pinset"
+#~ msgstr "Cài đặt pin"
