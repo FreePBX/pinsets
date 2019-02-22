@@ -15,15 +15,7 @@ class Pinsets implements BMO {
 	}
 	public function install() {}
     public function uninstall() {}
-    public function setDatabase($pdo){
-	$this->db = $pdo;
-		return $this;
-	}
-	
-	public function resetDatabase(){
-		$this->db = $this->FreePBX->Database;
-		return $this;
-	}
+
 	public function doConfigPageInit($page) {
 		$request = $_REQUEST;
 		isset($request['action'])?$action = $request['action']:$action='';

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-11-08 14:58-0500\n"
+"POT-Creation-Date: 2019-02-21 19:09-0500\n"
 "PO-Revision-Date: 2017-10-15 22:08+0200\n"
 "Last-Translator: hammer125 <auswertung@aon.at>\n"
 "Language-Team: German <http://weblate.freepbx.org/projects/freepbx/pinsets/"
@@ -40,7 +40,7 @@ msgid ""
 "other modules (eg, trunks)."
 msgstr ""
 
-#: Pinsets.class.php:67
+#: Pinsets.class.php:59
 msgid "Delete"
 msgstr "Löschen"
 
@@ -113,7 +113,7 @@ msgstr ""
 msgid "Record In CDR"
 msgstr ""
 
-#: Pinsets.class.php:72
+#: Pinsets.class.php:64
 msgid "Reset"
 msgstr "Zurücksetzen"
 
@@ -127,11 +127,11 @@ msgstr ""
 msgid "Settings"
 msgstr "Einstellungen"
 
-#: Pinsets.class.php:77
+#: Pinsets.class.php:69
 msgid "Submit"
 msgstr "Senden"
 
-#: Pinsets.class.php:126 functions.inc.php:117 functions.inc.php:126
+#: Pinsets.class.php:118 functions.inc.php:117 functions.inc.php:126
 msgid "Unnamed"
 msgstr "Unbenannt"
 

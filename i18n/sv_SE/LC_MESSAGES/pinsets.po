@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreeÅBX pinsets\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-11-08 14:58-0500\n"
+"POT-Creation-Date: 2019-02-21 19:09-0500\n"
 "PO-Revision-Date: 2011-03-20 00:00+0100\n"
 "Last-Translator: Mikael Carlsson <mickecamino@gmail.com>\n"
 "Language-Team: \n"
@@ -52,7 +52,7 @@ msgstr ""
 "Ger möjlighet att skapa listor med PINs (nummer för lösenord) somkan "
 "användas av andra moduler (trunkar)."
 
-#: Pinsets.class.php:67
+#: Pinsets.class.php:59
 msgid "Delete"
 msgstr ""
 
@@ -130,7 +130,7 @@ msgstr "Skriv in en giltig beskrivining"
 msgid "Record In CDR"
 msgstr ""
 
-#: Pinsets.class.php:72
+#: Pinsets.class.php:64
 msgid "Reset"
 msgstr ""
 
@@ -144,11 +144,11 @@ msgstr ""
 msgid "Settings"
 msgstr ""
 
-#: Pinsets.class.php:77
+#: Pinsets.class.php:69
 msgid "Submit"
 msgstr ""
 
-#: Pinsets.class.php:126 functions.inc.php:117 functions.inc.php:126
+#: Pinsets.class.php:118 functions.inc.php:117 functions.inc.php:126
 msgid "Unnamed"
 msgstr "Inget namn"
 

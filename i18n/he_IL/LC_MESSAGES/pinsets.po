@@ -23,7 +23,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX 2.2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-11-08 14:58-0500\n"
+"POT-Creation-Date: 2019-02-21 19:09-0500\n"
 "PO-Revision-Date: 2006-10-17 17:30+0300\n"
 "Last-Translator: Isaac Gal <gal@allegronet.co.il>\n"
 "MIME-Version: 1.0\n"
@@ -51,7 +51,7 @@ msgstr ""
 "מאפשר יצירת סטים של סיסמאות שניתנים לשימושעל ידי מודלים אחרים כגון (ניתוב "
 "שיחות יוצאות וכד)"
 
-#: Pinsets.class.php:67
+#: Pinsets.class.php:59
 msgid "Delete"
 msgstr ""
 
@@ -129,7 +129,7 @@ msgstr "נא ציין תיאור"
 msgid "Record In CDR"
 msgstr ""
 
-#: Pinsets.class.php:72
+#: Pinsets.class.php:64
 msgid "Reset"
 msgstr ""
 
@@ -143,11 +143,11 @@ msgstr ""
 msgid "Settings"
 msgstr ""
 
-#: Pinsets.class.php:77
+#: Pinsets.class.php:69
 msgid "Submit"
 msgstr ""
 
-#: Pinsets.class.php:126 functions.inc.php:117 functions.inc.php:126
+#: Pinsets.class.php:118 functions.inc.php:117 functions.inc.php:126
 msgid "Unnamed"
 msgstr "ללא שם"
 
