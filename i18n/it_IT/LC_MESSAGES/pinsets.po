@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-02-21 19:09-0500\n"
+"POT-Creation-Date: 2019-03-01 15:40+0530\n"
 "PO-Revision-Date: 2018-05-30 09:33+0000\n"
 "Last-Translator: Stell0 <stefano.fancello@nethesis.it>\n"
 "Language-Team: Italian <http://*/projects/freepbx/pinsets/it/>\n"
@@ -41,7 +41,7 @@ msgstr ""
 "Permetti la creazione di elenchi di PIN (numeri per password) che possono "
 "essere utilizzati da altri moduli (ad es. Tronchi)."
 
-#: Pinsets.class.php:59
+#: Pinsets.class.php:61
 msgid "Delete"
 msgstr "Elimina"
 
@@ -120,7 +120,7 @@ msgstr "Prego immettere una Descrizione valida"
 msgid "Record In CDR"
 msgstr "Registra in CDR"
 
-#: Pinsets.class.php:64
+#: Pinsets.class.php:66
 msgid "Reset"
 msgstr "Azzera"
 
@@ -136,11 +136,11 @@ msgstr ""
 msgid "Settings"
 msgstr "Impostazioni"
 
-#: Pinsets.class.php:69
+#: Pinsets.class.php:71
 msgid "Submit"
 msgstr "Sottoscrivi"
 
-#: Pinsets.class.php:118 functions.inc.php:117 functions.inc.php:126
+#: Pinsets.class.php:120 functions.inc.php:117 functions.inc.php:126
 msgid "Unnamed"
 msgstr "Senza nome"
 

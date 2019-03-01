@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-02-21 19:09-0500\n"
+"POT-Creation-Date: 2019-03-01 15:40+0530\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -38,7 +38,7 @@ msgid ""
 "other modules (eg, trunks)."
 msgstr ""
 
-#: Pinsets.class.php:59
+#: Pinsets.class.php:61
 msgid "Delete"
 msgstr ""
 
@@ -114,7 +114,7 @@ msgstr ""
 msgid "Record In CDR"
 msgstr ""
 
-#: Pinsets.class.php:64
+#: Pinsets.class.php:66
 msgid "Reset"
 msgstr ""
 
@@ -128,11 +128,11 @@ msgstr ""
 msgid "Settings"
 msgstr ""
 
-#: Pinsets.class.php:69
+#: Pinsets.class.php:71
 msgid "Submit"
 msgstr ""
 
-#: Pinsets.class.php:118
+#: Pinsets.class.php:120
 #: functions.inc.php:117
 #: functions.inc.php:126
 msgid "Unnamed"

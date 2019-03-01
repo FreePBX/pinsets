@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-02-21 19:09-0500\n"
+"POT-Creation-Date: 2019-03-01 15:40+0530\n"
 "PO-Revision-Date: 2016-05-05 04:23+0200\n"
 "Last-Translator: Media <mousavi.media@gmail.com>\n"
 "Language-Team: Persian (Iran) <http://weblate.freepbx.org/projects/freepbx/"
@@ -40,7 +40,7 @@ msgid ""
 "other modules (eg, trunks)."
 msgstr "مجوز ایجاد فهرست پین هایی که میتوانند توسط سایر ماژول ها استفاده شوند."
 
-#: Pinsets.class.php:59
+#: Pinsets.class.php:61
 msgid "Delete"
 msgstr "حذف"
 
@@ -116,7 +116,7 @@ msgstr "لطفا شرح معتبر وارد کنید"
 msgid "Record In CDR"
 msgstr "ذخیره در جزئیات تماس"
 
-#: Pinsets.class.php:64
+#: Pinsets.class.php:66
 msgid "Reset"
 msgstr "بازنشانی"
 
@@ -130,11 +130,11 @@ msgstr "اگر میخواهید پین در جزییات تماس ضبط شود 
 msgid "Settings"
 msgstr "پیکربندی"
 
-#: Pinsets.class.php:69
+#: Pinsets.class.php:71
 msgid "Submit"
 msgstr "ثبت"
 
-#: Pinsets.class.php:118 functions.inc.php:117 functions.inc.php:126
+#: Pinsets.class.php:120 functions.inc.php:117 functions.inc.php:126
 msgid "Unnamed"
 msgstr "بدون نام"
 

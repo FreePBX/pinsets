@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX v2.5\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-02-21 19:09-0500\n"
+"POT-Creation-Date: 2019-03-01 15:40+0530\n"
 "PO-Revision-Date: 2018-07-04 10:15+0000\n"
 "Last-Translator: Chavdar Shtiliyanov <chavdar_75@yahoo.com>\n"
 "Language-Team: Bulgarian <http://*/projects/freepbx/pinsets/bg/>\n"
@@ -42,7 +42,7 @@ msgstr ""
 "Позволява създаването на списък с PIN-ове (номера за пароли) които могат да "
 "се използват от други модули (например външни линии)."
 
-#: Pinsets.class.php:59
+#: Pinsets.class.php:61
 msgid "Delete"
 msgstr "Изтрий"
 
@@ -120,7 +120,7 @@ msgstr "Моля въведете правилно Описание"
 msgid "Record In CDR"
 msgstr "Запис в CDR"
 
-#: Pinsets.class.php:64
+#: Pinsets.class.php:66
 msgid "Reset"
 msgstr "Изчисти"
 
@@ -134,11 +134,11 @@ msgstr "Изберете Да, ако искате да записвате PIN �
 msgid "Settings"
 msgstr "Настройки"
 
-#: Pinsets.class.php:69
+#: Pinsets.class.php:71
 msgid "Submit"
 msgstr "Приеми"
 
-#: Pinsets.class.php:118 functions.inc.php:117 functions.inc.php:126
+#: Pinsets.class.php:120 functions.inc.php:117 functions.inc.php:126
 msgid "Unnamed"
 msgstr "Без име"
 

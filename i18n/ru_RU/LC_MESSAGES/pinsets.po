@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-02-21 19:09-0500\n"
+"POT-Creation-Date: 2019-03-01 15:40+0530\n"
 "PO-Revision-Date: 2015-05-04 00:04+0200\n"
 "Last-Translator: Yuriy <alliancesko@gmail.com>\n"
 "Language-Team: Russian <http://weblate.freepbx.org/projects/freepbx/pinsets/"
@@ -40,7 +40,7 @@ msgstr ""
 "Даёт возможность создавать списки наборов PIN, которые затем можно "
 "использовать в других модулях (например - в траках)."
 
-#: Pinsets.class.php:59
+#: Pinsets.class.php:61
 msgid "Delete"
 msgstr "Удалить"
 
@@ -118,7 +118,7 @@ msgstr "Укажите разрешенное описание"
 msgid "Record In CDR"
 msgstr "Запись в CDR"
 
-#: Pinsets.class.php:64
+#: Pinsets.class.php:66
 msgid "Reset"
 msgstr "Сброс"
 
@@ -134,11 +134,11 @@ msgstr ""
 msgid "Settings"
 msgstr "Установки"
 
-#: Pinsets.class.php:69
+#: Pinsets.class.php:71
 msgid "Submit"
 msgstr "Сохранить"
 
-#: Pinsets.class.php:118 functions.inc.php:117 functions.inc.php:126
+#: Pinsets.class.php:120 functions.inc.php:117 functions.inc.php:126
 msgid "Unnamed"
 msgstr "Без названия"
 
