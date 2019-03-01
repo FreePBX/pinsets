@@ -26,6 +26,7 @@ class Pinsets implements BMO {
 				case "add":
 					pinsets_add($request);
 					needreload();
+					unset($_REQUEST['view']);
 				break;
 				case "delete":
 					pinsets_del($itemid);
@@ -34,6 +35,7 @@ class Pinsets implements BMO {
 				case "edit":
 					pinsets_edit($itemid,$request);
 					needreload();
+					unset($_REQUEST['view']);
 				break;
 			}
 		}
