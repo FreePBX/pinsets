@@ -34,7 +34,7 @@ class Pinsets implements \BMO {
 				case "edit":
 					pinsets_edit($itemid,$request);
 					needreload();
-					redirect_standard('itemid','view');
+					unset($_REQUEST['view']);
 				break;
 			}
 		}
