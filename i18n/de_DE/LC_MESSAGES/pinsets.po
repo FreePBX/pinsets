@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-11-08 14:57-0500\n"
-"PO-Revision-Date: 2018-10-24 15:00+0000\n"
+"PO-Revision-Date: 2019-04-02 13:00+0000\n"
 "Last-Translator: Bastian Mertgen <b.mertgen@bastian-mertgen.de>\n"
 "Language-Team: German <http://*/projects/freepbx/pinsets/de/>\n"
 "Language: de_DE\n"
@@ -23,7 +23,7 @@ msgstr ""
 #: assets/js/pinsets.js:12
 #, perl-format
 msgid "%s already used, please use a different description."
-msgstr ""
+msgstr "%s wird bereits verwendet, bitte geben Sie eine andere Beschreibung an."
 
 #: views/grid.php:26
 msgid "Actions"
