@@ -10,8 +10,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-11-08 14:57-0500\n"
-"PO-Revision-Date: 2019-04-02 13:00+0000\n"
-"Last-Translator: Bastian Mertgen <b.mertgen@bastian-mertgen.de>\n"
+"PO-Revision-Date: 2019-04-10 07:55+0000\n"
+"Last-Translator: florian alberts <alberts@ar-systems.de>\n"
 "Language-Team: German <http://*/projects/freepbx/pinsets/de/>\n"
 "Language: de_DE\n"
 "MIME-Version: 1.0\n"
@@ -31,7 +31,7 @@ msgstr "Aktionen"
 
 #: views/bootnav.php:2 views/grid.php:8
 msgid "Add Pin Sets"
-msgstr ""
+msgstr "Füge PIN-Liste hinzu"
 
 #: pinsets.i18n.php:8
 msgid ""
@@ -55,7 +55,7 @@ msgstr "Geben Sie eine oder mehrere PINs an, jeweils eine pro Zeile."
 
 #: views/bootnav.php:3
 msgid "List Pin Sets"
-msgstr ""
+msgstr "Liste PIN-Listen"
 
 #: views/form.php:33
 msgid "New PIN Set"
@@ -166,7 +166,7 @@ msgstr "erledigt"
 
 #: install.php:88
 msgid "dropping used_by field.."
-msgstr ""
+msgstr "lösche das Feld genutzt_von (used_by).."
 
 #: install.php:34
 msgid "migrating.."
@@ -178,7 +178,7 @@ msgstr "Migration abgebrochen"
 
 #: install.php:92
 msgid "no used_by field???"
-msgstr ""
+msgstr "kein Feld namens genutzt_von (used_by)???"
 
 #: install.php:94
 msgid "ok"
