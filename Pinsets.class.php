@@ -110,6 +110,14 @@ class Pinsets implements BMO {
             break;
         }
     }
+	public function setDatabase($pdo){
+		$this->db = $pdo;
+		return $this;
+	}
+	public function resetDatabase(){
+		$this->db = $this->FreePBX->Database;
+		return $this;
+	}
 
 	public function getRightNav($request) {
 		if(isset($request['view']) && $request['view'] == 'form'){
