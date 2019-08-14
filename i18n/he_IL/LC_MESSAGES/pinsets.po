@@ -23,7 +23,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX 2.2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-01 15:40+0530\n"
+"POT-Creation-Date: 2019-08-14 15:58+0530\n"
 "PO-Revision-Date: 2006-10-17 17:30+0300\n"
 "Last-Translator: Isaac Gal <gal@allegronet.co.il>\n"
 "MIME-Version: 1.0\n"
@@ -147,7 +147,7 @@ msgstr ""
 msgid "Submit"
 msgstr ""
 
-#: Pinsets.class.php:120 functions.inc.php:117 functions.inc.php:126
+#: Pinsets.class.php:128 functions.inc.php:117 functions.inc.php:126
 msgid "Unnamed"
 msgstr "ללא שם"
 

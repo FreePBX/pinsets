@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX v2.5\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-01 15:40+0530\n"
+"POT-Creation-Date: 2019-08-14 15:58+0530\n"
 "PO-Revision-Date: 2018-07-04 10:15+0000\n"
 "Last-Translator: Chavdar Shtiliyanov <chavdar_75@yahoo.com>\n"
 "Language-Team: Bulgarian <http://*/projects/freepbx/pinsets/bg/>\n"
@@ -138,7 +138,7 @@ msgstr "Настройки"
 msgid "Submit"
 msgstr "Приеми"
 
-#: Pinsets.class.php:120 functions.inc.php:117 functions.inc.php:126
+#: Pinsets.class.php:128 functions.inc.php:117 functions.inc.php:126
 msgid "Unnamed"
 msgstr "Без име"
 
