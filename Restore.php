@@ -11,6 +11,15 @@ class Restore Extends Base\RestoreBase{
 		}
 	}
 	public function processLegacy($pdo, $data, $tables, $unknownTables) {
-		$this->restoreLegacyDatabase($pdo);
+		$bmo = $this->FreePBX->Pinsets;
+		$bmo->setDatabase($pdo);
+		$pinsets = $bmo->listPinsets();
+		$bmo->resetDatabase();
+		foreach($pinsets as $pin) {
+				$passwords = explode('\n',$pin['passwords']);
+				$pass = implode($passwords,"\n");
+				$pin['passwords'] = $pass;
+				pinsets_add($pin);
+		}
 	}
 }
