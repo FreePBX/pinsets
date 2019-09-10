@@ -2,13 +2,14 @@
     <rawname>pinsets</rawname>
     <repo>standard</repo>
     <name>PIN Sets</name>
-    <version>15.0.1.8</version>
+    <version>15.0.1.9</version>
     <publisher>Sangoma Technologies Corporation</publisher>
     <license>GPLv3+</license>
     <licenselink>https://www.gnu.org/licenses/gpl-3.0.txt</licenselink>
     <category>Settings</category>
     <description>Allow creation of lists of PINs (numbers for passwords) that can be used by other modules (eg, trunks).</description>
     <changelog>
+		*15.0.1.9* Related to FREEPBX-20414: removed $jobid from runRestore() 
 		*15.0.1.8* FREEPBX-20387 FreePBX 15 system is not restoring the PINSets data properly 
 		*15.0.1.7* FREEPBX-20068 Restoring the PINSets module gives illegal offset 
 		*15.0.1.6* FREEPBX-18367 pinset page is not redirecting to list page 
