@@ -11,6 +11,10 @@ class Restore Extends Base\RestoreBase{
 		}
 	}
 	public function processLegacy($pdo, $data, $tables, $unknownTables) {
+		if(!in_array('pinsets',$tables)) {
+			$this->log("Backup does not contain pinsets table");
+			return;
+		}
 		$bmo = $this->FreePBX->Pinsets;
 		$bmo->setDatabase($pdo);
 		$pinsets = $bmo->listPinsets();
