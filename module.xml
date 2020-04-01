@@ -29,7 +29,7 @@
         </table>
     </database>
     <supported>
-        <version>15.0</version>
+        <version>16.0</version>
     </supported>
     <depends>
         <module>core</module>
