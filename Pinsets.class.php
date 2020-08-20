@@ -131,4 +131,9 @@ class Pinsets implements BMO {
         $this->db->prepare($sql)
             ->execute($vars);
     }
+    public function addpinsetUsage($pinsetUsage) {
+	$sql = 'INSERT INTO pinset_usage (dispname, foreign_id, pinsets_id) values (:dispname, :foreign_id, :pinsets_id)';
+	$this->db->prepare($sql)
+		->execute($pinsetUsage);
+    }
 }

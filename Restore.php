@@ -5,9 +5,16 @@ class Restore Extends Base\RestoreBase{
 	public function runRestore(){
 		$configs = $this->getConfigs();
 		if (!empty($configs)) {
-				foreach ($configs as $pinset) {
-						$this->FreePBX->Pinsets->upsert($pinset);
+			if(isset($configs['listPinsets'])) {
+				foreach ($configs['listPinsets'] as $pinset) {
+					$this->FreePBX->Pinsets->upsert($pinset);
 				}
+			}
+			if(isset($configs['pinsetUsage'])) {
+				foreach ($configs['pinsetUsage'] as $pinsetUsage) {
+					$this->FreePBX->Pinsets->addpinsetUsage($pinsetUsage);
+				}
+			}
 		}
 	}
 	public function processLegacy($pdo, $data, $tables, $unknownTables) {
@@ -24,6 +31,10 @@ class Restore Extends Base\RestoreBase{
 				$pass = implode($passwords,"\n");
 				$pin['passwords'] = $pass;
 				pinsets_add($pin);
+		}
+		if(in_array('pinset_usage',$tables)) {
+			$pinsetUsage = array('pinset_usage');
+			$this->restoreLegacyDatabase($pdo, $pinsetUsage);
 		}
 	}
 }
