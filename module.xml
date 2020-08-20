@@ -2,15 +2,17 @@
     <rawname>pinsets</rawname>
     <repo>standard</repo>
     <name>PIN Sets</name>
-    <version>16.0.1</version>
+    <version>16.0.2</version>
     <publisher>Sangoma Technologies Corporation</publisher>
     <license>GPLv3+</license>
     <licenselink>https://www.gnu.org/licenses/gpl-3.0.txt</licenselink>
     <category>Settings</category>
     <description>Allow creation of lists of PINs (numbers for passwords) that can be used by other modules (eg, trunks).</description>
+    <more-info>https://wiki.freepbx.org/display/F2/Pin+Sets</more-info>
     <changelog>
+		*16.0.2* Packaging of ver 16.0.2
 		*16.0.1alpha* 16.0.1 alpha release
-    </changelog>
+	</changelog>
     <menuitems>
         <pinsets>PIN Sets</pinsets>
     </menuitems>
