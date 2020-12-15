@@ -2,7 +2,7 @@
     <rawname>pinsets</rawname>
     <repo>standard</repo>
     <name>PIN Sets</name>
-    <version>15.0.1.13</version>
+    <version>15.0.1.14</version>
     <publisher>Sangoma Technologies Corporation</publisher>
     <license>GPLv3+</license>
     <licenselink>https://www.gnu.org/licenses/gpl-3.0.txt</licenselink>
@@ -10,6 +10,7 @@
     <description>Allow creation of lists of PINs (numbers for passwords) that can be used by other modules (eg, trunks).</description>
     <more-info>https://wiki.freepbx.org/display/FPG/Pin+Sets</more-info>
     <changelog>
+		*15.0.1.14* FREEPBX-22108 Add API REST to control Pinsets 
 		*15.0.1.13* Packaging of ver 15.0.1.13
 		*15.0.1.12* FREEI-2059  Legacy backup restore on FreePBX 15 not restoring the outbound route settings properly 
 		*15.0.1.11* Packaging of ver 15.0.1.11
