@@ -176,9 +176,7 @@ function pinsets_adjustroute($route_id,$action,$routepinset='') {
 		break;
 	case 'addroute':
 		if ($routepinset != '') {
-			// we don't have the route_id yet, it hasn't been inserted yet :(, put it in the session
-			// and when returned it will be available on the redirect_standard
-			$_SESSION['pinsetsAddRoute'] = $routepinset;
+			sql("REPLACE INTO pinset_usage (pinsets_id, dispname, foreign_id) VALUES ($routepinset, '$dispname', '$route_id')");
 		}
 		break;
 	case 'delayed_insert_route':
@@ -207,14 +205,9 @@ function pinsets_hook_core($viewing_itemid, $target_menuid) {
 		if ($viewing_itemid == '') {
 			$selected_pinset = '';
 		} else {
-			// if this is set, we just added it so get it out of the session
-			if (isset($_SESSION['pinsetsAddRoute']) && $_SESSION['pinsetsAddRoute'] != '') {
-				$selected_pinset = $_SESSION['pinsetsAddRoute'];
-			} else {
-				$selected_pinset = $db->getOne("SELECT pinsets_id FROM pinset_usage WHERE dispname='routing' AND foreign_id='".$db->escapeSimple($viewing_itemid)."'");
-				if(DB::IsError($selected_pinset)) {
-					die_freepbx($selected_pinset->getMessage());
-				}
+			$selected_pinset = $db->getOne("SELECT pinsets_id FROM pinset_usage WHERE dispname='routing' AND foreign_id='".$db->escapeSimple($viewing_itemid)."'");
+			if(DB::IsError($selected_pinset)) {
+				die_freepbx($selected_pinset->getMessage());
 			}
 		}
 
@@ -276,13 +269,7 @@ function pinsets_hookProcess_core($viewing_itemid, $request) {
 		if (isset($request['Submit']) ) {
 			$action = (isset($action))?$action:'editroute';
 		}
-
-		// $action won't be set on the redirect but pinsetsAddRoute will be in the session
-		//
-		if (!$action && isset($_SESSION['pinsetsAddRoute']) && $_SESSION['pinsetsAddRoute'] != '') {
-			pinsets_adjustroute($route_id,'delayed_insert_route',$_SESSION['pinsetsAddRoute']);
-			unset($_SESSION['pinsetsAddRoute']);
-		} elseif ($action) {
+		if ($action) {
 			pinsets_adjustroute($route_id,$action,$request['pinsets']);
 		}
 		break;
