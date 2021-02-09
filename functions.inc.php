@@ -152,7 +152,7 @@ function pinsets_clean($passwords) {
 	$passwords = array_values(array_unique($passwords));
 
 	if (is_array($passwords)) {
-		return implode($passwords,"\n");
+		return implode("\n",$passwords);
 	} else {
 		return "";
 	}
