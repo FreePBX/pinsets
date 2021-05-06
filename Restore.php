@@ -28,7 +28,7 @@ class Restore Extends Base\RestoreBase{
 		$bmo->resetDatabase();
 		foreach($pinsets as $pin) {
 				$passwords = explode('\n',$pin['passwords']);
-				$pass = implode($passwords,"\n");
+				$pass = implode("\n", $passwords);
 				$pin['passwords'] = $pass;
 				pinsets_add($pin);
 		}
