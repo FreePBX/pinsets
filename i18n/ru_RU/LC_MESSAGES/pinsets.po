@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: 1.4\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-11-08 14:57-0500\n"
-"PO-Revision-Date: 2021-12-08 09:01+0000\n"
+"PO-Revision-Date: 2022-04-21 08:17+0000\n"
 "Last-Translator: Dmitriy Q <krotesk@ya.ru>\n"
 "Language-Team: Russian <http://weblate.freepbx.org/projects/freepbx/pinsets/"
 "ru/>\n"
@@ -22,7 +22,7 @@ msgstr ""
 #: assets/js/pinsets.js:12
 #, perl-format
 msgid "%s already used, please use a different description."
-msgstr ""
+msgstr "%s уже используется, пожалуйста, используйте другое описание."
 
 #: views/grid.php:26
 msgid "Actions"
@@ -30,7 +30,7 @@ msgstr "Действия"
 
 #: views/bootnav.php:2 views/grid.php:8
 msgid "Add Pin Sets"
-msgstr ""
+msgstr "Добавить набор PIN-кода"
 
 #: pinsets.i18n.php:8
 msgid ""
@@ -54,7 +54,7 @@ msgstr "Введите PIN-коды в список, по одному в стр
 
 #: views/bootnav.php:3
 msgid "List Pin Sets"
-msgstr ""
+msgstr "Список набора PIN-кодов"
 
 #: views/form.php:33
 msgid "New PIN Set"
@@ -132,7 +132,7 @@ msgstr ""
 
 #: pinsets.i18n.php:6
 msgid "Settings"
-msgstr "Установки"
+msgstr "Настройки"
 
 #: Pinsets.class.php:71
 msgid "Submit"
