@@ -40,8 +40,8 @@ if(!empty($pinsetDesc)){
 <div class="element-container">
 	<div class="row">
 		<div class="col-md-12">
-			<div class="row">
-				<div class="form-group">
+			<div class="">
+				<div class="row form-group">
 					<div class="col-md-3">
 						<label class="control-label" for="description"><?php echo _("PIN Set Description") ?></label>
 						<i class="fa fa-question-circle fpbx-help-icon" data-for="description"></i>
@@ -64,8 +64,8 @@ if(!empty($pinsetDesc)){
 <div class="element-container">
 	<div class="row">
 		<div class="col-md-12">
-			<div class="row">
-				<div class="form-group">
+			<div class="">
+				<div class="row form-group">
 					<div class="col-md-3">
 						<label class="control-label" for="addtocdr"><?php echo _("Record In CDR") ?></label>
 						<i class="fa fa-question-circle fpbx-help-icon" data-for="addtocdr"></i>
@@ -91,8 +91,8 @@ if(!empty($pinsetDesc)){
 <div class="element-container">
 	<div class="row">
 		<div class="col-md-12">
-			<div class="row">
-				<div class="form-group">
+			<div class="">
+				<div class="row form-group">
 					<div class="col-md-3">
 						<label class="control-label" for="passwords"><?php echo _("PIN List") ?></label>
 						<i class="fa fa-question-circle fpbx-help-icon" data-for="passwords"></i>
