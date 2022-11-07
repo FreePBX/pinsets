@@ -29,8 +29,8 @@ function pinsets_get_config($engine) {
 				$astman->database_put("PINSETS/".$item['pinsets_id'],$pin,$item['pinsets_id']);
 			}
 		}
-		$c = 'sub-pinsets';
-		// write out a sub that handles the authenticate
+		$c = 'macro-pinsets';
+		// write out a macro that handles the authenticate
 		$ext->add($c, 's', '', new ext_set('try','1'));
 		$ext->add($c, 's', '', new ext_gotoif('$[${ARG2} = 1]','cdr,1'));
 		$ext->add($c, 's', '', new ext_gotoif('$["${DB(AMPUSER/${AMPUSER}/pinless)}" != "NOPASSWD"]','auth:return'));
@@ -43,7 +43,6 @@ function pinsets_get_config($engine) {
 		$ext->add($c, 's', 'validate', new ext_gotoif('$["${DB(PINSETS/${ARG1}/${dtmf})}" = "${ARG1}"]', 'return:askpin'));
 		$ext->add($c, 's', 'hangup', new ext_hangup());
 		$ext->add($c, 's', 'return', new ext_noop('returning back'));
-		$ext->add($c, 's', '', new ext_return());
 
 		// authenticate with the CDR option (a)
 		$ext->add($c, 'cdr', '', new ext_gotoif('$["${DB(AMPUSER/${AMPUSER}/pinless)}" != "NOPASSWD"]', 'auth:return'));
@@ -58,7 +57,7 @@ function pinsets_get_config($engine) {
 		$ext->add($c, 'cdr', 'hangup', new ext_hangup());
 		$ext->add($c, 'cdr', 'setaccountcode', new ext_set('CHANNEL(accountcode)','${dtmf}'));
 		$ext->add($c, 'cdr', 'return', new ext_noop('returning back'));
-		$ext->add($c, 'cdr', '', new ext_return());
+
 	}
 
 	$usage_list = pinsets_list_usage('routing');
@@ -73,7 +72,7 @@ function pinsets_get_config($engine) {
 			foreach ($patterns as $pattern) {
 				$fpattern = core_routing_formatpattern($pattern);
 				$exten = $fpattern['dial_pattern'];
-				$ext->splice($context, $exten, 1, new ext_gosub('1','s','sub-pinsets', $thisroute['pinsets_id'].','.$addtocdr[$thisroute['pinsets_id']]),'pinsets');
+				$ext->splice($context, $exten, 1, new ext_macro('pinsets', $thisroute['pinsets_id'].','.$addtocdr[$thisroute['pinsets_id']]),'pinsets');
 			}
 		}
 	}
