@@ -5,6 +5,7 @@ namespace FreePBX\modules;
 use UnexpectedValueException;
 use BMO;
 use PDO;
+#[\AllowDynamicProperties]
 class Pinsets implements BMO {
 	public function __construct($freepbx = null) {
 		if ($freepbx == null) {
