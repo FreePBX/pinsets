@@ -42,7 +42,7 @@ function pinsets_get_config($engine) {
 		$ext->add($c, 's', '', new ext_read('dtmf','auth-incorrect',0,'n',1,10));
 		$ext->add($c, 's', 'validate', new ext_gotoif('$["${DB(PINSETS/${ARG1}/${dtmf})}" = "${ARG1}"]', 'return:askpin'));
 		$ext->add($c, 's', 'hangup', new ext_hangup());
-		$ext->add($c, 's', 'return', new ext_noop('returning back'));
+		$ext->add($c, 's', 'return', new ext_return());
 
 		// authenticate with the CDR option (a)
 		$ext->add($c, 'cdr', '', new ext_gotoif('$["${DB(AMPUSER/${AMPUSER}/pinless)}" != "NOPASSWD"]', 'auth:return'));
@@ -56,7 +56,7 @@ function pinsets_get_config($engine) {
 		$ext->add($c, 'cdr', 'validate', new ext_gotoif('$["${DB(PINSETS/${ARG1}/${dtmf})}" = "${ARG1}"]', 'setaccountcode:askpin'));
 		$ext->add($c, 'cdr', 'hangup', new ext_hangup());
 		$ext->add($c, 'cdr', 'setaccountcode', new ext_set('CHANNEL(accountcode)','${dtmf}'));
-		$ext->add($c, 'cdr', 'return', new ext_noop('returning back'));
+		$ext->add($c, 'cdr', 'return', new ext_return());
 
 	}
 
