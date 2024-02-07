@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-01-05 06:27+0000\n"
+"POT-Creation-Date: 2024-02-07 04:07-0500\n"
 "PO-Revision-Date: 2016-05-05 04:23+0200\n"
 "Last-Translator: Media <mousavi.media@gmail.com>\n"
 "Language-Team: Persian (Iran) <http://weblate.freepbx.org/projects/freepbx/"
@@ -40,7 +40,7 @@ msgid ""
 "other modules (eg, trunks)."
 msgstr "مجوز ایجاد فهرست پین هایی که میتوانند توسط سایر ماژول ها استفاده شوند."
 
-#: Pinsets.class.php:61
+#: Pinsets.class.php:62
 msgid "Delete"
 msgstr "حذف"
 
@@ -64,11 +64,11 @@ msgstr "PIN جدید"
 msgid "No"
 msgstr "خیر"
 
-#: functions.inc.php:227
+#: functions.inc.php:229
 msgid "None"
 msgstr "هیچ"
 
-#: functions.inc.php:243
+#: functions.inc.php:245
 msgid ""
 "Optional: Select a PIN set to use. If using this option, leave the Route "
 "Password field blank."
@@ -78,7 +78,7 @@ msgstr "اختیاری：یک PIN برای کاربر انتخاب کنید."
 msgid "PIN List"
 msgstr "فهرست PIN"
 
-#: functions.inc.php:222
+#: functions.inc.php:224
 msgid "PIN Set"
 msgstr "تنظیمات PIN"
 
@@ -116,7 +116,7 @@ msgstr "لطفا شرح معتبر وارد کنید"
 msgid "Record In CDR"
 msgstr "ذخیره در جزئیات تماس"
 
-#: Pinsets.class.php:66
+#: Pinsets.class.php:67
 msgid "Reset"
 msgstr "بازنشانی"
 
@@ -130,11 +130,11 @@ msgstr "اگر میخواهید پین در جزییات تماس ضبط شود 
 msgid "Settings"
 msgstr "پیکربندی"
 
-#: Pinsets.class.php:71
+#: Pinsets.class.php:72
 msgid "Submit"
 msgstr "ثبت"
 
-#: Pinsets.class.php:128 functions.inc.php:117 functions.inc.php:126
+#: Pinsets.class.php:129 functions.inc.php:117 functions.inc.php:127
 msgid "Unnamed"
 msgstr "بدون نام"
 

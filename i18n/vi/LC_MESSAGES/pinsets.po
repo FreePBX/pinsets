@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-01-05 06:27+0000\n"
+"POT-Creation-Date: 2024-02-07 04:07-0500\n"
 "PO-Revision-Date: 2017-07-14 08:25+0200\n"
 "Last-Translator: PETER <ftek@ymail.com>\n"
 "Language-Team: Vietnamese <http://weblate.freepbx.org/projects/freepbx/"
@@ -42,7 +42,7 @@ msgstr ""
 "Cho phép tạo các danh sách của PIN ( các số cho mật khẩu) có thể được sử "
 "dụng bởi ccas mô đun khác ( cụ thể là các trung kế)."
 
-#: Pinsets.class.php:61
+#: Pinsets.class.php:62
 msgid "Delete"
 msgstr "Xóa"
 
@@ -66,11 +66,11 @@ msgstr "Cài đặt PIN mới"
 msgid "No"
 msgstr "Không"
 
-#: functions.inc.php:227
+#: functions.inc.php:229
 msgid "None"
 msgstr "Không có"
 
-#: functions.inc.php:243
+#: functions.inc.php:245
 msgid ""
 "Optional: Select a PIN set to use. If using this option, leave the Route "
 "Password field blank."
@@ -82,7 +82,7 @@ msgstr ""
 msgid "PIN List"
 msgstr "Danh sách PIN"
 
-#: functions.inc.php:222
+#: functions.inc.php:224
 msgid "PIN Set"
 msgstr "Cài đặt PIN"
 
@@ -120,7 +120,7 @@ msgstr "Vui lòng nhập một mô tả hợp lệ"
 msgid "Record In CDR"
 msgstr "Bản ghi trong CDR"
 
-#: Pinsets.class.php:66
+#: Pinsets.class.php:67
 msgid "Reset"
 msgstr "Cài đặt lại"
 
@@ -134,11 +134,11 @@ msgstr "Chọn Yes, nếu bạn muốn ghi lại PIN trong các bản ghi chi ti
 msgid "Settings"
 msgstr "Các cài đặt"
 
-#: Pinsets.class.php:71
+#: Pinsets.class.php:72
 msgid "Submit"
 msgstr "Gửi đi"
 
-#: Pinsets.class.php:128 functions.inc.php:117 functions.inc.php:126
+#: Pinsets.class.php:129 functions.inc.php:117 functions.inc.php:127
 msgid "Unnamed"
 msgstr "Không được đặt tên"
 

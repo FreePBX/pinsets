@@ -23,7 +23,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX 2.2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-01-05 06:27+0000\n"
+"POT-Creation-Date: 2024-02-07 04:07-0500\n"
 "PO-Revision-Date: 2006-10-17 17:30+0300\n"
 "Last-Translator: Isaac Gal <gal@allegronet.co.il>\n"
 "MIME-Version: 1.0\n"
@@ -51,7 +51,7 @@ msgstr ""
 "מאפשר יצירת סטים של סיסמאות שניתנים לשימושעל ידי מודלים אחרים כגון (ניתוב "
 "שיחות יוצאות וכד)"
 
-#: Pinsets.class.php:61
+#: Pinsets.class.php:62
 msgid "Delete"
 msgstr ""
 
@@ -75,11 +75,11 @@ msgstr "סט סיסמאות חדש"
 msgid "No"
 msgstr ""
 
-#: functions.inc.php:227
+#: functions.inc.php:229
 msgid "None"
 msgstr "ללא"
 
-#: functions.inc.php:243
+#: functions.inc.php:245
 msgid ""
 "Optional: Select a PIN set to use. If using this option, leave the Route "
 "Password field blank."
@@ -91,7 +91,7 @@ msgstr ""
 msgid "PIN List"
 msgstr ""
 
-#: functions.inc.php:222
+#: functions.inc.php:224
 msgid "PIN Set"
 msgstr "סט סיסמאות"
 
@@ -129,7 +129,7 @@ msgstr "נא ציין תיאור"
 msgid "Record In CDR"
 msgstr ""
 
-#: Pinsets.class.php:66
+#: Pinsets.class.php:67
 msgid "Reset"
 msgstr ""
 
@@ -143,11 +143,11 @@ msgstr ""
 msgid "Settings"
 msgstr ""
 
-#: Pinsets.class.php:71
+#: Pinsets.class.php:72
 msgid "Submit"
 msgstr ""
 
-#: Pinsets.class.php:128 functions.inc.php:117 functions.inc.php:126
+#: Pinsets.class.php:129 functions.inc.php:117 functions.inc.php:127
 msgid "Unnamed"
 msgstr "ללא שם"
 

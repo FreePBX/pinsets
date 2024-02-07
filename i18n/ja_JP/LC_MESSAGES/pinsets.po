@@ -37,7 +37,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX 2.10.02\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-01-05 06:27+0000\n"
+"POT-Creation-Date: 2024-02-07 04:07-0500\n"
 "PO-Revision-Date: 2014-02-19 20:56+0200\n"
 "Last-Translator: Chise Mishima <c.mishima@qloog.com>\n"
 "Language-Team: Japanese <http://example.com/projects/freepbx/pinsets/ja/>\n"
@@ -69,7 +69,7 @@ msgstr ""
 "他のモジュール(例：トランク)によって使用される可能性のあるPINのリスト(パス"
 "ワードとしての数値)作成を許可します。"
 
-#: Pinsets.class.php:61
+#: Pinsets.class.php:62
 msgid "Delete"
 msgstr ""
 
@@ -93,11 +93,11 @@ msgstr "新しいPINセット"
 msgid "No"
 msgstr ""
 
-#: functions.inc.php:227
+#: functions.inc.php:229
 msgid "None"
 msgstr "なし"
 
-#: functions.inc.php:243
+#: functions.inc.php:245
 msgid ""
 "Optional: Select a PIN set to use. If using this option, leave the Route "
 "Password field blank."
@@ -109,7 +109,7 @@ msgstr ""
 msgid "PIN List"
 msgstr ""
 
-#: functions.inc.php:222
+#: functions.inc.php:224
 msgid "PIN Set"
 msgstr "PINセット"
 
@@ -147,7 +147,7 @@ msgstr "有効な説明を入力してください。"
 msgid "Record In CDR"
 msgstr ""
 
-#: Pinsets.class.php:66
+#: Pinsets.class.php:67
 msgid "Reset"
 msgstr ""
 
@@ -161,11 +161,11 @@ msgstr ""
 msgid "Settings"
 msgstr "設定"
 
-#: Pinsets.class.php:71
+#: Pinsets.class.php:72
 msgid "Submit"
 msgstr ""
 
-#: Pinsets.class.php:128 functions.inc.php:117 functions.inc.php:126
+#: Pinsets.class.php:129 functions.inc.php:117 functions.inc.php:127
 msgid "Unnamed"
 msgstr "名前がつけられてません"
 

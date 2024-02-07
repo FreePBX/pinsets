@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-01-05 06:27+0000\n"
+"POT-Creation-Date: 2024-02-07 04:07-0500\n"
 "PO-Revision-Date: 2018-05-30 09:33+0000\n"
 "Last-Translator: Stell0 <stefano.fancello@nethesis.it>\n"
 "Language-Team: Italian <http://*/projects/freepbx/pinsets/it/>\n"
@@ -41,7 +41,7 @@ msgstr ""
 "Permetti la creazione di elenchi di PIN (numeri per password) che possono "
 "essere utilizzati da altri moduli (ad es. Tronchi)."
 
-#: Pinsets.class.php:61
+#: Pinsets.class.php:62
 msgid "Delete"
 msgstr "Elimina"
 
@@ -65,11 +65,11 @@ msgstr "Nuovo Gruppo PIN"
 msgid "No"
 msgstr "No"
 
-#: functions.inc.php:227
+#: functions.inc.php:229
 msgid "None"
 msgstr "Nessuno"
 
-#: functions.inc.php:243
+#: functions.inc.php:245
 msgid ""
 "Optional: Select a PIN set to use. If using this option, leave the Route "
 "Password field blank."
@@ -81,7 +81,7 @@ msgstr ""
 msgid "PIN List"
 msgstr "Lista PIN"
 
-#: functions.inc.php:222
+#: functions.inc.php:224
 msgid "PIN Set"
 msgstr "Gruppo PIN"
 
@@ -120,7 +120,7 @@ msgstr "Prego immettere una Descrizione valida"
 msgid "Record In CDR"
 msgstr "Registra in CDR"
 
-#: Pinsets.class.php:66
+#: Pinsets.class.php:67
 msgid "Reset"
 msgstr "Azzera"
 
@@ -136,11 +136,11 @@ msgstr ""
 msgid "Settings"
 msgstr "Impostazioni"
 
-#: Pinsets.class.php:71
+#: Pinsets.class.php:72
 msgid "Submit"
 msgstr "Sottoscrivi"
 
-#: Pinsets.class.php:128 functions.inc.php:117 functions.inc.php:126
+#: Pinsets.class.php:129 functions.inc.php:117 functions.inc.php:127
 msgid "Unnamed"
 msgstr "Senza nome"
 

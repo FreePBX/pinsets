@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-01-05 06:27+0000\n"
+"POT-Creation-Date: 2024-02-07 04:07-0500\n"
 "PO-Revision-Date: 2016-02-05 06:17+0200\n"
 "Last-Translator: Nicolas Riendeau <freepbx@riendeau.org>\n"
 "Language-Team: French <http://weblate.freepbx.org/projects/freepbx/pinsets/"
@@ -40,7 +40,7 @@ msgstr ""
 "Permets la création de NIP (nombres utilisés comme mot de passe) qui peuvent "
 "être utilisés par d'autres modules ( p. ex. jonctions)."
 
-#: Pinsets.class.php:61
+#: Pinsets.class.php:62
 msgid "Delete"
 msgstr "Supprimer"
 
@@ -64,11 +64,11 @@ msgstr "Nouveau jeu de PIN"
 msgid "No"
 msgstr ""
 
-#: functions.inc.php:227
+#: functions.inc.php:229
 msgid "None"
 msgstr "Aucun"
 
-#: functions.inc.php:243
+#: functions.inc.php:245
 msgid ""
 "Optional: Select a PIN set to use. If using this option, leave the Route "
 "Password field blank."
@@ -80,7 +80,7 @@ msgstr ""
 msgid "PIN List"
 msgstr ""
 
-#: functions.inc.php:222
+#: functions.inc.php:224
 msgid "PIN Set"
 msgstr "Jeu de PIN"
 
@@ -119,7 +119,7 @@ msgstr "Entrez une description valide"
 msgid "Record In CDR"
 msgstr ""
 
-#: Pinsets.class.php:66
+#: Pinsets.class.php:67
 msgid "Reset"
 msgstr "Réinitialiser"
 
@@ -133,11 +133,11 @@ msgstr ""
 msgid "Settings"
 msgstr ""
 
-#: Pinsets.class.php:71
+#: Pinsets.class.php:72
 msgid "Submit"
 msgstr "Soumettre"
 
-#: Pinsets.class.php:128 functions.inc.php:117 functions.inc.php:126
+#: Pinsets.class.php:129 functions.inc.php:117 functions.inc.php:127
 msgid "Unnamed"
 msgstr "Sans nom"
 

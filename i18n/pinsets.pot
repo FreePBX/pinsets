@@ -3,13 +3,13 @@
 # For licensing information, please see the file named LICENSE located in the module directory
 #
 # FreePBX language template for pinsets
-# Copyright (C) 2008-2022 Sangoma Technologies, Inc.
+# Copyright (C) 2008-2024 Sangoma Technologies, Inc.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-05-23 10:30+0000\n"
+"POT-Creation-Date: 2024-02-07 04:07-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -38,7 +38,7 @@ msgid ""
 "other modules (eg, trunks)."
 msgstr ""
 
-#: Pinsets.class.php:61
+#: Pinsets.class.php:62
 msgid "Delete"
 msgstr ""
 
@@ -62,11 +62,11 @@ msgstr ""
 msgid "No"
 msgstr ""
 
-#: functions.inc.php:227
+#: functions.inc.php:229
 msgid "None"
 msgstr ""
 
-#: functions.inc.php:243
+#: functions.inc.php:245
 msgid ""
 "Optional: Select a PIN set to use. If using this option, leave the Route "
 "Password field blank."
@@ -76,7 +76,7 @@ msgstr ""
 msgid "PIN List"
 msgstr ""
 
-#: functions.inc.php:222
+#: functions.inc.php:224
 msgid "PIN Set"
 msgstr ""
 
@@ -114,7 +114,7 @@ msgstr ""
 msgid "Record In CDR"
 msgstr ""
 
-#: Pinsets.class.php:66
+#: Pinsets.class.php:67
 msgid "Reset"
 msgstr ""
 
@@ -128,13 +128,13 @@ msgstr ""
 msgid "Settings"
 msgstr ""
 
-#: Pinsets.class.php:71
+#: Pinsets.class.php:72
 msgid "Submit"
 msgstr ""
 
-#: Pinsets.class.php:128
+#: Pinsets.class.php:129
 #: functions.inc.php:117
-#: functions.inc.php:126
+#: functions.inc.php:127
 msgid "Unnamed"
 msgstr ""
 
