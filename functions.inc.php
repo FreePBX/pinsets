@@ -272,7 +272,7 @@ function pinsets_hookProcess_core($viewing_itemid, $request) {
 			$action = (isset($action))?$action:'editroute';
 		}
 		if ($action) {
-			pinsets_adjustroute($route_id,$action,$request['pinsets']);
+			pinsets_adjustroute($route_id,$action,$request['pinsets'] ?? '');
 		}
 		break;
 	}
