@@ -18,9 +18,10 @@ class Pinsets extends Base {
          * @returns - the pinset list
          * @uri     /pinsets
          */
-        $app->get('/', function($request, $response, $args) {
+        $freepbx = $this->freepbx;
+        $app->get('/', function($request, $response, $args) use($freepbx) {
             $list = [];
-            $pinsets = $this->freepbx->Pinsets->listPinsets();
+            $pinsets = $freepbx->Pinsets->listPinsets();
 
             foreach ($pinsets as $pinset) {
                 $entry = new \stdClass();
@@ -29,7 +30,9 @@ class Pinsets extends Base {
                 $list[$pinset['pinsets_id']] = $entry;
             }
 
-            return $response->withJson(!empty($list) ? $list : false);
+            $list = !empty($list) ? $list : false;
+            $response->getBody()->write(json_encode($list));
+            return $response->withHeader('Content-Type', 'application/json');
         })->add($this->checkAllReadScopeMiddleware());
 
         /**
@@ -47,7 +50,9 @@ class Pinsets extends Base {
                 $entry->deptname = $pinset['deptname'];
             }
 
-            return $response->withJson(!empty($entry) ? $entry : false);
+            $entry = !empty($entry) ? $entry : false;
+            $response->getBody()->write(json_encode($entry));
+            return $response->withHeader('Content-Type', 'application/json');
         })->add($this->checkAllReadScopeMiddleware());
 
         /**
@@ -58,7 +63,8 @@ class Pinsets extends Base {
         $app->put('/{id}', function($request, $response, $args) {
             $pinset = pinsets_get($args['id']);
             if (empty($pinset)) {
-                return $response->withJson(false);
+                $response->getBody()->write(json_encode(false));
+                return $response->withHeader('Content-Type', 'application/json');
             }
 
             $params = $request->getParsedBody();
@@ -77,8 +83,8 @@ class Pinsets extends Base {
 
             pinsets_edit($args['id'], $pinset);
             needreload();
-
-            return $response->withJson(true);
+            $response->getBody()->write(json_encode(true));
+            return $response->withHeader('Content-Type', 'application/json');
         })->add($this->checkAllReadScopeMiddleware());
     }
 }
