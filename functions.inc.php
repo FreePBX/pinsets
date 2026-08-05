@@ -93,20 +93,25 @@ function pinsets_list() {
 }
 
 function pinsets_get($id){
-	$results = sql("SELECT * FROM pinsets WHERE pinsets_id = '$id'","getRow",DB_FETCHMODE_ASSOC);
-	return $results;
+	$id = (int) $id;
+	$sth = FreePBX::Database()->prepare("SELECT * FROM pinsets WHERE pinsets_id = ?");
+	$sth->execute([$id]);
+	return $sth->fetch(\PDO::FETCH_ASSOC);
 }
 
 function pinsets_del($id){
 	global $amp_conf;
 	global $astman;
+	$id= (int) $id;
 	$filename = $amp_conf['ASTETCDIR'].'/pinset_'.$id;
 	if (file_exists($filename)) {
 		unlink($filename);
 	}
 	$astman->database_deltree("PINSETS/".$id);
-	$results = sql("DELETE FROM pinsets WHERE pinsets_id = '$id'","query");
-	$results = sql("DELETE FROM pinset_usage WHERE pinsets_id = '$id'","query");
+	$sth = FreePBX::Database()->prepare("DELETE FROM pinsets WHERE pinsets_id = ?");
+	$sth->execute([$id]);
+	$sth = FreePBX::Database()->prepare("DELETE FROM pinset_usage WHERE pinsets_id = ?");
+	$sth->execute([$id]);
 }
 
 function pinsets_add($post){
@@ -124,7 +129,10 @@ function pinsets_edit($id,$post){
 	extract($post);
 	$passwords = pinsets_clean($passwords);
 	if(empty($description)) $description = _('Unnamed');
-	$results = sql("UPDATE pinsets SET description = \"$description\", passwords = \"$passwords\", addtocdr = \"$addtocdr\", deptname = \"$deptname\" WHERE pinsets_id = \"$id\"");
+	if (empty($deptname)) $deptname = '';
+	$id = (int) $id;
+	$sth = FreePBX::Database()->prepare("UPDATE pinsets SET description = ?, passwords = ?, addtocdr = ?, deptname = ? WHERE pinsets_id = ?");
+	$sth->execute([$description, $passwords, $addtocdr, $deptname, $id]);
 }
 
 // clean and remove duplicates
