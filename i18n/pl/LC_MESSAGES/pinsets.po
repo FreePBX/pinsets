@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-07 04:07-0500\n"
+"POT-Creation-Date: 2026-08-05 02:21-0400\n"
 "PO-Revision-Date: 2023-11-18 16:02+0000\n"
 "Last-Translator: Szymon Wysokinski <szymon.wysokinski@sqspolska.pl>\n"
 "Language-Team: Polish <http://weblate.freepbx.org/projects/freepbx/pinsets/"
@@ -65,11 +65,11 @@ msgstr ""
 msgid "No"
 msgstr ""
 
-#: functions.inc.php:229
+#: functions.inc.php:236
 msgid "None"
 msgstr ""
 
-#: functions.inc.php:245
+#: functions.inc.php:252
 msgid ""
 "Optional: Select a PIN set to use. If using this option, leave the Route "
 "Password field blank."
@@ -79,7 +79,7 @@ msgstr ""
 msgid "PIN List"
 msgstr ""
 
-#: functions.inc.php:224
+#: functions.inc.php:231
 msgid "PIN Set"
 msgstr ""
 
@@ -132,7 +132,7 @@ msgstr ""
 msgid "Submit"
 msgstr ""
 
-#: Pinsets.class.php:129 functions.inc.php:117 functions.inc.php:127
+#: Pinsets.class.php:129 functions.inc.php:122 functions.inc.php:132
 msgid "Unnamed"
 msgstr ""
 
