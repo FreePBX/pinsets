@@ -3,13 +3,13 @@
 # For licensing information, please see the file named LICENSE located in the module directory
 #
 # FreePBX language template for pinsets
-# Copyright (C) 2008-2022 Sangoma Technologies, Inc.
+# Copyright (C) 2008-2026 Sangoma Technologies, Inc.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-05-23 10:30+0000\n"
+"POT-Creation-Date: 2026-09-01 09:03+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -62,11 +62,11 @@ msgstr ""
 msgid "No"
 msgstr ""
 
-#: functions.inc.php:227
+#: functions.inc.php:235
 msgid "None"
 msgstr ""
 
-#: functions.inc.php:243
+#: functions.inc.php:251
 msgid ""
 "Optional: Select a PIN set to use. If using this option, leave the Route "
 "Password field blank."
@@ -76,7 +76,7 @@ msgstr ""
 msgid "PIN List"
 msgstr ""
 
-#: functions.inc.php:222
+#: functions.inc.php:230
 msgid "PIN Set"
 msgstr ""
 
@@ -133,8 +133,8 @@ msgid "Submit"
 msgstr ""
 
 #: Pinsets.class.php:128
-#: functions.inc.php:117
-#: functions.inc.php:126
+#: functions.inc.php:122
+#: functions.inc.php:131
 msgid "Unnamed"
 msgstr ""
 
